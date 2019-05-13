@@ -120,6 +120,7 @@
 </template>
 
 <script>
+import { setInterval } from 'timers';
     export default {
         data() {
             return {
@@ -142,7 +143,8 @@
             createUser(){
                 this.$Progress.start();
                 this.form.post('api/user');
-
+                // emit create an event
+                Fire.$emit('AfterCreate');
                 $('#addNew').modal('hide');
 
                 toast.fire({
@@ -154,6 +156,11 @@
         },
         created() {
             this.loadUsers();
+            // on listen to trigger a function
+            Fire.$on('AfterCreate',() => {
+                this.loadUsers();
+            });
+            // setInterval(()=> this.loadUsers(), 3000);
         }
     }
 </script>
