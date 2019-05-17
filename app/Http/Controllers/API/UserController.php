@@ -52,6 +52,18 @@ class UserController extends Controller
         ]);
     }
 
+    public function updateProfile(Request $request)
+    {
+        $user = auth('api')->user();
+
+        return $request->photo;
+        // return ['message' => "Success"];
+    }
+
+    public function profile()
+    {
+        return auth('api')->user();
+    }
     /**
      * Display the specified resource.
      *
