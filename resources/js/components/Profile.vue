@@ -22,7 +22,7 @@
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle" src="" alt="User profile picture">
+                  <img class="profile-user-img img-fluid img-circle" :src="getProfilePhoto()" alt="User profile picture">
                 </div>
 
                 <h3 class="profile-username text-center">Nina Mcintire</h3>
@@ -313,37 +313,44 @@
                   <div class="tab-pane" id="settings">
                     <form class="form-horizontal">
                       <div class="form-group">
-                        <label for="inputName" class="col-sm-2 control-label">Name</label>
+                        <label for="name" class="col-sm-2 control-label">Name</label>
 
                         <div class="col-sm-10">
-                          <input type="email" v-model="form.name" class="form-control" id="inputName" placeholder="Name">
+                          <input type="text" v-model="form.name" class="form-control" id="name" placeholder="Name"
+                          :class="{ 'is-invalid': form.errors.has('name') }">
+                          <has-error :form="form" field="name"></has-error>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                        <label for="email" class="col-sm-2 control-label">Email</label>
 
                         <div class="col-sm-10">
-                          <input type="email" v-model="form.email" class="form-control" id="inputEmail" placeholder="Email">
+                          <input type="email" v-model="form.email" class="form-control" id="email" placeholder="Email"
+                          :class="{ 'is-invalid': form.errors.has('email') }">
+                          <has-error :form="form" field="email"></has-error>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+                        <label for="bio" class="col-sm-2 control-label">Experience</label>
 
                         <div class="col-sm-10">
-                          <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                          <textarea v-model="form.bio" class="form-control" id="bio" placeholder="Experience"
+                          :class="{ 'is-invalid': form.errors.has('bio') }"></textarea>
+                          <has-error :form="form" field="bio"></has-error>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputSkills" class="col-sm-2 control-label">Profile Photo</label>
+                        <label for="profilePhoto" class="col-sm-2 control-label">Profile Photo</label>
 
                         <div class="col-sm-10">
                             <input type="file" @change="updateProfile" name="profile" id="form-input">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="inputExperience" class="col-sm-2 control-label">PassPort (leave empty if not changing)</label>
+                        <label for="password" class="col-sm-2 control-label">Password (leave empty if not changing)</label>
                         <div class="col-sm-10">
-                          <textarea class="form-control" id="inputExperience" placeholder="passport"></textarea>
+                          <input type="password" v-model="form.password" class="form-control" id="password" placeholder="Password" :class="{ 'is-invalid': form.errors.has('password') }">
+                          <has-error :form="form" field="password"></has-error>
                         </div>
                       </div>
 
@@ -390,13 +397,20 @@ export default {
     },
 
     methods:{
+        getProfilePhoto(){
+            let photo = (this.form.photo.length > 100) ? this.form.photo : "img/profile/"+ this.form.photo ;
+            return photo;
+        },
         updateInfo() {
-            this.form.put('api/profile')
+            this.$Progress.start();
+            this.form.put('api/profile/')
             .then(()=>{
+                Fire.$emit('profileUpdate');
 
+                this.$Progress.finish();
             })
             .catch(() => {
-
+                this.$Progress.fail();
             })
         },
         updateProfile(e) {
@@ -405,19 +419,37 @@ export default {
             let file = e.target.files[0];
             // console.log(file);
             var reader = new FileReader();
-            reader.onloadend = (file) => {
-            // console.log('RESULT', reader.result)
+
+            // Check if the file size us less than 2mb
+            if(file['size'] < 2111775){
+                reader.onloadend = (file) => {
+                // console.log('RESULT', reader.result)
                 this.form.photo = reader.result;
+                }
+
+                reader.readAsDataURL(file);
+            }else{
+                swal.fire(
+                    'Ooops....',
+                    'Your are uploading a large file',
+                    'error'
+                )
             }
 
-            reader.readAsDataURL(file);
 
+        },
+        loadProfile(){
+            axios.get("api/profile")
+        .then(({ data }) => (this.form.fill(data)));
         }
     },
 
     created() {
-        axios.get("api/profile")
-        .then(({ data }) => (this.form.fill(data)));
+        this.loadProfile();
+        Fire.$on('profileUpdate',() => {
+                this.loadProfile();
+        });
+
     },
 };
 </script>

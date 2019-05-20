@@ -82,7 +82,7 @@
                 <div class="form-group">
                     <textarea v-model="form.bio" name="bio" id="bio"
                     placeholder="Short bio for user (Optional)"
-                    class="form-control" :class="{ 'is-invalid': form.errors.has('email') }"></textarea>
+                    class="form-control" :class="{ 'is-invalid': form.errors.has('bio') }"></textarea>
                     <has-error :form="form" field="bio"></has-error>
                 </div>
 
