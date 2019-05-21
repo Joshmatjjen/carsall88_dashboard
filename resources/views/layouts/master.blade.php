@@ -54,7 +54,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="./img/profile.png" class="img-circle elevation-2" alt="User Image">
+          <img src="./img/profile/{{ Auth::user()->photo }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
             <a href="#" class="d-block">
@@ -80,7 +80,7 @@
             </router-link>
           </li>
 
-          @can('isAdmin')
+          @can('isAdminORAuthor')
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cog green"></i>
@@ -92,7 +92,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <router-link to="/users" class="nav-link">
-                  <i class="fa fa-users"></i>
+                  <i class="nav-icon fa fa-users"></i>
                   <p>Users</p>
                 </router-link>
               </li>
@@ -105,6 +105,31 @@
             </ul>
           </li>
           @endCan
+
+          {{-- E-commerce Shop --}}
+          <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-shopping-cart green"></i>
+                  <p>
+                      Shop
+                    <i class="right fa fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <router-link to="/products" class="nav-link">
+                      <i class="nav-icon fa fa-luggage-cart"></i>
+                      <p>Products</p>
+                    </router-link>
+                  </li>
+                  <li class="nav-item">
+                    <router-link to="/productcategories" class="nav-link">
+                      <i class="nav-icon fas fa-list-alt  pink"></i>
+                      <p>Product Categories</p>
+                    </router-link>
+                  </li>
+                </ul>
+              </li>
 
 
           <li class="nav-item">
@@ -160,7 +185,7 @@
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2018 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

@@ -1,5 +1,5 @@
 <template>
-    <div class="container" v-if="$gate.isAdmin()">
+    <div class="container" v-if="$gate.isAdminORAuthor()">
         <div class="row mt-5">
           <div class="col-md-12">
             <div class="card">
@@ -15,6 +15,7 @@
                 <table class="table table-hover">
                   <tbody><tr>
                     <th>ID</th>
+                    <th>Photo</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Type</th>
@@ -25,6 +26,7 @@
                   <tr v-for="user in users.data" :key="user.id">
 
                     <td>{{user.id}}</td>
+                    <td><img class="profile-user-img img-fluid img-circle" v-bind:src="'/img/profile/' + user.photo" alt="User profile picture"></td>
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
                     <td>{{user.type | upText}}</td>
@@ -51,7 +53,7 @@
         </div>
 
 
-        <div v-if="!$gate.isAdmin()">
+        <div v-if="!$gate.isAdminORAuthor()">
             <not-found></not-found>
         </div>
 
@@ -213,13 +215,14 @@ import { setInterval } from 'timers';
                     })
             },
             loadUsers(){
-                if(this.$gate.isAdmin()){
+                if(this.$gate.isAdminORAuthor()){
                     axios.get("api/user").then(({ data }) => (this.users = data));
                 }
 
             },
             createUser(){
                 this.$Progress.start();
+                this.form.photo = 'profile.png'
                 this.form.post('api/user')
                 .then(()=>{
                     // emit create an event
