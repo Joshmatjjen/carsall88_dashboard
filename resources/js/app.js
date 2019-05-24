@@ -7,6 +7,12 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import BootstrapVue from 'bootstrap-vue'
+Vue.use(BootstrapVue)
+
 import moment from 'moment';
 import { Form, HasError, AlertError } from 'vform'
 

@@ -16,8 +16,10 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->float('price');
+            $table->decimal('price');
             $table->string('size')->nullable();
+            $table->string('category')->default('car_parts');
+            $table->string('category_type');
             $table->string('email');
             $table->string('address');
             $table->mediumText('description')->nullable();

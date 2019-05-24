@@ -22,23 +22,22 @@
             <div class="col-lg-9">
 
                 <div class="row">
-                    <div class="col-lg-6 col-xl-4 col-md-12">
+                    <div class="col-lg-6 col-xl-4 col-md-12" v-for="product in products.data" :key="product.id">
                         <div class="card item-card">
                             <div class="product-grid  card-body">
                                 <div class="product-image">
                                     <a href="#">
-                                        <img class="img-fluid" src="/img/product1.jpg">
+                                        <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo_main">
                                     </a>
                                 </div>
                                 <div class="product-content text-center mt-4">
-                                    <h4 class="title"><a href="#">Sports shoes</a></h4>
-                                    <div class="price"><strong>₦</strong>2000</div>
+                                    <h4 class="title"><a href="#">{{product.name}}</a></h4>
+                                    <div class="price"><strong>₦</strong>{{product.price}}</div>
                                 </div>
-                                <!-- <ul class="icons">
-                                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                                    <li><a href="" data-tip="Add to Wishlist"><i class="fal fa-heart"></i></a></li>
-                                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul> -->
+                                <ul class="icons">
+                                    <li><a href="#" @click="editModal(product)" data-tip="Edit Product"><i class="fa fa-edit"></i></a></li>
+                                    <li><a href="#" data-tip="Delete Product"><i class="fa fa-trash-alt"></i></a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -48,25 +47,25 @@
 
 
 
-                <!-- Modal Add New User -->
+                <!-- Modal Add New Product -->
         <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 v-show="!editmode" class="modal-title" id="addNewLabel">Add New User</h5>
-                <h5 v-show="editmode" class="modal-title" id="addNewLabel">Update User's Info</h5>
+                <h5 v-show="!editmode" class="modal-title" id="addNewLabel">Add New Product</h5>
+                <h5 v-show="editmode" class="modal-title" id="addNewLabel">Update Products Info</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
             <!-- Form body Add New Product -->
-            <form @submit.prevent="editmode ? updateProduct() :createProduct() ">
+            <form enctype="multipart/form-data" method="POST" @submit.prevent="editmode ? updateProduct() :createProduct() ">
             <div class="modal-body">
                 <!-- Name -->
                 <div class="form-group">
                     <input v-model="form.name" type="text" name="name"
-                    placeholder="Name"
+                    placeholder="Product Name"
                     class="form-control" :class="{ 'is-invalid': form.errors.has('name') }">
                     <has-error :form="form" field="name"></has-error>
                 </div>
@@ -112,25 +111,39 @@
                 </div>
 
                 <!-- Type -->
+
                 <div class="form-group">
-                    <select v-model="form.type" name="type" id="type"
-                    placeholder="Email Address"
-                    class="form-control" :class="{ 'is-invalid': form.errors.has('type') }">
-                        <option value="">Select User Role</option>
-                        <option value="admin">Admin</option>
-                        <option value="user">Standard User</option>
-                        <option value="author">Author</option>
+                    <select v-model="form.category" name="category" id="category" @change="onChange($event)"
+                    class="form-control" :class="{ 'is-invalid': form.errors.has('category') }">
+                        <option  value="">Select Product Category</option>
+                        <option  value="cars">Cars</option>
+                        <option  value="car_parts">Cars Part</option>
                     </select>
-                    <has-error :form="form" field="type"></has-error>
+                    <has-error :form="form" field="category"></has-error>
                 </div>
 
-                <!-- Password -->
+
                 <div class="form-group">
-                    <input v-model="form.password" type="password" name="password" id="password"
-                    placeholder="Password"
-                    class="form-control" :class="{ 'is-invalid': form.errors.has('password') }">
-                    <has-error :form="form" field="password"></has-error>
+                    <b-form-select v-model="form.category_type" :options="options"></b-form-select>
                 </div>
+
+
+                <!-- Photo -->
+                <div class="form-group">
+                    Product Image 1:
+                            <input type="file" @change="addPhotoMain" name="photo_main" id="form-input">
+                </div>
+
+                <div class="form-group">
+                    Product Image 2:
+                            <input type="file" @change="addPhotoSecond" name="photo_second" id="form-input">
+                </div>
+
+                <div class="form-group">
+                    Product Image 3:
+                            <input type="file" @change="addPhotoLast" name="photo_last" id="form-input">
+                </div>
+
 
             </div>
             <div class="modal-footer">
@@ -158,6 +171,7 @@
 </template>
 
 <script>
+let values;
     export default {
         data() {
             return {
@@ -168,6 +182,8 @@
                     name: '',
                     price: '',
                     size: '',
+                    category: '',
+                    category_type: '',
                     email: '',
                     address: '',
                     description: '',
@@ -175,20 +191,142 @@
                     photo_second: '',
                     photo_last: ''
 
-                })
+                }),
+
+                options: values
             }
         },
         methods: {
 
+            addPhotoMain(e) {
+            // console.log("uploading");
+            // Converting image to base64
+            let file = e.target.files[0];
+            // console.log(file);
+            var reader = new FileReader();
+
+            // Check if the file size us less than 2mb
+            if(file['size'] < 2111775){
+                reader.onloadend = (file) => {
+
+                this.form.photo_main = reader.result;
+                console.log('RESULT', reader.result)
+
+                }
+
+                reader.readAsDataURL(file);
+
+            }else{
+                swal.fire(
+                    'Ooops....',
+                    'Your are uploading a large file',
+                    'error'
+                )
+            }
+
+
+        },
+
+        addPhotoSecond(f) {
+            // console.log("uploading");
+            // Converting image to base64
+            let file = f.target.files[0];
+            // console.log(file);
+            var reader = new FileReader();
+
+            // Check if the file size us less than 2mb
+            if(file['size'] < 2111775){
+                reader.onloadend = (file) => {
+                // console.log('RESULT', reader.result)
+                this.form.photo_second = reader.result;
+
+                console.log('RESULT', reader.result)
+                }
+
+                reader.readAsDataURL(file);
+
+
+            }else{
+                swal.fire(
+                    'Ooops....',
+                    'Your are uploading a large file',
+                    'error'
+                )
+            }
+
+
+        },
+
+        addPhotoLast(g) {
+            // console.log("uploading");
+            // Converting image to base64
+            let file = g.target.files[0];
+            // console.log(file);
+            var reader = new FileReader();
+
+            // Check if the file size us less than 2mb
+            if(file['size'] < 2111775){
+                reader.onloadend = (file) => {
+                // console.log('RESULT', reader.result)
+                this.form.photo_last = reader.result;
+
+                console.log('RESULT', reader.result)
+                }
+
+                reader.readAsDataURL(file);
+
+            }else{
+                swal.fire(
+                    'Ooops....',
+                    'Your are uploading a large file',
+                    'error'
+                )
+            }
+
+
+        },
+
+            onChange(event) {
+                if(event.target.value === "cars"){
+                    console.log('cars: Correct');
+
+                    this.options = [
+                    { value: '', text: 'Please select cars' },
+                    { value: 'benz', text: 'Benz' },
+                    { value: 'toyota', text: 'Toyota' },
+                    { value: { bmw: '3PO' }, text: 'BMW' },
+                    { value: 'ford', text: 'Ford', disabled: true }
+                ]
+                console.log(this.options);
+
+                }
+                else if(event.target.value === "car_parts"){
+                    console.log('car parts: Correct')
+
+                    this.options = [
+                    { value: '', text: 'Please select car parts' },
+                    { value: 'oil', text: 'Oil' },
+                    { value: 'plug', text: 'plug' },
+                    // { value: { brain_box: '3.1' }, text: 'brain box' },
+                    { value: 'brain_box' , text: 'brain box' },
+                    { value: 'wheel', text: 'Wheel'}
+                    // { value: 'wheel', text: 'Wheel', disabled: true }
+                ]
+                    console.log(this.options);
+                }
+
+
+            },
+
             getResults(page = 1) {
 			    axios.get('api/product?page=' + page)
 				.then(response => {
-					this.products = response.data;
+					this.product = response.data;
 				});
             },
-            updateUser(){
+            updateProduct(){
                 this.$Progress.start();
-                this.form.put('api/user/'+this.form.id)
+                this.form.put('api/product/'+this.form.id)
                 .then(()=>{
                     $('#addNew').modal('hide');
                     swal.fire(
@@ -204,18 +342,18 @@
                     this.$Progress.fail();
                 })
             },
-            editModal(user){
+            editModal(product){
                 this.editmode = true;
                 this.form.reset();
                 $('#addNew').modal('show');
-                this.form.fill(user);
+                this.form.fill(product);
             },
             newModal(){
                 this.editmode = false;
                 this.form.reset();
                 $('#addNew').modal('show');
             },
-            deleteUser(id){
+            deleteProduct(id){
                 swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -227,7 +365,7 @@
                     }).then((result) => {
                         // Send request to the server
                     if (result.value) {
-                        this.form.delete('api/user/'+id)
+                        this.form.delete('api/product/'+id)
                         .then(()=>{
 
                             swal.fire(
@@ -244,15 +382,16 @@
                     })
             },
             loadProducts(){
-                if(this.$gate.isAdminORAuthor()){
-                    axios.get("api/user").then(({ data }) => (this.users = data));
-                }
+                // if(this.$gate.isAdminORAuthor()){
+                    axios.get("api/product").then(({ data }) => (this.products = data));
+                // }
 
             },
+
             createProduct(){
                 this.$Progress.start();
                 // this.form.photo = 'profile.png'
-                this.form.post('api/user')
+                this.form.post('api/product')
                 .then(()=>{
                     // emit create an event
                     Fire.$emit('ActionCreate');
@@ -260,7 +399,7 @@
 
                     toast.fire({
                         type: 'success',
-                        title: 'Signed in successfully'
+                        title: 'Product created successfully'
                         })
                     this.$Progress.finish();
                 })
@@ -276,7 +415,7 @@
                 let query = this.$parent.search;
                 axios.get('api/findProduct?q=' + query)
                 .then((data) => {
-                    this.products = data.data
+                    this.product = data.data
                 })
                 .catch(() => {
 
