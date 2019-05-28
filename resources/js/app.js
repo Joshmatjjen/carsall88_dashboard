@@ -55,6 +55,8 @@ let routes = [
     { path: '/profile', component: require('./components/Profile.vue').default },
     { path: '/products', component: require('./components/Products.vue').default },
     { path: '/productcategories', component: require('./components/ProductCategories.vue').default },
+    { path: '/productbrands', component: require('./components/ProductBrands.vue').default },
+    { path: '/myproducts', component: require('./components/MyProducts.vue').default },
     { path: '*', component: require('./components/NotFound.vue').default }
   ]
 

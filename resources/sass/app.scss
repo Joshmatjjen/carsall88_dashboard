@@ -14,17 +14,45 @@ $fa-font-path: "../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
+// For Condition Bootstrap radio
+label:not(.form-check-label):not(.custom-file-label) {
+    font-weight: normal;
+}
+
+// .modal-dialog,
+// .modal-content {
+//     /* 80% of window height */
+//     height: 80%;
+// }
+
+// .modal-body {
+//     /* 100% = dialog height, 120px = header + footer */
+//     max-height: calc(100% - 120px);
+//     overflow-y: scroll;
+// }
+
+#product-details{
+  left: 13%;
+  height: 95vh;
+  top: 3%;
+}
 .router-link-exact-active{
     background-color: #3f51b5;
-    color: #fff !important;
+    color: $white !important;
 }
 .profile-user-img {
     width: 50px;
 }
 
+
 .item-card img:hover {
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
     transform: scale3d(1.1, 1.1, 1.1);
+}
+.item-card img {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
 }
 .product-grid .product-content {
     text-align: center;
@@ -42,7 +70,7 @@ $fa-font-path: "../webfonts";
 }
 .product-grid .icons {
     padding: 0;
-    margin: 0;
+    margin: 0 10px;
     list-style: none;
     opacity: 0;
     left: 0;
@@ -55,20 +83,46 @@ $fa-font-path: "../webfonts";
 }
 
 .product-grid .icons li a {
-    color: #633aa2;
     font-size: 16px;
     line-height: 45px;
     text-align: center;
     height: 45px;
     width: 45px;
     margin: 0 7px;
-    border: 1px solid #633aa2;
     border-radius: 50px;
     display: block;
     position: relative;
     transition: all .3s ease-in-out;
 }
 
+.product-grid .icons #p-view a {
+    color: $green;
+    border: 1px solid $green;
+}
+.product-grid .icons #p-edit a {
+    color: $blue;
+    border: 1px solid $blue;
+}
+.product-grid .icons #p-delete a {
+    color: $red;
+    border: 1px solid $red;
+}
+
+.product-grid .icons #p-view a:hover {
+    background-color: $green;
+    color: $white;
+}
+.product-grid .icons #p-edit a:hover {
+    background-color: $blue;
+    color: $white;
+}
+.product-grid .icons #p-delete a:hover {
+    background-color: $red;
+    color: $white;
+}
+
+
 .product-grid .icons li {
     display: inline-block;
+
 }

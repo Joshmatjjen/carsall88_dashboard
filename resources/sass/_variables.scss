@@ -7,7 +7,8 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$blue: #3490dc;
+$white: #fff;
+$blue: #299af7;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
@@ -17,8 +18,29 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$avacado: #568203;
+$azur: #007FFF;
+$bright-green: #66FF00;
+$blue-violet: #8A2BE2;
 
 
+.avacado{
+    color: $avacado;
+}
+
+.azur{
+    color: $azur;
+}
+
+.bright-green{
+    color: $bright-green;
+}
+.blue-violet{
+    color: $blue-violet;
+}
+.white{
+    color: $white;
+}
 .blue{
     color: $blue;
 }

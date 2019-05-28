@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Foundation\Testing\Constraints\SoftDeletedInDatabase;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CreateProductCategoriesTable extends Migration
+class CreateCategoriesTable extends Migration
 {
+    use SoftDeletes;
     /**
      * Run the migrations.
      *
@@ -13,11 +16,13 @@ class CreateProductCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_categories', function (Blueprint $table) {
+        Schema::enableForeignKeyConstraints();
+        Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->default('car_parts');
-            $table->string('type');
+            $table->string( 'name', 200 );
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 
@@ -28,6 +33,6 @@ class CreateProductCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_categories');
+        Schema::dropIfExists('categories');
     }
 }

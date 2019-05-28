@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CreateUsersTable extends Migration
+class CreateBrandsTable extends Migration
 {
     use SoftDeletes;
     /**
@@ -16,21 +16,17 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::enableForeignKeyConstraints();
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('brands', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('type')->default('user');
-            $table->mediumText('bio')->nullable();
-            $table->mediumText('address')->nullable();
-            $table->string('photo')->default('profile.png');
-            $table->rememberToken();
+            $table->string('logo');
+            $table->bigInteger('type')->unsigned();
+            $table->foreign('type' )
+            ->references( 'id' )->on( 'categories' )
+            ->onDelete( 'cascade' )
+            ->onUpdate( 'cascade' );
             $table->timestamps();
             $table->softDeletes();
-
-
         });
     }
 
@@ -41,6 +37,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('brands');
     }
 }

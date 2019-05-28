@@ -19,7 +19,140 @@
         </div>
         <div class="row row-cards justify-content-center">
 
-            <div class="col-lg-9">
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title"> Categories</div>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label class="form-label mt-0">Mens</label>
+                                    <select name="beast" id="select-beast" class="form-control custom-select">
+                                        <option value="0">--Select--</option>
+                                        <option value="1">Foot wear</option>
+                                        <option value="2">Top wear</option>
+                                        <option value="3">Bootom wear</option>
+                                        <option value="4">Men's Groming</option>
+                                        <option value="5">Accessories</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Women</label>
+                                    <select name="beast" id="select-beast1" class="form-control custom-select">
+                                        <option value="0">--Select--</option>
+                                        <option value="1">Western wear</option>
+                                        <option value="2">Foot wear</option>
+                                        <option value="3">Top wear</option>
+                                        <option value="4">Bootom wear</option>
+                                        <option value="5">Beuty Groming</option>
+                                        <option value="6">Accessories</option>
+                                        <option value="7">jewellery</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Baby &amp; Kids</label>
+                                    <select name="beast" id="select-beast2" class="form-control custom-select">
+                                        <option value="0">--Select--</option>
+                                        <option value="1">Boys clothing</option>
+                                        <option value="2">girls Clothing</option>
+                                        <option value="3">Toys</option>
+                                        <option value="4">Baby Care</option>
+                                        <option value="5">Kids footwear</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Electronics</label>
+                                    <select name="beast" id="select-beast3" class="form-control custom-select">
+                                        <option value="0">--Select--</option>
+                                        <option value="1">Mobiles</option>
+                                        <option value="2">Laptops</option>
+                                        <option value="3">Gaming &amp; Accessories</option>
+                                        <option value="4">Health care Appliances</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label class="form-label">Sport,Books &amp; More </label>
+                                    <select name="beast" id="select-beast4" class="form-control custom-select">
+                                        <option value="0">--Select--</option>
+                                        <option value="1">Stationery</option>
+                                        <option value="2">Books</option>
+                                        <option value="3">Gaming</option>
+                                        <option value="4">Music</option>
+                                        <option value="5">Exercise &amp; fitness</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-group-item">
+                                <header class="card-header">
+                                    <h2 class="card-title">Brands </h2>
+                                </header>
+                                <div class="filter-content">
+                                    <div class="card-body">
+                                        <form>
+                                            <label class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <span class="form-check-label">
+                                                    Mersedes Benz
+                                                </span>
+                                            </label> <!-- form-check.// -->
+                                            <label class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <span class="form-check-label">
+                                                    Nissan Altima
+                                                </span>
+                                            </label> <!-- form-check.// -->
+                                            <label class="form-check mb-0">
+                                                <input class="form-check-input" type="checkbox" value="">
+                                                <span class="form-check-label">
+                                                    Another Brand
+                                                </span>
+                                            </label> <!-- form-check.// -->
+                                        </form>
+                                    </div> <!-- card-body.// -->
+                                </div>
+                            </div> <!-- card-group-item.// -->
+                        </div>
+                        <div class="card">
+                            <div class="card-group-item">
+                                <header class="card-header">
+                                    <h2 class="card-title">Choose type </h2>
+                                </header>
+                                <div class="filter-content">
+                                    <div class="card-body">
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                                            <span class="form-check-label">
+                                                First hand items
+                                            </span>
+                                        </label>
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                                            <span class="form-check-label">
+                                                Brand new items
+                                            </span>
+                                        </label>
+                                        <label class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                                            <span class="form-check-label">
+                                                Some other option
+                                            </span>
+                                        </label>
+                                    </div> <!-- card-body.// -->
+                                </div>
+                            </div> <!-- card-group-item.// -->
+                        </div>
+                        <a href="#" class="btn btn-primary btn-block mb-3 ">Search</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="col-lg-9">
 
                 <div class="row">
                     <div class="col-lg-6 col-xl-4 col-md-12" v-for="product in products.data" :key="product.id">
@@ -30,13 +163,17 @@
                                         <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo_main">
                                     </a>
                                 </div>
-                                <div class="product-content text-center mt-4">
+                                <div class="product-content text-center mt-4" v-for="category in categories.data" :key="category.id">
+                                    <h6 class="title"><a href="#">category</a></h6>
                                     <h4 class="title"><a href="#">{{product.name}}</a></h4>
+
                                     <div class="price"><strong>₦</strong>{{product.price}}</div>
                                 </div>
                                 <ul class="icons">
-                                    <li><a href="#" @click="editModal(product)" data-tip="Edit Product"><i class="fa fa-edit"></i></a></li>
-                                    <li><a href="#" data-tip="Delete Product"><i class="fa fa-trash-alt"></i></a></li>
+                                     <!-- <b-button  variant="primary">xl modal</b-button> -->
+                                    <li id="p-view"><a href="#" v-b-modal.product-details @click="showProduct(product)" v-b-tooltip.hover title="View Product"><i class="fa fa-eye"></i></a></li>
+                                    <li id="p-edit"><a href="#" v-b-tooltip.hover title="Edit Product" @click="editModal(product)" data-tip="Edit Product"><i class="fa fa-edit"></i></a></li>
+                                    <li id="p-delete"><a href="#" v-b-tooltip.hover title="Delete Product"><i class="fa fa-trash-alt"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -47,6 +184,7 @@
 
 
 
+<!-- ANCHOR : Modal -->
                 <!-- Modal Add New Product -->
         <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -78,9 +216,50 @@
                     <has-error :form="form" field="price"></has-error>
                 </div>
 
+                <!-- Condtion -->
+                 <div class="form-group">
+                    <!-- <b-form-group label="Condition"> -->
+                    <b-form-radio-group v-model="form.condition" id="brand" :options="condition"
+                    name="brand" :class="{ 'is-invalid': form.errors.has('brand') }">
+                    </b-form-radio-group>
+
+                    <!-- </b-form-group> -->
+                    <!-- <b-form-select  :options="condition" name="brand"
+                    ></b-form-select> -->
+                    <has-error :form="form" field="brand"></has-error>
+                </div>
+
+
+                <!-- Type -->
+
+                <div class="form-group">
+                    <select v-model="form.category_id" name="category" id="category" @change="onChange($event)"
+                    class="form-control">
+                        <option  value="">Select Product Category</option>
+                        <option  value="1" >Cars</option>
+                        <option  value="2" >Cars Part</option>
+                        <option  value="3" >Cars Accessories</option>
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+                    <b-form-select v-model="form.category_type_id" :options="cTOptions"
+                    :class="{ 'is-invalid': form.errors.has('category_type') }"></b-form-select>
+                    <has-error :form="form" field="category_type"></has-error>
+                </div>
+
+                <!-- Brands -->
+                 <div class="form-group">
+                    <b-form-select v-model="form.brand_id" :options="brands" name="condition"
+                    :class="{ 'is-invalid': form.errors.has('condition') }"></b-form-select>
+                    <has-error :form="form" field="condition"></has-error>
+                </div>
+
                 <!-- Size -->
                 <div class="form-group">
-                    <input v-model="form.size" type="size" name="size"
+                    <input v-if="form.category_id!=1" v-model="form.size" type="size" name="size"
                     placeholder="Size"
                     class="form-control" :class="{ 'is-invalid': form.errors.has('size') }">
                     <has-error :form="form" field="size"></has-error>
@@ -110,39 +289,23 @@
                     <has-error :form="form" field="description"></has-error>
                 </div>
 
-                <!-- Type -->
-
-                <div class="form-group">
-                    <select v-model="form.category" name="category" id="category" @change="onChange($event)"
-                    class="form-control" :class="{ 'is-invalid': form.errors.has('category') }">
-                        <option  value="">Select Product Category</option>
-                        <option  value="cars">Cars</option>
-                        <option  value="car_parts">Cars Part</option>
-                    </select>
-                    <has-error :form="form" field="category"></has-error>
-                </div>
-
-
-                <div class="form-group">
-                    <b-form-select v-model="form.category_type" :options="options"></b-form-select>
-                </div>
 
 
                 <!-- Photo -->
                 <div class="form-group">
-                    Product Image 1:
+                    Product Image:
                             <input type="file" @change="addPhotoMain" name="photo_main" id="form-input">
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     Product Image 2:
-                            <input type="file" @change="addPhotoSecond" name="photo_second" id="form-input">
+                            <input type="file" @change="addPhotoMain" name="photo_second" id="form-input">
                 </div>
 
                 <div class="form-group">
                     Product Image 3:
-                            <input type="file" @change="addPhotoLast" name="photo_last" id="form-input">
-                </div>
+                            <input type="file" @change="addPhotoMain" name="photo_last" id="form-input">
+                </div> -->
 
 
             </div>
@@ -154,6 +317,81 @@
             </form>
         </div>
         </div>
+        </div>
+
+
+
+<!-- ANCHOR Product Details -->
+        <div>
+            <b-modal hide-footer id="product-details" size="lg" centered scrollable title="Product Details">
+
+                <div class="card-body">
+                    <div class="bg-light-gray text-center">
+                        <img alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_main">
+                        <h3>{{selectedProduct.name}}</h3>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="#" class="btn btn-sm btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                        <a href="#" class="btn btn-sm btn-success"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+                    </div>
+                    <div class="border mt-4 mb-4">
+                        <h4 class="m-b-0 m-t-20">Description</h4>
+                        <p>{{selectedProduct.description}}</p>
+                    </div>
+                    <h4 class="mb-4">Specifications</h4>
+                    <div class="pro_detail border p-4">
+                        <h5 class="m-l-0 m-t-10">General</h5>
+                        <ul class="list-unstyled mb-0 border-bottom-0">
+                            <li class="row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Brand</div>
+                                <div class="col-sm-3 mb-2">Fas-track</div>
+                            </li>
+                            <li class=" row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Model Number</div>
+                                <div class="col-sm-3 mb-2">RDF016</div>
+                            </li>
+                            <li class="p-b-20 row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Model Name</div>
+                                <div class="col-sm-3 mb-2">RS10</div>
+                            </li>
+                            <li class="p-b-20 row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Suitable For</div>
+                                <div class="col-sm-3 mb-2">Men, Women</div>
+                            </li>
+                            <li class="p-b-20 row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Material</div>
+                                <div class="col-sm-3 mb-2">Leather</div>
+                            </li>
+                            <li class="p-b-20 row border-bottom-0">
+                                <div class="col-sm-3 text-muted">Color</div>
+                                <div class="col-sm-3">Black</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pro_detail border p-4 border-top-0">
+                        <h5 class="m-l-0 m-t-0">Dimensions</h5>
+                        <ul class="list-unstyled mb-0 ">
+                            <li class="row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Width</div>
+                                <div class="col-sm-3 mb-2">3 inch</div>
+                            </li>
+                            <li class="p-b-20 row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Works</div>
+                                <div class="col-sm-3 mb-2">Alarm, Digital counter</div>
+                            </li>
+                            <li class="p-b-20 row border-bottom-0">
+                                <div class="col-sm-3 text-muted mb-2">Warranty</div>
+                                <div class="col-sm-3 mb-2">3 yrs</div>
+                            </li>
+                            <li class="p-b-20 row border-bottom-0">
+                                <div class="col-sm-3 text-muted ">Others</div>
+                                <div class="col-sm-3 "> Pulse Measurement</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </b-modal>
+
         </div>
 
                 <!-- Pagination -->
@@ -169,35 +407,61 @@
         </div>
     </div>
 </template>
+    // <my-component :user-name=></my-componet>
+
 
 <script>
-let values;
+let cTValues;
     export default {
         data() {
             return {
                 editmode: false,
+                user: {},
                 products: {},
+                categories: {},
+                selectedProduct: {},
                 form: new Form({
                     id: '',
+                    category_id: '',
+                    category_type: '',
+                    brand_id: '',
                     name: '',
                     price: '',
                     size: '',
-                    category: '',
-                    category_type: '',
                     email: '',
                     address: '',
+                    condition: '',
                     description: '',
                     photo_main: '',
                     photo_second: '',
                     photo_last: ''
 
                 }),
+                brands : [
+                    { value: '', text: 'Please select brand' },
+                    { value: '1', text: 'Acura' },
+                    { value: '2', text: 'Audi' },
 
-                options: values
+                ],
+                condition : [
+                    { value: 'new', text: 'New' },
+                    { value: 'used', text: 'Used' },
+
+                ],
+                cTOptions: cTValues,
+
             }
         },
-        methods: {
 
+        methods: {
+            //  productDetails(product){
+            //     this.selectedProductId.fill(product);
+            // },
+
+            showProduct(productId) {
+                this.selectedProduct = productId;
+                // console.log(this.selectedProductId);
+            },
             addPhotoMain(e) {
             // console.log("uploading");
             // Converting image to base64
@@ -210,6 +474,8 @@ let values;
                 reader.onloadend = (file) => {
 
                 this.form.photo_main = reader.result;
+                // this.form.photo_second = reader.result;
+                // this.form.photo_last = reader.result;
                 console.log('RESULT', reader.result)
 
                 }
@@ -227,85 +493,68 @@ let values;
 
         },
 
-        addPhotoSecond(f) {
-            // console.log("uploading");
-            // Converting image to base64
-            let file = f.target.files[0];
-            // console.log(file);
-            var reader = new FileReader();
+        // addPhotoSecond(f) {
+        //     // console.log("uploading");
+        //     // Converting image to base64
+        //     let file = f.target.files[0];
+        //     // console.log(file);
+        //     var reader = new FileReader();
 
-            // Check if the file size us less than 2mb
-            if(file['size'] < 2111775){
-                reader.onloadend = (file) => {
-                // console.log('RESULT', reader.result)
-                this.form.photo_second = reader.result;
+        //     // Check if the file size us less than 2mb
+        //     if(file['size'] < 2111775){
+        //         reader.onloadend = (file) => {
+        //         // console.log('RESULT', reader.result)
+        //         this.form.photo_second = reader.result;
 
-                console.log('RESULT', reader.result)
-                }
+        //         console.log('RESULT', reader.result)
+        //         }
 
-                reader.readAsDataURL(file);
-
-
-            }else{
-                swal.fire(
-                    'Ooops....',
-                    'Your are uploading a large file',
-                    'error'
-                )
-            }
+        //         reader.readAsDataURL(file);
 
 
-        },
-
-        addPhotoLast(g) {
-            // console.log("uploading");
-            // Converting image to base64
-            let file = g.target.files[0];
-            // console.log(file);
-            var reader = new FileReader();
-
-            // Check if the file size us less than 2mb
-            if(file['size'] < 2111775){
-                reader.onloadend = (file) => {
-                // console.log('RESULT', reader.result)
-                this.form.photo_last = reader.result;
-
-                console.log('RESULT', reader.result)
-                }
-
-                reader.readAsDataURL(file);
-
-            }else{
-                swal.fire(
-                    'Ooops....',
-                    'Your are uploading a large file',
-                    'error'
-                )
-            }
+        //     }else{
+        //         swal.fire(
+        //             'Ooops....',
+        //             'Your are uploading a large file',
+        //             'error'
+        //         )
+        //     }
 
 
-        },
+        // },
+
+
 
             onChange(event) {
-                if(event.target.value === "cars"){
+                if(event.target.value === "1"){
                     console.log('cars: Correct');
 
-                    this.options = [
-                    { value: '', text: 'Please select cars' },
-                    { value: 'benz', text: 'Benz' },
-                    { value: 'toyota', text: 'Toyota' },
-                    { value: { bmw: '3PO' }, text: 'BMW' },
-                    { value: 'ford', text: 'Ford', disabled: true }
+
+                    this.cTOptions = [
+                    { value: '', text: 'Please select car type' },
+                    { value: 1, text: 'SUV' },
+                    { value: 2, text: 'Truck' },
+                    { value: 3, text: 'Sedan' },
+                    { value: 4, text: 'Van'},
+                    { value: 5, text: 'Coupe'},
+                    { value: 6, text: 'Wagon'},
+                    { value: 7, text: 'Convertible'},
+                    { value: 8, text: 'Sport Car'},
+                    { value: 9, text: 'Diesel'},
+                    { value: 10, text: 'Crossover'},
+                    { value: 11, text: 'Luxury Car'},
+                    { value: 12, text: 'Hybrid/Electric'},
+                    { value: 13, text: 'Certified Pre-Owned'},
                 ]
                 console.log(this.options);
 
                 }
-                else if(event.target.value === "car_parts"){
+                else if(event.target.value === "2"){
                     console.log('car parts: Correct')
 
-                    this.options = [
+                    this.cTOptions = [
                     { value: '', text: 'Please select car parts' },
-                    { value: 'oil', text: 'Oil' },
+                    { value: 'Bonnet', text: 'Oil' },
                     { value: 'plug', text: 'plug' },
                     // { value: { brain_box: '3.1' }, text: 'brain box' },
                     { value: 'brain_box' , text: 'brain box' },
@@ -313,6 +562,22 @@ let values;
                     // { value: 'wheel', text: 'Wheel', disabled: true }
                 ]
                     console.log(this.options);
+                }
+                else if(event.target.value === "3"){
+
+                    this.cTOptions = [
+                    { value: '', text: 'Please select car accessories' },
+                    { value: 'oil', text: 'Oil' },
+                    { value: 'plug', text: 'plug' },
+                    // { value: { brain_box: '3.1' }, text: 'brain box' },
+                    { value: 'brain_box' , text: 'brain box' },
+                    { value: 'wheel', text: 'Wheel'}
+                    // { value: 'wheel', text: 'Wheel', disabled: true }
+
+                ]
+
+                console.log(this.options);
+
                 }
 
 
@@ -348,9 +613,13 @@ let values;
                 $('#addNew').modal('show');
                 this.form.fill(product);
             },
+
+
             newModal(){
                 this.editmode = false;
                 this.form.reset();
+                this.form.email = this.user.email
+                this.form.address = this.user.address
                 $('#addNew').modal('show');
             },
             deleteProduct(id){
@@ -388,6 +657,20 @@ let values;
 
             },
 
+            loadCategory(){
+                // if(this.$gate.isAdminORAuthor()){
+                    axios.get("api/categories")
+                    .then(({ data }) => (this.category = data));
+
+            },
+
+            loadUser(){
+                // if(this.$gate.isAdminORAuthor()){
+                    axios.get("api/profile")
+                    .then(({ data }) => (this.user = data));
+
+            },
+
             createProduct(){
                 this.$Progress.start();
                 // this.form.photo = 'profile.png'
@@ -422,12 +705,15 @@ let values;
                 })
             })
             this.loadProducts();
+            this.loadUser();
             // on listen to trigger a function
             Fire.$on('ActionCreate',() => {
                 this.loadProducts();
+                this.loadUser();
             });
             // setInterval(()=> this.loadUsers(), 3000);
         }
     }
 
 </script>
+

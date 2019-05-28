@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
+use Laravel\Passport\Bridge\User;
 
 class ProductController extends Controller
 {
@@ -24,7 +25,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        if(\Gate::allows('isAdmin') || \Gate::allows('isAuthor')){
+        if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper')){
             return Product::latest()->paginate(20);
         }
     }
@@ -43,12 +44,14 @@ class ProductController extends Controller
         ]);
 
         $photoMain = 'product-main' . time().'.' . explode('/', explode(':', substr($request->photo_main, 0, strpos($request->photo_main, ';')))[1])[1];
-        $photoSecond = 'product-second' . time().'.' . explode('/', explode(':', substr($request->photo_second, 0, strpos($request->photo_second, ';')))[1])[1];
-        $photoLast = 'product-last' . time().'.' . explode('/', explode(':', substr($request->photo_last, 0, strpos($request->photo_last, ';')))[1])[1];
+        // $photoSecond = 'product-second' . time().'.' . explode('/', explode(':', substr($request->photo_second, 0, strpos($request->photo_second, ';')))[1])[1];
+        // $photoLast = 'product-last' . time().'.' . explode('/', explode(':', substr($request->photo_last, 0, strpos($request->photo_last, ';')))[1])[1];
 
         \Image::make($request->photo_main)->save(public_path('img/productImage/').$photoMain);
-        \Image::make($request->photo_second)->save(public_path('img/productImage/').$photoSecond);
-        \Image::make($request->photo_last)->save(public_path('img/productImage/').$photoLast);
+        // \Image::make($request->photo_second)->save(public_path('img/productImage/').$photoSecond);
+        // \Image::make($request->photo_last)->save(public_path('img/productImage/').$photoLast);
+
+        // $userId = auth('api')->user()->id;
 
 
         // For updating photo
@@ -57,18 +60,23 @@ class ProductController extends Controller
         // $photolast = $request->merge(['photo_last' => $photoLast]);
 
         return Product::create([
+            'user_id' => auth('api')->user()->id,
+            'category_id' => $request['category_id'],
+            'category_type_id' => $request['category_type_id'],
+            'brand_id' => $request['brand_id'],
             'name' => $request['name'],
             'price' => $request['price'],
             'size' => $request['size'],
-            'category' => $request['category'],
-            'category_type' => $request['category_type'],
             'email' => $request['email'],
             'address' => $request['address'],
             'description' => $request['description'],
             'photo_main' => $photoMain,
-            'photo_second' => $photoSecond,
-            'photo_last' => $photoLast,
+            // 'photo_second' => $photoSecond,
+            // 'photo_last' => $photoLast,
         ]);
+        // return User::create([
+
+        // ]);
     }
 
     /**
@@ -102,7 +110,20 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = auth('api')->user();
+
+        if($user){
+            $this->authorize('isAdminORDeveloper');
+
+            $product = Product::findOrFail($id);
+
+            // delete the user
+
+            $product->delete();
+        }
+        // Product::get()
+
+        return ['message' => 'User Deleted'];
     }
 
     public function search(){

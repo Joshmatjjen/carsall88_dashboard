@@ -80,7 +80,7 @@
             </router-link>
           </li>
 
-          @can('isAdminORAuthor')
+          @can('isAdminORDeveloper')
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-cog green"></i>
@@ -92,7 +92,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <router-link to="/users" class="nav-link">
-                  <i class="nav-icon fa fa-users"></i>
+                  <i class="nav-icon fa fa-users teal"></i>
                   <p>Users</p>
                 </router-link>
               </li>
@@ -107,9 +107,10 @@
           @endCan
 
           {{-- E-commerce Shop --}}
+
           <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-shopping-cart green"></i>
+                  <i class="nav-icon fas fa-store bright-green"></i>
                   <p>
                       Shop
                     <i class="right fa fa-angle-left"></i>
@@ -122,16 +123,35 @@
                       <p>Products</p>
                     </router-link>
                   </li>
+                  @can('isAdminORDeveloperORMechanic')
                   <li class="nav-item">
                     <router-link to="/productcategories" class="nav-link">
                       <i class="nav-icon fas fa-list-alt  pink"></i>
                       <p>Product Categories</p>
                     </router-link>
                   </li>
+
+                  <li class="nav-item">
+                    <router-link to="/productbrands" class="nav-link">
+                      <i class="nav-icon fas fa-tags  cyan"></i>
+                      <p>Brands</p>
+                    </router-link>
+                  </li>
+                  @endcan
+
+                  <li class="nav-item">
+                    <router-link to="/myproducts" class="nav-link">
+                      <i class="nav-icon fas fa-shopping-basket azur"></i>
+                      <p>My Products</p>
+                    </router-link>
+                  </li>
+
                 </ul>
               </li>
 
 
+
+              {{-- User Profile --}}
           <li class="nav-item">
             <router-link to="/profile" class="nav-link">
               <i class="nav-icon fas fa-user orange"></i>
