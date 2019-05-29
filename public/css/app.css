@@ -30688,6 +30688,29 @@ label:not(.form-check-label):not(.custom-file-label) {
   font-weight: normal;
 }
 
+/* Important part */
+
+.mod-dg {
+  overflow-y: initial !important;
+}
+
+.mod-bdy {
+  height: 650px;
+  overflow-y: auto;
+}
+
+.div-small-p-img .small-p-img {
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product-detail-img {
+  height: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 #product-details {
   left: 13%;
   height: 95vh;

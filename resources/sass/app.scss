@@ -18,18 +18,31 @@ $fa-font-path: "../webfonts";
 label:not(.form-check-label):not(.custom-file-label) {
     font-weight: normal;
 }
-
-// .modal-dialog,
-// .modal-content {
-//     /* 80% of window height */
-//     height: 80%;
+// .mod{
+//     display: block !important; /* I added this to see the modal, you don't need this */
 // }
 
-// .modal-body {
-//     /* 100% = dialog height, 120px = header + footer */
-//     max-height: calc(100% - 120px);
-//     overflow-y: scroll;
+/* Important part */
+.mod-dg{
+    overflow-y: initial !important
+}
+.mod-bdy{
+    height: 650px;
+    overflow-y: auto;
+}
+.div-small-p-img .small-p-img{
+    height: 100px;
+    object-fit: cover;
+}
+// .small-p-img{
+//     height: 100px;
+//     object-fit: cover;
+//     float: left;
 // }
+.product-detail-img{
+    height: 25vw;
+    object-fit: cover;
+}
 
 #product-details{
   left: 13%;

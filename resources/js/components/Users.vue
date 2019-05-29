@@ -1,5 +1,5 @@
 <template>
-    <div class="container" v-if="$gate.isAdminORAuthor()">
+    <div class="container" v-if="$gate.isAdminORDeveloper()">
         <div class="row mt-5">
           <div class="col-md-12">
             <div class="card">
@@ -53,7 +53,7 @@
         </div>
 
 
-        <div v-if="!$gate.isAdminORAuthor()">
+        <div v-if="!$gate.isAdminORDeveloper()">
             <not-found></not-found>
         </div>
 
@@ -104,8 +104,8 @@
                     class="form-control" :class="{ 'is-invalid': form.errors.has('type') }">
                         <option value="">Select User Role</option>
                         <option value="admin">Admin</option>
+                        <option value="mechanic">Mechanic</option>
                         <option value="user">Standard User</option>
-                        <option value="author">Author</option>
                     </select>
                     <has-error :form="form" field="type"></has-error>
                 </div>
@@ -215,7 +215,7 @@ import { setInterval } from 'timers';
                     })
             },
             loadUsers(){
-                if(this.$gate.isAdminORAuthor()){
+                if(this.$gate.isAdminORDeveloper()){
                     axios.get("api/user").then(({ data }) => (this.users = data));
                 }
 

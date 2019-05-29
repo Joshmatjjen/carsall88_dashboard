@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@chenfengyuan/vue-carousel": "^1.0.2",
         "admin-lte": "^3.0.0-alpha.2",
         "bootstrap-vue": "^2.0.0-rc.20",
         "laravel-vue-pagination": "^2.3.0",

@@ -163,9 +163,10 @@
                                         <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo_main">
                                     </a>
                                 </div>
-                                <div class="product-content text-center mt-4" v-for="category in categories.data" :key="category.id">
+                                <!-- v-for="category in categories.data" :key="category.id" -->
+                                <div class="product-content text-center mt-4" >
                                     <h6 class="title"><a href="#">category</a></h6>
-                                    <h4 class="title"><a href="#">{{product.name}}</a></h4>
+                                    <h5 class="title"><a href="#">{{product.name}}</a></h5>
 
                                     <div class="price"><strong>₦</strong>{{product.price}}</div>
                                 </div>
@@ -186,8 +187,8 @@
 
 <!-- ANCHOR : Modal -->
                 <!-- Modal Add New Product -->
-        <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal fade mod" id="addNew" tabindex="-1" role="dialog" scroll aria-labelledby="addNewLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mod-dg" role="document">
             <div class="modal-content">
             <div class="modal-header">
                 <h5 v-show="!editmode" class="modal-title" id="addNewLabel">Add New Product</h5>
@@ -199,7 +200,7 @@
 
             <!-- Form body Add New Product -->
             <form enctype="multipart/form-data" method="POST" @submit.prevent="editmode ? updateProduct() :createProduct() ">
-            <div class="modal-body">
+            <div class="modal-body mod-bdy">
                 <!-- Name -->
                 <div class="form-group">
                     <input v-model="form.name" type="text" name="name"
@@ -244,17 +245,22 @@
                 </div>
 
 
-                <div class="form-group">
-                    <b-form-select v-model="form.category_type_id" :options="cTOptions"
+                <!-- <div class="form-group"> -->
+                    <!-- <b-form-select v-model="form.category_type_id" :options="cTOptions"
                     :class="{ 'is-invalid': form.errors.has('category_type') }"></b-form-select>
-                    <has-error :form="form" field="category_type"></has-error>
+                    <has-error :form="form" field="category_type"></has-error> -->
+                    <div class="form-group">
+                    <b-form-select v-model="form.category_type_id" :options="cTOptions" name="category_type_id"
+                    :class="{ 'is-invalid': form.errors.has('category_type_id') }"></b-form-select>
+                    <has-error :form="form" field="category_type_id"></has-error>
                 </div>
+                <!-- </div> -->
 
                 <!-- Brands -->
                  <div class="form-group">
-                    <b-form-select v-model="form.brand_id" :options="brands" name="condition"
-                    :class="{ 'is-invalid': form.errors.has('condition') }"></b-form-select>
-                    <has-error :form="form" field="condition"></has-error>
+                    <b-form-select v-model="form.brand_id" :options="brands" name="brands"
+                    :class="{ 'is-invalid': form.errors.has('brands') }"></b-form-select>
+                    <has-error :form="form" field="brands"></has-error>
                 </div>
 
                 <!-- Size -->
@@ -293,19 +299,19 @@
 
                 <!-- Photo -->
                 <div class="form-group">
-                    Product Image:
+                    Product Image 1:
                             <input type="file" @change="addPhotoMain" name="photo_main" id="form-input">
                 </div>
 
-                <!-- <div class="form-group">
+                <div class="form-group" v-show="editmode">
                     Product Image 2:
                             <input type="file" @change="addPhotoMain" name="photo_second" id="form-input">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" v-show="editmode">
                     Product Image 3:
                             <input type="file" @change="addPhotoMain" name="photo_last" id="form-input">
-                </div> -->
+                </div>
 
 
             </div>
@@ -327,14 +333,19 @@
 
                 <div class="card-body">
                     <div class="bg-light-gray text-center">
-                        <img alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_main">
+
+                                <img class="product-detail-img" alt="Product" v-bind:src="'/img/productImage/' + selectedProductImage">
+                    </div>
+                    <div class="bg-light-gray div-small-p-img">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_main" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_main">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_second" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_second">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_last" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_last">
+                    </div>
+                    <div class="mt-2 mb-2 text-center">
                         <h3>{{selectedProduct.name}}</h3>
                     </div>
-                    <div class="text-center mt-4">
-                        <a href="#" class="btn btn-sm btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                        <a href="#" class="btn btn-sm btn-success"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-                    </div>
-                    <div class="border mt-4 mb-4">
+
+                    <div class="mt-4 mb-4">
                         <h4 class="m-b-0 m-t-20">Description</h4>
                         <p>{{selectedProduct.description}}</p>
                     </div>
@@ -420,10 +431,11 @@ let cTValues;
                 products: {},
                 categories: {},
                 selectedProduct: {},
+                selectedProductImage: {},
                 form: new Form({
                     id: '',
                     category_id: '',
-                    category_type: '',
+                    category_type_id: '',
                     brand_id: '',
                     name: '',
                     price: '',
@@ -437,6 +449,7 @@ let cTValues;
                     photo_last: ''
 
                 }),
+
                 brands : [
                     { value: '', text: 'Please select brand' },
                     { value: '1', text: 'Acura' },
@@ -454,12 +467,10 @@ let cTValues;
         },
 
         methods: {
-            //  productDetails(product){
-            //     this.selectedProductId.fill(product);
-            // },
 
             showProduct(productId) {
                 this.selectedProduct = productId;
+                this.selectedProductImage = this.selectedProduct.photo_main;
                 // console.log(this.selectedProductId);
             },
             addPhotoMain(e) {
@@ -612,6 +623,7 @@ let cTValues;
                 this.form.reset();
                 $('#addNew').modal('show');
                 this.form.fill(product);
+
             },
 
 
@@ -712,7 +724,7 @@ let cTValues;
                 this.loadUser();
             });
             // setInterval(()=> this.loadUsers(), 3000);
-        }
+        },
     }
 
 </script>
