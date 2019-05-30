@@ -97,6 +97,13 @@
                     <has-error :form="form" field="bio"></has-error>
                 </div>
 
+                <div class="form-group">
+                    <textarea v-model="form.address" name="address" id="address"
+                    placeholder="Place Of Work Address"
+                    class="form-control" :class="{ 'is-invalid': form.errors.has('address') }"></textarea>
+                    <has-error :form="form" field="address"></has-error>
+                </div>
+
                 <!-- Type -->
                 <div class="form-group">
                     <select v-model="form.type" name="type" id="type"
@@ -145,6 +152,7 @@ import { setInterval } from 'timers';
                     password: '',
                     type: '',
                     bio: '',
+                    address: '',
                     photo: ''
 
                 })

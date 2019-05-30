@@ -6,8 +6,8 @@
             <div class="d-flex align-items-center">
                   <h2 class="card-title">Products</h2>
                     <div class="mx-auto input-group px-4">
-                        <input type="text" class="form-control br-tl-7 br-bl-7" placeholder="Search products....">
-                        <button type="button" class="btn btn-primary br-tr-7 br-br-7 input-group-btn">
+                        <input type="search" @keyup="searchit" v-model="searchP" class="form-control br-tl-7 br-bl-7" placeholder="Search products....">
+                        <button type="button" @click="searchit" class="btn btn-primary br-tr-7 br-br-7 input-group-btn">
                         <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -173,8 +173,8 @@
                                 <ul class="icons">
                                      <!-- <b-button  variant="primary">xl modal</b-button> -->
                                     <li id="p-view"><a href="#" v-b-modal.product-details @click="showProduct(product)" v-b-tooltip.hover title="View Product"><i class="fa fa-eye"></i></a></li>
-                                    <li id="p-edit"><a href="#" v-b-tooltip.hover title="Edit Product" @click="editModal(product)" data-tip="Edit Product"><i class="fa fa-edit"></i></a></li>
-                                    <li id="p-delete"><a href="#" v-b-tooltip.hover title="Delete Product"><i class="fa fa-trash-alt"></i></a></li>
+                                    <li v-if="$gate.isAdminORDeveloper()" id="p-edit"><a href="#" v-b-tooltip.hover title="Edit Product" @click="editModal(product)" data-tip="Edit Product"><i class="fa fa-edit"></i></a></li>
+                                    <li v-if="$gate.isAdminORDeveloper()" id="p-delete"><a href="#" @click="deleteProduct(product.id)" v-b-tooltip.hover title="Delete Product"><i class="fa fa-trash-alt"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -462,11 +462,15 @@ let cTValues;
 
                 ],
                 cTOptions: cTValues,
+                searchP: ''
 
             }
         },
 
         methods: {
+            searchit: _.debounce(() => {
+            Fire.$emit('searching');
+            }, 1000),
 
             showProduct(productId) {
                 this.selectedProduct = productId;
@@ -708,9 +712,10 @@ let cTValues;
         created() {
             Fire.$on('searching', () => {
                 let query = this.$parent.search;
+                query = this.searchP;
                 axios.get('api/findProduct?q=' + query)
                 .then((data) => {
-                    this.product = data.data
+                    this.products = data.data
                 })
                 .catch(() => {
 

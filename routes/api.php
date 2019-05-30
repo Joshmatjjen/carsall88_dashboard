@@ -24,5 +24,6 @@ Route::get('findUser', 'API\UserController@search');
 Route::put('profile', 'API\UserController@updateProfile');
 
 Route::apiResources(['product'=>'API\ProductController']);
-Route::get('findPrduct', 'API\ProductController@search');
+Route::get('findProduct', 'API\ProductController@search');
+Route::get('myProducts', 'API\ProductController@myProducts');
 

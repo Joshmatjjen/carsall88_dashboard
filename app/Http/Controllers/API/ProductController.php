@@ -25,9 +25,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper')){
+        if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper') || \Gate::allows('isMechanic') || \Gate::allows('isUser')){
             return Product::latest()->paginate(20);
         }
+
     }
 
     /**
@@ -79,6 +80,14 @@ class ProductController extends Controller
         // ]);
     }
 
+    public function myProducts(){
+        $user = auth('api')->user()->id;
+        if(auth('api')->user()){
+            return Product::where('user_id', $user)->latest()->paginate(20);
+        }
+        // return auth('api')->user();
+    }
+
     /**
      * Display the specified resource.
      *
@@ -99,7 +108,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::findOrFail($id);
+
+        $this->validate($request,[
+            'name' => 'required|string|max:191',
+        ]);
+
+        $product->update($request->all());
+
+        return ['message' => 'Updated the product info'];
     }
 
     /**
@@ -131,7 +148,7 @@ class ProductController extends Controller
         if($search = \Request::get('q')){
             $products = Product::where(function($query) use ($search){
                 $query->where('name','LIKE',"%$search%");
-                // ->orWhere('','LIKE',"%$search%")
+                // ->orWhere('','LIKE',"%$search%");
                 // ->orWhere('type','LIKE',"%$search%");
             })->paginate(10);
         }else {

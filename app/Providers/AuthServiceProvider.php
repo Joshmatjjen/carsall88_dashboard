@@ -35,7 +35,7 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define('isMechanic', function($user){
-            return $user->type === 'Mechanic';
+            return $user->type === 'mechanic';
         });
 
         Gate::define('isUser', function($user){
