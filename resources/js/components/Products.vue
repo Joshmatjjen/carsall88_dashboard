@@ -246,13 +246,13 @@
 
 
                 <!-- <div class="form-group"> -->
-                    <!-- <b-form-select v-model="form.category_type_id" :options="cTOptions"
+                    <!-- <b-form-select v-model="form.subcategory_id" :options="cTOptions"
                     :class="{ 'is-invalid': form.errors.has('category_type') }"></b-form-select>
                     <has-error :form="form" field="category_type"></has-error> -->
                     <div class="form-group">
-                    <b-form-select v-model="form.category_type_id" :options="cTOptions" name="category_type_id"
-                    :class="{ 'is-invalid': form.errors.has('category_type_id') }"></b-form-select>
-                    <has-error :form="form" field="category_type_id"></has-error>
+                    <b-form-select v-model="form.subcategory_id" :options="cTOptions" name="subcategory_id"
+                    :class="{ 'is-invalid': form.errors.has('subcategory_id') }"></b-form-select>
+                    <has-error :form="form" field="subcategory_id"></has-error>
                 </div>
                 <!-- </div> -->
 
@@ -435,7 +435,7 @@ let cTValues;
                 form: new Form({
                     id: '',
                     category_id: '',
-                    category_type_id: '',
+                    subcategory_id: '',
                     brand_id: '',
                     name: '',
                     price: '',

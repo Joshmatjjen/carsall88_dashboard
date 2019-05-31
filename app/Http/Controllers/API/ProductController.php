@@ -63,7 +63,7 @@ class ProductController extends Controller
         return Product::create([
             'user_id' => auth('api')->user()->id,
             'category_id' => $request['category_id'],
-            'category_type_id' => $request['category_type_id'],
+            'subcategory_id' => $request['subcategory_id'],
             'brand_id' => $request['brand_id'],
             'name' => $request['name'],
             'price' => $request['price'],

@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class CreateCategoriesTypeTable extends Migration
+class CreateSubCategoriesTable extends Migration
 {
     use SoftDeletes;
     /**
@@ -15,14 +15,15 @@ class CreateCategoriesTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories_type', function (Blueprint $table) {
+        Schema::create('subcategories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('categories_id')->unsigned();
-            $table->foreign('categories_id' )
-            ->references( 'id' )->on( 'categories' )
+            $table->bigInteger('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories')
             ->onDelete( 'cascade' )
             ->onUpdate( 'cascade' );
             $table->string('name', 20);
+            $table->string('photo', 50)->default('noimage.png');
+            $table->mediumText('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -35,6 +36,6 @@ class CreateCategoriesTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories_type');
+        Schema::dropIfExists('subcategories');
     }
 }

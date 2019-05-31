@@ -19,7 +19,9 @@ class CreateCategoriesTable extends Migration
         Schema::enableForeignKeyConstraints();
         Schema::create('categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string( 'name', 200 );
+            $table->string( 'name', 20 );
+            $table->string( 'photo', 20 )->default('noimage.png');
+            $table->mediumText('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

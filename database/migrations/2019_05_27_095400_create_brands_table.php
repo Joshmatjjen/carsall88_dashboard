@@ -20,11 +20,7 @@ class CreateBrandsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('logo');
-            $table->bigInteger('type')->unsigned();
-            $table->foreign('type' )
-            ->references( 'id' )->on( 'categories' )
-            ->onDelete( 'cascade' )
-            ->onUpdate( 'cascade' );
+            $table->mediumText('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

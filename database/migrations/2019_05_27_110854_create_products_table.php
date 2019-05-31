@@ -24,8 +24,8 @@ class CreateProductsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories')
             ->onDelete( 'cascade' )
             ->onUpdate( 'cascade' );
-            $table->bigInteger('category_type_id')->unsigned();
-            $table->foreign('category_type_id')->references('id')->on('categories_type')
+            $table->bigInteger('subcategory_id')->unsigned();
+            $table->foreign('subcategory_id')->references('id')->on('subcategories')
             ->onDelete( 'cascade' )
             ->onUpdate( 'cascade' );
             $table->bigInteger('brand_id')->unsigned();

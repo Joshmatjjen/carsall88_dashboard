@@ -16,6 +16,7 @@ class CategoriesTableSeeder extends Seeder
         foreach ( $categories as $category ) {
             DB::table( 'categories' )->insert( [
                 'name'       => trim( strtolower( $category ) ),
+                'photo' => $category.'.png',
                 'created_at' => Carbon::now(),
             ] );
         }

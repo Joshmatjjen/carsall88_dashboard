@@ -27,3 +27,5 @@ Route::apiResources(['product'=>'API\ProductController']);
 Route::get('findProduct', 'API\ProductController@search');
 Route::get('myProducts', 'API\ProductController@myProducts');
 
+Route::apiResources(['brand'=>'API\BrandController']);
+
