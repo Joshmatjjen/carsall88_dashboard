@@ -95739,9 +95739,7 @@ var render = function() {
                         _c("a", { attrs: { href: "#" } }, [
                           _c("img", {
                             staticClass: "img-fluid",
-                            attrs: {
-                              src: "/img/productImage/" + brand.photo_main
-                            }
+                            attrs: { src: "/img/BrandLogo/" + brand.logo }
                           })
                         ])
                       ]),
