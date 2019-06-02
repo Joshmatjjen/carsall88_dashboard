@@ -187,7 +187,7 @@
 
 <!-- ANCHOR : Modal -->
                 <!-- Modal Add New Product -->
-        <div class="modal fade mod" id="addNew" tabindex="-1" role="dialog" scroll aria-labelledby="addNewLabel" aria-hidden="true">
+        <div class="modal fade mod" id="addNew" tabindex="-1" role="dialog"  aria-labelledby="addNewLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered mod-dg" role="document">
             <div class="modal-content">
             <div class="modal-header">
@@ -237,30 +237,56 @@
                     <select v-model="form.category_id" name="category" id="category" @change="onChange($event)"
                     class="form-control">
                         <option  value="">Select Product Category</option>
-                        <option  value="1" >Cars</option>
-                        <option  value="2" >Cars Part</option>
-                        <option  value="3" >Cars Accessories</option>
+                         <option v-for="category in categories" v-bind:key="category.id" v-bind:value="category.id" class="form-control">{{category.name}}</option>
+
                     </select>
 
                 </div>
 
 
-                <!-- <div class="form-group"> -->
-                    <!-- <b-form-select v-model="form.subcategory_id" :options="cTOptions"
-                    :class="{ 'is-invalid': form.errors.has('category_type') }"></b-form-select>
-                    <has-error :form="form" field="category_type"></has-error> -->
-                    <div class="form-group">
-                    <b-form-select v-model="form.subcategory_id" :options="cTOptions" name="subcategory_id"
-                    :class="{ 'is-invalid': form.errors.has('subcategory_id') }"></b-form-select>
-                    <has-error :form="form" field="subcategory_id"></has-error>
+                <!-- SubCategory -->
+                <div class="form-group">
+                    <select v-model="form.subcategory_id" name="category" id="category" @change="onChange($event)"
+                    class="form-control">
+                        <option  value="">Select Product Category Type</option>
+                         <option v-for="subcategory in cTOptions" v-bind:key="subcategory.id" v-bind:value="subcategory.id" class="form-control">{{subcategory.name}}</option>
+
+                    </select>
+
                 </div>
                 <!-- </div> -->
 
+                <!-- Colour -->
+                <div class="form-group" v-if="form.category_id != 2 || form.category_id != 3">
+                    <select name="colour" v-model="form.color" class="form-control">
+                        <option value="">Select Colour</option>
+                        <option v-for="color in colours" v-bind:key="color" v-bind:value="color" class="form-control">{{color}}</option>
+                    </select>
+                </div>
+
                 <!-- Brands -->
-                 <div class="form-group">
-                    <b-form-select v-model="form.brand_id" :options="brands" name="brands"
-                    :class="{ 'is-invalid': form.errors.has('brands') }"></b-form-select>
-                    <has-error :form="form" field="brands"></has-error>
+                <div class="form-group">
+                    <select name="brand" v-model="form.brand_id" class="form-control">
+                        <option value="">Select Brand</option>
+                        <option v-for="brand in brands" v-bind:key="brand.id" v-bind:value="brand.id" class="form-control">{{brand.name}}</option>
+                    </select>
+                </div>
+
+
+                <!-- Model -->
+                <div class="form-group">
+                    <input v-model="form.model" type="text" name="model"
+                    placeholder="Model Name"
+                    class="form-control" :class="{ 'is-invalid': form.errors.has('model') }">
+                    <has-error :form="form" field="model"></has-error>
+                </div>
+
+                <!-- Year -->
+                <div class="form-group">
+                    <select name="year" v-model="form.year" class="form-control">
+                        <option value="">Year:</option>
+                        <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
+                    </select>
                 </div>
 
                 <!-- Size -->
@@ -272,20 +298,20 @@
                 </div>
 
                 <!-- Email -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <input v-model="form.email" type="email" name="email"
                     placeholder="Email Address"
                     class="form-control" :class="{ 'is-invalid': form.errors.has('email') }">
                     <has-error :form="form" field="email"></has-error>
-                </div>
+                </div> -->
 
                 <!-- Address -->
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <input v-model="form.address" type="address" name="address"
                     placeholder="Address"
                     class="form-control" :class="{ 'is-invalid': form.errors.has('address') }">
                     <has-error :form="form" field="address"></has-error>
-                </div>
+                </div> -->
 
                 <!-- Description -->
                 <div class="form-group">
@@ -303,15 +329,21 @@
                             <input type="file" @change="addPhotoMain" name="photo_main" id="form-input">
                 </div>
 
-                <div class="form-group" v-show="editmode">
+                <div class="form-group">
                     Product Image 2:
                             <input type="file" @change="addPhotoMain" name="photo_second" id="form-input">
                 </div>
 
-                <div class="form-group" v-show="editmode">
+                <div class="form-group">
                     Product Image 3:
                             <input type="file" @change="addPhotoMain" name="photo_last" id="form-input">
                 </div>
+
+                <div class="form-group">
+                    Product Image 4:
+                            <input type="file" @change="addPhotoMain" name="photo_last" id="form-input">
+                </div>
+
 
 
             </div>
@@ -430,6 +462,9 @@ let cTValues;
                 user: {},
                 products: {},
                 categories: {},
+                subcategories: {},
+                brands: {},
+                selectedBrand: {},
                 selectedProduct: {},
                 selectedProductImage: {},
                 form: new Form({
@@ -439,31 +474,36 @@ let cTValues;
                     brand_id: '',
                     name: '',
                     price: '',
+                    color: '',
+                    model: '',
+                    year: '',
                     size: '',
                     email: '',
                     address: '',
                     condition: '',
                     description: '',
-                    photo_main: '',
-                    photo_second: '',
-                    photo_last: ''
+                    photo1: '',
+                    photo2: '',
+                    photo3: '',
+                    photo4: '',
 
                 }),
 
-                brands : [
-                    { value: '', text: 'Please select brand' },
-                    { value: '1', text: 'Acura' },
-                    { value: '2', text: 'Audi' },
-
-                ],
                 condition : [
-                    { value: 'new', text: 'New' },
-                    { value: 'used', text: 'Used' },
+                    { value: 'Brand New', text: 'Brand New' },
+                    { value: 'Used/Tokunbo', text: 'Used/Tokunbo' },
 
                 ],
+                colours: ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"],
                 cTOptions: cTValues,
                 searchP: ''
 
+            }
+        },
+        computed : {
+            years () {
+            const year = new Date().getFullYear()
+            return Array.from({length: year - 1900}, (value, index) => 1901 + index)
             }
         },
 
@@ -488,10 +528,11 @@ let cTValues;
             if(file['size'] < 2111775){
                 reader.onloadend = (file) => {
 
-                this.form.photo_main = reader.result;
-                // this.form.photo_second = reader.result;
-                // this.form.photo_last = reader.result;
-                console.log('RESULT', reader.result)
+                this.form.photo1 = reader.result;
+                this.form.photo2 = reader.result;
+                this.form.photo3 = reader.result;
+                this.form.photo4 = reader.result;
+                console.log('RESULT', this.form.photo1, this.form.photo2, this.form.photo3);
 
                 }
 
@@ -508,90 +549,35 @@ let cTValues;
 
         },
 
-        // addPhotoSecond(f) {
-        //     // console.log("uploading");
-        //     // Converting image to base64
-        //     let file = f.target.files[0];
-        //     // console.log(file);
-        //     var reader = new FileReader();
-
-        //     // Check if the file size us less than 2mb
-        //     if(file['size'] < 2111775){
-        //         reader.onloadend = (file) => {
-        //         // console.log('RESULT', reader.result)
-        //         this.form.photo_second = reader.result;
-
-        //         console.log('RESULT', reader.result)
-        //         }
-
-        //         reader.readAsDataURL(file);
-
-
-        //     }else{
-        //         swal.fire(
-        //             'Ooops....',
-        //             'Your are uploading a large file',
-        //             'error'
-        //         )
-        //     }
-
-
-        // },
-
-
-
             onChange(event) {
                 if(event.target.value === "1"){
                     console.log('cars: Correct');
 
+                    this.cTOptions = this.subcategories.filter(function (obj) {
+                        return obj.category_id === 1;
+                    });
 
-                    this.cTOptions = [
-                    { value: '', text: 'Please select car type' },
-                    { value: 1, text: 'SUV' },
-                    { value: 2, text: 'Truck' },
-                    { value: 3, text: 'Sedan' },
-                    { value: 4, text: 'Van'},
-                    { value: 5, text: 'Coupe'},
-                    { value: 6, text: 'Wagon'},
-                    { value: 7, text: 'Convertible'},
-                    { value: 8, text: 'Sport Car'},
-                    { value: 9, text: 'Diesel'},
-                    { value: 10, text: 'Crossover'},
-                    { value: 11, text: 'Luxury Car'},
-                    { value: 12, text: 'Hybrid/Electric'},
-                    { value: 13, text: 'Certified Pre-Owned'},
-                ]
+                        // this.cTOptions = this.subcategories.find(x => x.all.category_id = 1);
+
+
                 console.log(this.options);
 
                 }
                 else if(event.target.value === "2"){
                     console.log('car parts: Correct')
 
-                    this.cTOptions = [
-                    { value: '', text: 'Please select car parts' },
-                    { value: 'Bonnet', text: 'Oil' },
-                    { value: 'plug', text: 'plug' },
-                    // { value: { brain_box: '3.1' }, text: 'brain box' },
-                    { value: 'brain_box' , text: 'brain box' },
-                    { value: 'wheel', text: 'Wheel'}
-                    // { value: 'wheel', text: 'Wheel', disabled: true }
-                ]
-                    console.log(this.options);
+                    this.cTOptions = this.subcategories.filter(function (obj) {
+                        return obj.category_id === 2;
+                    });
+                    console.log(this.cTOptions);
                 }
                 else if(event.target.value === "3"){
 
-                    this.cTOptions = [
-                    { value: '', text: 'Please select car accessories' },
-                    { value: 'oil', text: 'Oil' },
-                    { value: 'plug', text: 'plug' },
-                    // { value: { brain_box: '3.1' }, text: 'brain box' },
-                    { value: 'brain_box' , text: 'brain box' },
-                    { value: 'wheel', text: 'Wheel'}
-                    // { value: 'wheel', text: 'Wheel', disabled: true }
+                    this.cTOptions = this.subcategories.filter(function (obj) {
+                        return obj.category_id === 3;
+                    });
 
-                ]
-
-                console.log(this.options);
+                console.log(this.cTOptions);
 
                 }
 
@@ -675,9 +661,21 @@ let cTValues;
 
             loadCategory(){
                 // if(this.$gate.isAdminORAuthor()){
-                    axios.get("api/categories")
-                    .then(({ data }) => (this.category = data));
+                    axios.get("api/allCategories")
+                    .then(({ data }) => (this.categories = data));
 
+            },
+
+            loadSubCategory(){
+                // if(this.$gate.isAdminORAuthor()){
+                    axios.get("api/allSubCategories")
+                    .then(({ data }) => (this.subcategories = data));
+
+            },
+
+            loadBrand(){
+                axios.get("api/allBrands")
+                .then(({data}) => (this.brands = data))
             },
 
             loadUser(){
@@ -722,7 +720,10 @@ let cTValues;
                 })
             })
             this.loadProducts();
+            this.loadCategory();
+            this.loadSubCategory();
             this.loadUser();
+            this.loadBrand();
             // on listen to trigger a function
             Fire.$on('ActionCreate',() => {
                 this.loadProducts();

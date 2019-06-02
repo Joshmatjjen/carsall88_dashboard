@@ -31,6 +31,9 @@ class BrandController extends Controller
         }
     }
 
+    public function allBrands(){
+        return Brand::all();
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -83,5 +86,20 @@ class BrandController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function search(){
+
+        if($search = \Request::get('q')){
+            $brands = Brand::where(function($query) use ($search){
+                $query->where('name','LIKE',"%$search%");
+                // ->orWhere('','LIKE',"%$search%");
+                // ->orWhere('type','LIKE',"%$search%");
+            })->paginate(10);
+        }else {
+            $brands = Brand::latest()->paginate(10);
+        }
+
+        return $brands;
     }
 }

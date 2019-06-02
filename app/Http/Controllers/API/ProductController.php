@@ -5,6 +5,8 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Product;
+use App\Brand;
+use App\Http\Controllers\API\BrandController;
 use Laravel\Passport\Bridge\User;
 
 class ProductController extends Controller
@@ -41,24 +43,41 @@ class ProductController extends Controller
     {
         $this->validate($request,[
             'name' => 'required|string|max:191',
-            'address' => 'required|string|max:191',
+            'price' => 'required'
         ]);
 
-        $photoMain = 'product-main' . time().'.' . explode('/', explode(':', substr($request->photo_main, 0, strpos($request->photo_main, ';')))[1])[1];
-        // $photoSecond = 'product-second' . time().'.' . explode('/', explode(':', substr($request->photo_second, 0, strpos($request->photo_second, ';')))[1])[1];
-        // $photoLast = 'product-last' . time().'.' . explode('/', explode(':', substr($request->photo_last, 0, strpos($request->photo_last, ';')))[1])[1];
 
-        \Image::make($request->photo_main)->save(public_path('img/productImage/').$photoMain);
-        // \Image::make($request->photo_second)->save(public_path('img/productImage/').$photoSecond);
-        // \Image::make($request->photo_last)->save(public_path('img/productImage/').$photoLast);
+
+        if($request->photo1 != null){
+            $photo1 = 'product-main' . time().'.' . explode('/', explode(':', substr($request->photo1, 0, strpos($request->photo1, ';')))[1])[1];
+        }
+
+        if($request->photo1 != null){
+            $photo2 = 'product-second' . time().'.' . explode('/', explode(':', substr($request->photo2, 0, strpos($request->photo2, ';')))[1])[1];
+        }
+
+        if($request->photo1 != null){
+            $photo3 = 'product-last' . time().'.' . explode('/', explode(':', substr($request->photo3, 0, strpos($request->photo3, ';')))[1])[1];
+        }
+
+        if($request->photo1 != null){
+        $photo4 = 'product-last' . time().'.' . explode('/', explode(':', substr($request->photo4, 0, strpos($request->photo4, ';')))[1])[1];
+        }
+
+
+        \Image::make($request->photo1)->save(public_path('img/productImage/').$photo1);
+        \Image::make($request->photo2)->save(public_path('img/productImage/').$photo2);
+        \Image::make($request->photo3)->save(public_path('img/productImage/').$photo3);
+        \Image::make($request->photo4)->save(public_path('img/productImage/').$photo4);
 
         // $userId = auth('api')->user()->id;
 
+        $photo1;$photo2;$photo3;$photo4;
 
         // For updating photo
-        // $photomain = $request->merge(['photo_main' => $photoMain]);
+        // $photo1 = $request->merge(['photo_main' => $photo1]);
         // $photosecond = $request->merge(['photo_second' => $photoSecond]);
-        // $photolast = $request->merge(['photo_last' => $photoLast]);
+        // $photolast = $request->merge(['photo3' => $photo3]);
 
         return Product::create([
             'user_id' => auth('api')->user()->id,
@@ -67,13 +86,17 @@ class ProductController extends Controller
             'brand_id' => $request['brand_id'],
             'name' => $request['name'],
             'price' => $request['price'],
+            'model' => $request['model'],
+            'year' => $request['year'],
             'size' => $request['size'],
             'email' => $request['email'],
             'address' => $request['address'],
             'description' => $request['description'],
-            'photo_main' => $photoMain,
-            // 'photo_second' => $photoSecond,
-            // 'photo_last' => $photoLast,
+            'photo1' => $photo1,
+            'photo2' => $photo2,
+            'photo3' => $photo3,
+            'photo4' => $photo4,
+
         ]);
         // return User::create([
 
@@ -157,4 +180,11 @@ class ProductController extends Controller
 
         return $products;
     }
+
+    // public function brandsItem(Request $name){
+    //     $brand = BrandControllers($name);
+    //     // $brandName = Brand::fildORFail($name);
+
+    //     return $brand;
+    // }
 }

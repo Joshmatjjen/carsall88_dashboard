@@ -26,6 +26,15 @@ Route::put('profile', 'API\UserController@updateProfile');
 Route::apiResources(['product'=>'API\ProductController']);
 Route::get('findProduct', 'API\ProductController@search');
 Route::get('myProducts', 'API\ProductController@myProducts');
+Route::get('brandsItem', 'API\ProductController@brandsItem');
+
+Route::apiResources(['category'=>'API\CategoryController']);
+Route::get('allCategories', 'API\CategoryController@allCategories');
+
+Route::apiResources(['subcategory'=>'API\SubCategoryController']);
+Route::get('allSubCategories', 'API\SubCategoryController@allSubCategories');
 
 Route::apiResources(['brand'=>'API\BrandController']);
+Route::get('findBrand', 'API\BrandController@search');
+Route::get('allBrands', 'API\BrandController@allBrands');
 

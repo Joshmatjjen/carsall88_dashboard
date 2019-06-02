@@ -17,158 +17,22 @@
 
             </div>
         </div>
-        <div class="row row-cards justify-content-center">
+        <!-- <div class="row row-cards justify-content-center"> -->
 
-            <div class="col-lg-3">
+
+        <div class="col-lg-12">
                 <div class="row">
-                    <div class="col-md-12 col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-title"> Categories</div>
-                            </div>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label class="form-label mt-0">Mens</label>
-                                    <select name="beast" id="select-beast" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Foot wear</option>
-                                        <option value="2">Top wear</option>
-                                        <option value="3">Bootom wear</option>
-                                        <option value="4">Men's Groming</option>
-                                        <option value="5">Accessories</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Women</label>
-                                    <select name="beast" id="select-beast1" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Western wear</option>
-                                        <option value="2">Foot wear</option>
-                                        <option value="3">Top wear</option>
-                                        <option value="4">Bootom wear</option>
-                                        <option value="5">Beuty Groming</option>
-                                        <option value="6">Accessories</option>
-                                        <option value="7">jewellery</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Baby &amp; Kids</label>
-                                    <select name="beast" id="select-beast2" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Boys clothing</option>
-                                        <option value="2">girls Clothing</option>
-                                        <option value="3">Toys</option>
-                                        <option value="4">Baby Care</option>
-                                        <option value="5">Kids footwear</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Electronics</label>
-                                    <select name="beast" id="select-beast3" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Mobiles</option>
-                                        <option value="2">Laptops</option>
-                                        <option value="3">Gaming &amp; Accessories</option>
-                                        <option value="4">Health care Appliances</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <label class="form-label">Sport,Books &amp; More </label>
-                                    <select name="beast" id="select-beast4" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Stationery</option>
-                                        <option value="2">Books</option>
-                                        <option value="3">Gaming</option>
-                                        <option value="4">Music</option>
-                                        <option value="5">Exercise &amp; fitness</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-group-item">
-                                <header class="card-header">
-                                    <h2 class="card-title">Brands </h2>
-                                </header>
-                                <div class="filter-content">
-                                    <div class="card-body">
-                                        <form>
-                                            <label class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Mersedes Benz
-                                                </span>
-                                            </label> <!-- form-check.// -->
-                                            <label class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Nissan Altima
-                                                </span>
-                                            </label> <!-- form-check.// -->
-                                            <label class="form-check mb-0">
-                                                <input class="form-check-input" type="checkbox" value="">
-                                                <span class="form-check-label">
-                                                    Another Brand
-                                                </span>
-                                            </label> <!-- form-check.// -->
-                                        </form>
-                                    </div> <!-- card-body.// -->
-                                </div>
-                            </div> <!-- card-group-item.// -->
-                        </div>
-                        <div class="card">
-                            <div class="card-group-item">
-                                <header class="card-header">
-                                    <h2 class="card-title">Choose type </h2>
-                                </header>
-                                <div class="filter-content">
-                                    <div class="card-body">
-                                        <label class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                                            <span class="form-check-label">
-                                                First hand items
-                                            </span>
-                                        </label>
-                                        <label class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                                            <span class="form-check-label">
-                                                Brand new items
-                                            </span>
-                                        </label>
-                                        <label class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadio" value="">
-                                            <span class="form-check-label">
-                                                Some other option
-                                            </span>
-                                        </label>
-                                    </div> <!-- card-body.// -->
-                                </div>
-                            </div> <!-- card-group-item.// -->
-                        </div>
-                        <a href="#" class="btn btn-primary btn-block mb-3 ">Search</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-        <div class="col-lg-9">
-
-                <div class="row">
-                    <div class="col-lg-6 col-xl-4 col-md-12" v-for="brand in brands.data" :key="brand.id">
+                    <div class="col-sm-4 col-lg-3" v-for="brand in brands.data" :key="brand.id">
                         <div class="card item-card">
                             <div class="product-grid  card-body">
                                 <div class="product-image">
                                     <a href="#">
-                                        <img class="img-fluid" v-bind:src="'/img/BrandLogo/' + brand.logo">
+                                        <img class="product-img" v-bind:src="'/img/BrandLogo/' + brand.logo">
                                     </a>
                                 </div>
                                 <!-- v-for="category in categories.data" :key="category.id" -->
                                 <div class="product-content text-center mt-4" >
-                                    <h6 class="title"><a href="#">category</a></h6>
                                     <h5 class="title"><a href="#">{{brand.name}}</a></h5>
-
-                                    <div class="price"><strong>₦</strong>{{brand.price}}</div>
                                 </div>
                                 <ul class="icons">
                                      <!-- <b-button  variant="primary">xl modal</b-button> -->
@@ -314,7 +178,7 @@
 
                 <!-- Pagination -->
                 <div class="mb-3 ">
-                    <div class="float-right">
+                    <div class="float-left">
                         <ul class="pagination ">
                             <div class="card-footer">
                   <pagination :data="brands" @pagination-change-page="getResults"></pagination>
@@ -325,7 +189,7 @@
             </div>
         </div>
         </div>
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>
@@ -391,7 +255,7 @@ let cTValues;
 
 
             getResults(page = 1) {
-			    axios.get('api/?page=' + page)
+			    axios.get('api/brand?page=' + page)
 				.then(response => {
 					this.brands = response.data;
 				});
@@ -516,136 +380,3 @@ let cTValues;
     }
 
 </script>
-
-
-
-
-
-
-
-// import { setInterval } from 'timers';
-//     export default {
-//         data() {
-//             return {
-//                 editmode: false,
-//                 brands: {},
-//                 form: new Form({
-//                     id: '',
-//                     name: '',
-//                     logo: '',
-//                     type: '',
-
-//                 })
-//             }
-//         },
-//         methods: {
-//             getResults(page = 1) {
-// 			    axios.get('api/brand?page=' + page)
-// 				.then(response => {
-// 					this.brands = response.data;
-// 				});
-//             },
-//             updateBrand(){
-//                 this.$Progress.start();
-//                 this.form.put('api/brand/'+this.form.id)
-//                 .then(()=>{
-//                     $('#addNew').modal('hide');
-//                     swal.fire(
-//                         'Updated!',
-//                         'Information has been updated.',
-//                         'success'
-//                     )
-//                     this.$Progress.finish();
-//                     Fire.$emit('ActionCreate');
-
-//                 })
-//                 .catch(()=>{
-//                     this.$Progress.fail();
-//                 })
-//             },
-//             editModal(brand){
-//                 this.editmode = true;
-//                 this.form.reset();
-//                 $('#addNew').modal('show');
-//                 this.form.fill(brand);
-//             },
-//             newModal(){
-//                 this.editmode = false;
-//                 this.form.reset();
-//                 $('#addNew').modal('show');
-//             },
-//             deleteBrand(id){
-//                 swal.fire({
-//                     title: 'Are you sure?',
-//                     text: "You won't be able to revert this!",
-//                     type: 'warning',
-//                     showCancelButton: true,
-//                     confirmButtonColor: '#3085d6',
-//                     cancelButtonColor: '#d33',
-//                     confirmButtonText: 'Yes, delete it!'
-//                     }).then((result) => {
-//                         // Send request to the server
-//                     if (result.value) {
-//                         this.form.delete('api/brand/'+id)
-//                         .then(()=>{
-
-//                             swal.fire(
-//                                 'Deleted!',
-//                                 'Your file has been deleted.',
-//                                 'success'
-//                             )
-//                             Fire.$emit('ActionCreate');
-//                             })
-//                         .catch(()=>{
-//                             swal("Failed!", "There was something wrong.", "warning");
-//                         })
-//                     }
-//                     })
-//             },
-//             loadBrands(){
-//                 if(this.$gate.isAdminORDeveloper()){
-//                     axios.get("api/brand").then(({ data }) => (this.brands = data));
-//                 }
-
-//             },
-//             createBrand(){
-//                 this.$Progress.start();
-//                 // this.form.photo = 'profile.png'
-//                 this.form.post('api/brand')
-//                 .then(()=>{
-//                     // emit create an event
-//                     Fire.$emit('ActionCreate');
-//                     $('#addNew').modal('hide');
-
-//                     toast.fire({
-//                         type: 'success',
-//                         title: 'Signed in successfully'
-//                         })
-//                     this.$Progress.finish();
-//                 })
-//                 .catch(()=>{
-//                     this.$Progress.fail();
-//                 })
-
-//             }
-//         },
-//         created() {
-//             Fire.$on('searching', () => {
-//                 let query = this.$parent.search;
-//                 axios.get('api/findBrand?q=' + query)
-//                 .then((data) => {
-//                     this.brands = data.data
-//                 })
-//                 .catch(() => {
-
-//                 })
-//             })
-//             this.loadBrands();
-//             // on listen to trigger a function
-//             Fire.$on('ActionCreate',() => {
-//                 this.loadBrands();
-//             });
-//             // setInterval(()=> this.loadBrands(), 3000);
-//         }
-//     }
-// </script>

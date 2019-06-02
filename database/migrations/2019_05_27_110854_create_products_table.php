@@ -24,8 +24,8 @@ class CreateProductsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories')
             ->onDelete( 'cascade' )
             ->onUpdate( 'cascade' );
-            $table->bigInteger('subcategory_id')->unsigned();
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')
+            $table->bigInteger('sub_category_id')->unsigned();
+            $table->foreign('sub_category_id')->references('id')->on('sub_categories')
             ->onDelete( 'cascade' )
             ->onUpdate( 'cascade' );
             $table->bigInteger('brand_id')->unsigned();
@@ -34,14 +34,17 @@ class CreateProductsTable extends Migration
             ->onUpdate( 'cascade' );
             $table->string('name');
             $table->bigInteger('price');
+            $table->string('model')->nullable();
+            $table->Integer('year')->nullable();
             $table->string('condition')->nullable();
             $table->string('size')->nullable();
             $table->string('email');
             $table->string('address');
             $table->mediumText('description')->nullable();
-            $table->string('photo_main')->default('product-placeholder.jpg');
-            $table->string('photo_second')->default('product-placeholder.jpg');
-            $table->string('photo_last')->default('product-placeholder.jpg');
+            $table->string('photo1')->default('product-placeholder.jpg');
+            $table->string('photo2')->default('product-placeholder.jpg');
+            $table->string('photo3')->default('product-placeholder.jpg');
+            $table->string('photo4')->default('product-placeholder.jpg');
             $table->timestamps();
             $table->softDeletes();
         });
