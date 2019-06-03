@@ -35,6 +35,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->bigInteger('price');
             $table->string('model')->nullable();
+            $table->string('colour')->nullable();
             $table->Integer('year')->nullable();
             $table->string('condition')->nullable();
             $table->string('size')->nullable();

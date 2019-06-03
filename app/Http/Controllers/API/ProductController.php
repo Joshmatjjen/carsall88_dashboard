@@ -28,7 +28,7 @@ class ProductController extends Controller
     public function index()
     {
         if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper') || \Gate::allows('isMechanic') || \Gate::allows('isUser')){
-            return Product::latest()->paginate(20);
+            return Product::with('user', 'category', 'subcategory', 'brand')->latest()->paginate(20);
         }
 
     }
@@ -48,31 +48,50 @@ class ProductController extends Controller
 
 
 
-        if($request->photo1 != null){
-            $photo1 = 'product-main' . time().'.' . explode('/', explode(':', substr($request->photo1, 0, strpos($request->photo1, ';')))[1])[1];
+        if($request->photo1 != ''){
+            $photo1 = 'photo1-' . time().'.' . explode('/', explode(':', substr($request->photo1, 0, strpos($request->photo1, ';')))[1])[1];
+            \Image::make($request->photo1)->save(public_path('img/productImage/').$photo1);
+        }else{
+            $request->photo1 = 'product-placeholder.jpg';
+            $photo1 = $request->photo1;
         }
 
-        if($request->photo1 != null){
-            $photo2 = 'product-second' . time().'.' . explode('/', explode(':', substr($request->photo2, 0, strpos($request->photo2, ';')))[1])[1];
+        if($request->photo2 != ''){
+            $photo2 = 'photo2-' . time().'.' . explode('/', explode(':', substr($request->photo2, 0, strpos($request->photo2, ';')))[1])[1];
+            \Image::make($request->photo2)->save(public_path('img/productImage/').$photo2);
+        }else{
+            $request->photo2 = 'product-placeholder.jpg';
+            $photo2 = $request->photo2;
         }
 
-        if($request->photo1 != null){
-            $photo3 = 'product-last' . time().'.' . explode('/', explode(':', substr($request->photo3, 0, strpos($request->photo3, ';')))[1])[1];
+        if($request->photo3 != ''){
+            $photo3 = 'photo3-' . time().'.' . explode('/', explode(':', substr($request->photo3, 0, strpos($request->photo3, ';')))[1])[1];
+            \Image::make($request->photo3)->save(public_path('img/productImage/').$photo3);
+        }else{
+            $request->photo3 = 'product-placeholder.jpg';
+            $photo3 = $request->photo3;
         }
 
-        if($request->photo1 != null){
-        $photo4 = 'product-last' . time().'.' . explode('/', explode(':', substr($request->photo4, 0, strpos($request->photo4, ';')))[1])[1];
-        }
-
-
-        \Image::make($request->photo1)->save(public_path('img/productImage/').$photo1);
-        \Image::make($request->photo2)->save(public_path('img/productImage/').$photo2);
-        \Image::make($request->photo3)->save(public_path('img/productImage/').$photo3);
+        if($request->photo4 != ''){
+        $photo4 = 'photo4-' . time().'.' . explode('/', explode(':', substr($request->photo4, 0, strpos($request->photo4, ';')))[1])[1];
         \Image::make($request->photo4)->save(public_path('img/productImage/').$photo4);
+        }else{
+            $request->photo4 = 'product-placeholder.jpg';
+            $photo4= $request->photo4;
+        }
+
+
+
+
+
+
 
         // $userId = auth('api')->user()->id;
 
-        $photo1;$photo2;$photo3;$photo4;
+        // $photo1 = $request->photo1;
+        // $photo2 = $request->photo2;
+        // $photo3 = $request->photo3;
+        // $photo4 = $request->photo4;
 
         // For updating photo
         // $photo1 = $request->merge(['photo_main' => $photo1]);
@@ -82,11 +101,12 @@ class ProductController extends Controller
         return Product::create([
             'user_id' => auth('api')->user()->id,
             'category_id' => $request['category_id'],
-            'subcategory_id' => $request['subcategory_id'],
+            'sub_category_id' => $request['sub_category_id'],
             'brand_id' => $request['brand_id'],
             'name' => $request['name'],
             'price' => $request['price'],
             'model' => $request['model'],
+            'colour' => $request['colour'],
             'year' => $request['year'],
             'size' => $request['size'],
             'email' => $request['email'],

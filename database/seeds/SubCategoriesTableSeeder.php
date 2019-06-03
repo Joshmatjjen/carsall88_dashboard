@@ -15,7 +15,7 @@ class SubCategoriesTableSeeder extends Seeder
         $categories_cars = [ 'SUV', 'Truck', 'Sedan', 'Van', 'Coupe', 'Wagon', 'Convertible', 'Sport Car', 'Diesel', 'Crossover', 'Luxury Car', 'Hybrid/Electric', 'Certified Pre-Owned'];
         foreach ( $categories_cars as $subcategory1 ) {
             DB::table( 'sub_categories' )->insert( [
-                'name'       => trim( strtolower( $subcategory1) ),
+                'name'       => $subcategory1,
                 'category_id' => 1,
                 'photo' => $subcategory1.'.png',
                 'created_at' => Carbon::now(),
@@ -26,7 +26,7 @@ class SubCategoriesTableSeeder extends Seeder
 
         foreach ( $categories_car_parts as $subcategory2 ) {
             DB::table( 'sub_categories' )->insert( [
-                'name'       => trim( strtolower( $subcategory2) ),
+                'name'       => $subcategory2,
                 'category_id' => 2,
                 'photo' => $subcategory2.'.png',
                 'created_at' => Carbon::now(),

@@ -160,12 +160,12 @@
                             <div class="product-grid  card-body">
                                 <div class="product-image">
                                     <a href="#">
-                                        <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo_main">
+                                        <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo1">
                                     </a>
                                 </div>
                                 <!-- v-for="category in categories.data" :key="category.id" -->
                                 <div class="product-content text-center mt-4" >
-                                    <h6 class="title"><a href="#">category</a></h6>
+                                    <h6 class="title"><a href="#">{{product.category_id.name}}</a></h6>
                                     <h5 class="title"><a href="#">{{product.name}}</a></h5>
 
                                     <div class="price"><strong>₦</strong>{{product.price}}</div>
@@ -217,20 +217,6 @@
                     <has-error :form="form" field="price"></has-error>
                 </div>
 
-                <!-- Condtion -->
-                 <div class="form-group">
-                    <!-- <b-form-group label="Condition"> -->
-                    <b-form-radio-group v-model="form.condition" id="brand" :options="condition"
-                    name="brand" :class="{ 'is-invalid': form.errors.has('brand') }">
-                    </b-form-radio-group>
-
-                    <!-- </b-form-group> -->
-                    <!-- <b-form-select  :options="condition" name="brand"
-                    ></b-form-select> -->
-                    <has-error :form="form" field="brand"></has-error>
-                </div>
-
-
                 <!-- Type -->
 
                 <div class="form-group">
@@ -246,7 +232,7 @@
 
                 <!-- SubCategory -->
                 <div class="form-group">
-                    <select v-model="form.subcategory_id" name="category" id="category" @change="onChange($event)"
+                    <select v-model="form.sub_category_id" name="sub_category" id="sub_category"
                     class="form-control">
                         <option  value="">Select Product Category Type</option>
                          <option v-for="subcategory in cTOptions" v-bind:key="subcategory.id" v-bind:value="subcategory.id" class="form-control">{{subcategory.name}}</option>
@@ -258,7 +244,7 @@
 
                 <!-- Colour -->
                 <div class="form-group" v-if="form.category_id != 2 || form.category_id != 3">
-                    <select name="colour" v-model="form.color" class="form-control">
+                    <select name="colour" v-model="form.colour" class="form-control">
                         <option value="">Select Colour</option>
                         <option v-for="color in colours" v-bind:key="color" v-bind:value="color" class="form-control">{{color}}</option>
                     </select>
@@ -272,6 +258,22 @@
                     </select>
                 </div>
 
+                <div class="form-group">
+                    <!-- <b-form-group label="Condition"> -->
+                    <b-form-radio-group v-model="form.condition" id="brand" :options="condition"
+                    name="brand" :class="{ 'is-invalid': form.errors.has('brand') }">
+                    </b-form-radio-group>
+                    <has-error :form="form" field="brand"></has-error>
+                </div>
+
+                <!-- Transmision -->
+                <div class="form-group">
+                    <!-- <b-form-group label="Condition"> -->
+                    <b-form-radio-group label="Condition" v-model="form.transmission" id="transmission" :options="transmission"
+                    name="transmission" :class="{ 'is-invalid': form.errors.has('transmission') }">
+                    </b-form-radio-group>
+                    <has-error :form="form" field="transmission"></has-error>
+                </div>
 
                 <!-- Model -->
                 <div class="form-group">
@@ -326,22 +328,22 @@
                 <!-- Photo -->
                 <div class="form-group">
                     Product Image 1:
-                            <input type="file" @change="addPhotoMain" name="photo_main" id="form-input">
+                            <input type="file" @change="addPhoto1" name="photo1" id="form-input">
                 </div>
 
                 <div class="form-group">
                     Product Image 2:
-                            <input type="file" @change="addPhotoMain" name="photo_second" id="form-input">
+                            <input type="file" @change="addPhoto2" name="photo2" id="form-input">
                 </div>
 
                 <div class="form-group">
                     Product Image 3:
-                            <input type="file" @change="addPhotoMain" name="photo_last" id="form-input">
+                            <input type="file" @change="addPhoto3" name="photo3" id="form-input">
                 </div>
 
                 <div class="form-group">
                     Product Image 4:
-                            <input type="file" @change="addPhotoMain" name="photo_last" id="form-input">
+                            <input type="file" @change="addPhoto4" name="photo3" id="form-input">
                 </div>
 
 
@@ -369,9 +371,10 @@
                                 <img class="product-detail-img" alt="Product" v-bind:src="'/img/productImage/' + selectedProductImage">
                     </div>
                     <div class="bg-light-gray div-small-p-img">
-                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_main" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_main">
-                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_second" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_second">
-                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_last" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_last">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo1" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo1">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo2" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo2">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo3" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo3">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo4" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo4">
                     </div>
                     <div class="mt-2 mb-2 text-center">
                         <h3>{{selectedProduct.name}}</h3>
@@ -462,7 +465,7 @@ let cTValues;
                 user: {},
                 products: {},
                 categories: {},
-                subcategories: {},
+                sub_categories: {},
                 brands: {},
                 selectedBrand: {},
                 selectedProduct: {},
@@ -470,12 +473,13 @@ let cTValues;
                 form: new Form({
                     id: '',
                     category_id: '',
-                    subcategory_id: '',
+                    sub_category_id: '',
                     brand_id: '',
                     name: '',
                     price: '',
-                    color: '',
+                    colour: '',
                     model: '',
+                    transmission: '',
                     year: '',
                     size: '',
                     email: '',
@@ -494,6 +498,10 @@ let cTValues;
                     { value: 'Used/Tokunbo', text: 'Used/Tokunbo' },
 
                 ],
+                transmission: [
+                    { value: 'Automatic', text: 'Automatic' },
+                    { value: 'Manual', text: 'Manual' },
+                ],
                 colours: ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"],
                 cTOptions: cTValues,
                 searchP: ''
@@ -503,7 +511,7 @@ let cTValues;
         computed : {
             years () {
             const year = new Date().getFullYear()
-            return Array.from({length: year - 1900}, (value, index) => 1901 + index)
+            return Array.from({length: year - 1980}, (value, index) => 1980 + index)
             }
         },
 
@@ -514,11 +522,10 @@ let cTValues;
 
             showProduct(productId) {
                 this.selectedProduct = productId;
-                this.selectedProductImage = this.selectedProduct.photo_main;
+                this.selectedProductImage = this.selectedProduct.photo1;
                 // console.log(this.selectedProductId);
             },
-            addPhotoMain(e) {
-            // console.log("uploading");
+            addPhoto1(e) {
             // Converting image to base64
             let file = e.target.files[0];
             // console.log(file);
@@ -529,11 +536,82 @@ let cTValues;
                 reader.onloadend = (file) => {
 
                 this.form.photo1 = reader.result;
-                this.form.photo2 = reader.result;
-                this.form.photo3 = reader.result;
-                this.form.photo4 = reader.result;
-                console.log('RESULT', this.form.photo1, this.form.photo2, this.form.photo3);
+                }
 
+                reader.readAsDataURL(file);
+
+            }else{
+                swal.fire(
+                    'Ooops....',
+                    'Your are uploading a large file',
+                    'error'
+                )
+            }
+
+
+        },
+        addPhoto2(e) {
+            // Converting image to base64
+            let file = e.target.files[0];
+            // console.log(file);
+            var reader = new FileReader();
+
+            // Check if the file size us less than 2mb
+            if(file['size'] < 2111775){
+                reader.onloadend = (file) => {
+
+                this.form.photo2 = reader.result;
+
+                // console.log('RESULT', this.form.photo1, this.form.photo2, this.form.photo3);
+                }
+
+                reader.readAsDataURL(file);
+
+            }else{
+                swal.fire(
+                    'Ooops....',
+                    'Your are uploading a large file',
+                    'error'
+                )
+            }
+
+
+        },
+        addPhoto3(e) {
+            // Converting image to base64
+            let file = e.target.files[0];
+            // console.log(file);
+            var reader = new FileReader();
+
+            // Check if the file size us less than 2mb
+            if(file['size'] < 2111775){
+                reader.onloadend = (file) => {
+                this.form.photo3 = reader.result;
+                }
+
+                reader.readAsDataURL(file);
+
+            }else{
+                swal.fire(
+                    'Ooops....',
+                    'Your are uploading a large file',
+                    'error'
+                )
+            }
+
+
+        },
+        addPhoto4(e) {
+            // Converting image to base64
+            let file = e.target.files[0];
+            // console.log(file);
+            var reader = new FileReader();
+
+            // Check if the file size us less than 2mb
+            if(file['size'] < 2111775){
+                reader.onloadend = (file) => {
+
+                this.form.photo4 = reader.result;
                 }
 
                 reader.readAsDataURL(file);
