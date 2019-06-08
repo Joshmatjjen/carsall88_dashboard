@@ -18,7 +18,6 @@
                     <th>Photo</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Type</th>
                     <th>Registered At</th>
                     <th>Modify</th>
                   </tr>
@@ -29,7 +28,6 @@
                     <td><img class="profile-user-img img-fluid img-circle" v-bind:src="'/img/profile/' + user.photo" alt="User profile picture"></td>
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
-                    <td>{{user.type | upText}}</td>
                     <td>{{user.created_at | myDate}}</td>
                     <td>
                         <a href="#" @click="editModal(user)">
@@ -150,7 +148,6 @@ import { setInterval } from 'timers';
                     name: '',
                     email: '',
                     password: '',
-                    type: '',
                     bio: '',
                     address: '',
                     photo: ''
@@ -224,7 +221,7 @@ import { setInterval } from 'timers';
             },
             loadUsers(){
                 if(this.$gate.isAdminORDeveloper()){
-                    axios.get("api/user").then(({ data }) => (this.users = data));
+                    axios.get("api/mechanic").then(({ data }) => (this.users = data));
                 }
 
             },

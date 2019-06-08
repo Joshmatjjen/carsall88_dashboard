@@ -58,7 +58,7 @@ class UserController extends Controller
     }
 
     public function mechanic(){
-        return User::where('type', 'mechanic')->get();
+        return User::where('type', 'mechanic')->latest()->paginate(20);
     }
 
     public function updateProfile(Request $request)

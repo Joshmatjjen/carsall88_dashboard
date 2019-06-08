@@ -14,17 +14,42 @@ $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
 $red: #e3342f;
-$orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
+$light-orange: #f6993f;
+$orange: #fd7e14;
+$light-yellow: #ffed4a;
+$yellow:#ffc107;
+$green: #28a745;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $avacado: #568203;
 $azur: #007FFF;
 $bright-green: #66FF00;
 $blue-violet: #8A2BE2;
+$success:#28a745;
+$warning:#ffc107;
+$info:#17a2b8;
+$danger:#dc3545;
+$light:#f8f9fa;
+$dark:#343a40;
 
-
+.success{
+    color: $success;
+}
+.warning{
+    color: $warning;
+}
+.info{
+    color: $info;
+}
+.danger{
+    color: $danger;
+}
+.light{
+    color: $light;
+}
+.dark{
+    color: $dark
+}
 .black{
     color: $black;
 }
@@ -63,8 +88,14 @@ $blue-violet: #8A2BE2;
 .orange{
     color: $orange;
 }
+.light-orange{
+    color: $light-orange;
+}
 .yellow{
     color: $yellow;
+}
+.light-yellow{
+    color: $light-yellow;
 }
 .green{
     color: $green;

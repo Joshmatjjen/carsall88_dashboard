@@ -2009,8 +2009,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2022,7 +2020,6 @@ __webpack_require__.r(__webpack_exports__);
         name: '',
         email: '',
         password: '',
-        type: '',
         bio: '',
         address: '',
         photo: ''
@@ -2091,7 +2088,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this4 = this;
 
       if (this.$gate.isAdminORDeveloper()) {
-        axios.get("api/user").then(function (_ref) {
+        axios.get("api/mechanic").then(function (_ref) {
           var data = _ref.data;
           return _this4.users = data;
         });
@@ -94268,10 +94265,6 @@ var render = function() {
                           _c("td", [_vm._v(_vm._s(user.email))]),
                           _vm._v(" "),
                           _c("td", [
-                            _vm._v(_vm._s(_vm._f("upText")(user.type)))
-                          ]),
-                          _vm._v(" "),
-                          _c("td", [
                             _vm._v(_vm._s(_vm._f("myDate")(user.created_at)))
                           ]),
                           _vm._v(" "),
@@ -94758,8 +94751,6 @@ var staticRenderFns = [
       _c("th", [_vm._v("Name")]),
       _vm._v(" "),
       _c("th", [_vm._v("Email")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("Type")]),
       _vm._v(" "),
       _c("th", [_vm._v("Registered At")]),
       _vm._v(" "),

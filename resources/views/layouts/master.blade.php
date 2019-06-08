@@ -102,21 +102,15 @@
                   <p>Developer</p>
                 </router-link>
               </li>
-              <li class="nav-item">
-                <router-link to="/mechanic" class="nav-link">
-                  <i class="nav-icon fas fa-wrench blue"></i>
-                  <p>Mechanic</p>
-                </router-link>
-              </li>
             </ul>
           </li>
           @endCan
 
 
-          @can('isAdminORDeveloper')
+          @can('isAdminORDeveloperORMechanic')
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-car-mechanic green"></i>
+              <i class="nav-icon fas fa-car-mechanic cyan"></i>
               <p>
                   Car Mechanic
                 <i class="right fas fa-angle-left"></i>
@@ -124,7 +118,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <router-link to="/users" class="nav-link">
+                <router-link to="/mechanic" class="nav-link">
                   <i class="nav-icon fas fa-user-hard-hat teal"></i>
                   <p>Mechanics</p>
                 </router-link>
