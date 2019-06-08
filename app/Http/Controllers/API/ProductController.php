@@ -107,6 +107,8 @@ class ProductController extends Controller
             'price' => $request['price'],
             'model' => $request['model'],
             'colour' => $request['colour'],
+            'transmission' => $request['transmission'],
+            'fuel_type' => $request['fuel_type'],
             'year' => $request['year'],
             'size' => $request['size'],
             'email' => $request['email'],
@@ -190,9 +192,9 @@ class ProductController extends Controller
 
         if($search = \Request::get('q')){
             $products = Product::where(function($query) use ($search){
-                $query->where('name','LIKE',"%$search%");
-                // ->orWhere('','LIKE',"%$search%");
-                // ->orWhere('type','LIKE',"%$search%");
+                $query->where('name','LIKE',"%$search%")
+                ->orWhere('category_id','LIKE',"%$search%")
+                ->orWhere('sub_category_id','LIKE',"%$search%");
             })->paginate(10);
         }else {
             $products = Product::latest()->paginate(10);

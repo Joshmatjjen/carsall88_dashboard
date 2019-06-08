@@ -10,9 +10,21 @@ $fa-font-path: "../webfonts";
 @import '~bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
 @import '~admin-lte/dist/css/adminlte.css';
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../fontawesome-pro-5.8.2-web/scss/fontawesome.scss";
+@import "../fontawesome-pro-5.8.2-web/scss/solid.scss";
+@import "../fontawesome-pro-5.8.2-web/scss/regular.scss";
+@import "../fontawesome-pro-5.8.2-web/scss/light.scss";
+@import "../fontawesome-pro-5.8.2-web/scss/brands.scss";
+@import "../fontawesome-pro-5.8.2-web/scss/v4-shims.scss";
+
+// NodeMudules path
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "~@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+// Package.json path
+// "@fortawesome/fontawesome-free": "^5.8.2",
+
 
 // For Condition Bootstrap radio
 label:not(.form-check-label):not(.custom-file-label) {
@@ -22,6 +34,10 @@ label:not(.form-check-label):not(.custom-file-label) {
 //     // display: block !important; /* I added this to see the modal, you don't need this */
 // }
 
+.c-bdy {
+    flex: 1 1 auto;
+    padding: 0.5rem;
+}
 
 
 /* Important part */
@@ -31,23 +47,37 @@ label:not(.form-check-label):not(.custom-file-label) {
 .mod-bdy{
     height: 450px;
     overflow-y: auto;
+    padding: 0;
 }
-.div-small-p-img .small-p-img{
+.small-p-img{
     height: 100px;
+    width: 24.5%;
+    padding: 5px 0;
     object-fit: cover;
+}
+.small-p-img :hover{
+    background: black;
+    opacity: 0.4;
 }
 // .small-p-img{
 //     height: 100px;
 //     object-fit: cover;
 //     float: left;
 // }
-// .product-img{
-//     width:  100px;
-//     height: 100px;
-//     // background-position: 50% 50%;
-// }
+
+.div-small-p-img img:hover {
+    -webkit-filter: brightness(50%);
+}
+
+
+.product-img{
+    height: 100px;
+    width:  100%;
+
+}
 .product-detail-img{
     height: 25vw;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -60,10 +90,21 @@ label:not(.form-check-label):not(.custom-file-label) {
     background-color: #3f51b5;
     color: $white !important;
 }
+.brand-sm-img {
+    width: 25px;
+}
 .profile-user-img {
     width: 50px;
 }
 
+.item-card .product-img {
+    width: 100%;
+    height: 220px;
+    // object-fit: cover;
+    // font-family: Georgia, 'Times New Roman', Times, serif
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    // font-family: Verdana, Geneva, Tahoma, sans-serif
+}
 
 .item-card img:hover {
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
@@ -71,13 +112,20 @@ label:not(.form-check-label):not(.custom-file-label) {
 }
 .item-card img {
     width: 100%;
-    height: 150px;
+    height: 140px;
     // object-fit: cover;
+    // font-family: Georgia, 'Times New Roman', Times, serif
+    // font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    // font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.product-grid{
+    flex: 1 1 auto;
+    padding: 0.6rem;
 }
 .product-grid .product-content {
     text-align: center;
     transition: all .5s ease 0s;
-    padding: 15px;
+    padding: 0 15px;
     border: 1px solid #eaeaea;
 }
 
@@ -86,7 +134,7 @@ label:not(.form-check-label):not(.custom-file-label) {
 }
 .product-grid:hover .icons {
     opacity: 1;
-    bottom: 33px;
+    bottom: 35px;
 }
 .product-grid .icons {
     padding: 0;

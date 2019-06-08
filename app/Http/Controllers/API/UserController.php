@@ -57,6 +57,10 @@ class UserController extends Controller
         ]);
     }
 
+    public function mechanic(){
+        return User::where('type', 'mechanic')->get();
+    }
+
     public function updateProfile(Request $request)
     {
         $user = auth('api')->user();

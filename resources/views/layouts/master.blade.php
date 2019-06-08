@@ -102,6 +102,40 @@
                   <p>Developer</p>
                 </router-link>
               </li>
+              <li class="nav-item">
+                <router-link to="/mechanic" class="nav-link">
+                  <i class="nav-icon fas fa-wrench blue"></i>
+                  <p>Mechanic</p>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+          @endCan
+
+
+          @can('isAdminORDeveloper')
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-car-mechanic green"></i>
+              <p>
+                  Car Mechanic
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <router-link to="/users" class="nav-link">
+                  <i class="nav-icon fas fa-user-hard-hat teal"></i>
+                  <p>Mechanics</p>
+                </router-link>
+              </li>
+              <li class="nav-item">
+                <router-link to="/services" class="nav-link">
+                  <i class="nav-icon fas fa-cogs pink"></i>
+                  <p>Services</p>
+                </router-link>
+              </li>
+
             </ul>
           </li>
           @endCan
@@ -125,9 +159,16 @@
                   </li>
                   @can('isAdminORDeveloperORMechanic')
                   <li class="nav-item">
-                    <router-link to="/productcategories" class="nav-link">
-                      <i class="nav-icon fas fa-list-alt  pink"></i>
+                    <router-link to="/product_categories" class="nav-link">
+                      <i class="nav-icon fas fa-list  pink"></i>
                       <p>Product Categories</p>
+                    </router-link>
+                  </li>
+
+                  <li class="nav-item">
+                    <router-link to="/product_subcategories" class="nav-link">
+                      <i class="nav-icon fab fa-hubspot yellow"></i>
+                      <p>Product SubCategories</p>
                     </router-link>
                   </li>
 

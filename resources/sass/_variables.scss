@@ -7,6 +7,7 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
+$black: #000;
 $white: #fff;
 $blue: #299af7;
 $indigo: #6574cd;
@@ -24,6 +25,9 @@ $bright-green: #66FF00;
 $blue-violet: #8A2BE2;
 
 
+.black{
+    color: $black;
+}
 .avacado{
     color: $avacado;
 }

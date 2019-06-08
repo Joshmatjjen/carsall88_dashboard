@@ -160,7 +160,7 @@
                             <div class="product-grid  card-body">
                                 <div class="product-image">
                                     <a href="#">
-                                        <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo_main">
+                                        <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo1">
                                     </a>
                                 </div>
                                 <!-- v-for="category in categories.data" :key="category.id" -->

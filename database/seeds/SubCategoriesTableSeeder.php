@@ -12,7 +12,7 @@ class SubCategoriesTableSeeder extends Seeder
      */
     public function run()
     {
-        $categories_cars = [ 'SUV', 'Truck', 'Sedan', 'Van', 'Coupe', 'Wagon', 'Convertible', 'Sport Car', 'Diesel', 'Crossover', 'Luxury Car', 'Hybrid/Electric', 'Certified Pre-Owned'];
+        $categories_cars = [ 'Convertible', 'Coupe', 'Crossover', 'Hatchback', 'Hybrid_Electric', 'Limousine', 'Luxury Car', 'Minivan', 'Pickup Truck', 'Roadster', 'Sedan', 'Sport Car', 'SUV', 'Truck',  'Van', 'Wagon'];
         foreach ( $categories_cars as $subcategory1 ) {
             DB::table( 'sub_categories' )->insert( [
                 'name'       => $subcategory1,

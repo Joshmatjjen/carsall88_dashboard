@@ -28,61 +28,33 @@
                             </div>
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label class="form-label mt-0">Mens</label>
-                                    <select name="beast" id="select-beast" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Foot wear</option>
-                                        <option value="2">Top wear</option>
-                                        <option value="3">Bootom wear</option>
-                                        <option value="4">Men's Groming</option>
-                                        <option value="5">Accessories</option>
+                                    <label class="form-label mt-0">Cars</label>
+                                    <select v-model="searchP" name="sub_category" id="sub_category" class="form-control custom-select">
+                                        <option value="">--Select--</option>
+                                        <option v-for="subcategory in cars_cat" v-bind:key="subcategory.id"
+                                            v-bind:value="subcategory.category_id" class="form-control">{{subcategory.name}}
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Women</label>
-                                    <select name="beast" id="select-beast1" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Western wear</option>
-                                        <option value="2">Foot wear</option>
-                                        <option value="3">Top wear</option>
-                                        <option value="4">Bootom wear</option>
-                                        <option value="5">Beuty Groming</option>
-                                        <option value="6">Accessories</option>
-                                        <option value="7">jewellery</option>
+                                    <label class="form-label">Car Parts</label>
+                                    <select v-model="searchP" name="sub_category" id="sub_category" class="form-control custom-select">
+                                        <option value="">--Select--</option>
+                                        <option v-for="subcategory in carP_cat" v-bind:key="subcategory.id"
+                                            v-bind:value="subcategory.category_id" class="form-control">{{subcategory.name}}
+                                        </option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Baby &amp; Kids</label>
+                                    <label class="form-label">Car Accessories</label>
                                     <select name="beast" id="select-beast2" class="form-control custom-select">
                                         <option value="0">--Select--</option>
-                                        <option value="1">Boys clothing</option>
-                                        <option value="2">girls Clothing</option>
-                                        <option value="3">Toys</option>
-                                        <option value="4">Baby Care</option>
-                                        <option value="5">Kids footwear</option>
+                                        <option v-for="subcategory in carA_cat" v-bind:key="subcategory.id"
+                                            v-bind:value="subcategory.id" class="form-control">{{subcategory.name}}
+                                        </option>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">Electronics</label>
-                                    <select name="beast" id="select-beast3" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Mobiles</option>
-                                        <option value="2">Laptops</option>
-                                        <option value="3">Gaming &amp; Accessories</option>
-                                        <option value="4">Health care Appliances</option>
-                                    </select>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <label class="form-label">Sport,Books &amp; More </label>
-                                    <select name="beast" id="select-beast4" class="form-control custom-select">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Stationery</option>
-                                        <option value="2">Books</option>
-                                        <option value="3">Gaming</option>
-                                        <option value="4">Music</option>
-                                        <option value="5">Exercise &amp; fitness</option>
-                                    </select>
-                                </div>
+
                             </div>
                         </div>
                         <div class="card">
@@ -157,7 +129,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-xl-4 col-md-12" v-for="product in products.data" :key="product.id">
                         <div class="card item-card">
-                            <div class="product-grid  card-body">
+                            <div class="product-grid">
                                 <div class="product-image">
                                     <a href="#">
                                         <img class="img-fluid" v-bind:src="'/img/productImage/' + product.photo1">
@@ -165,10 +137,11 @@
                                 </div>
                                 <!-- v-for="category in categories.data" :key="category.id" -->
                                 <div class="product-content text-center mt-4" >
-                                    <h6 class="title"><a href="#">{{product.category_id.name}}</a></h6>
+                                    <h6 class="title green" v-if="product.category"><a href="#">{{product.category.name}}</a></h6>
                                     <h5 class="title"><a href="#">{{product.name}}</a></h5>
 
-                                    <div class="price"><strong>₦</strong>{{product.price}}</div>
+                                    <div class="price red" style="font-size:19px; font-family:Tahoma;">₦{{formatPrice(product.price)}}</div>
+                                    <h6 class="" v-if="product.user">By {{product.user.name}}</h6>
                                 </div>
                                 <ul class="icons">
                                      <!-- <b-button  variant="primary">xl modal</b-button> -->
@@ -243,7 +216,7 @@
                 <!-- </div> -->
 
                 <!-- Colour -->
-                <div class="form-group" v-if="form.category_id != 2 || form.category_id != 3">
+                <div class="form-group" v-if="form.category_id != 2 && form.category_id != 3">
                     <select name="colour" v-model="form.colour" class="form-control">
                         <option value="">Select Colour</option>
                         <option v-for="color in colours" v-bind:key="color" v-bind:value="color" class="form-control">{{color}}</option>
@@ -259,26 +232,38 @@
                 </div>
 
                 <div class="form-group">
-                    <!-- <b-form-group label="Condition"> -->
+                    <b-form-group label="Condition: ">
                     <b-form-radio-group v-model="form.condition" id="brand" :options="condition"
                     name="brand" :class="{ 'is-invalid': form.errors.has('brand') }">
                     </b-form-radio-group>
                     <has-error :form="form" field="brand"></has-error>
+                    </b-form-group>
                 </div>
 
                 <!-- Transmision -->
-                <div class="form-group">
-                    <!-- <b-form-group label="Condition"> -->
-                    <b-form-radio-group label="Condition" v-model="form.transmission" id="transmission" :options="transmission"
+                <div class="form-group" v-if="form.category_id != 2 && form.category_id != 3">
+                    <b-form-group label="Transmission: ">
+                    <b-form-radio-group  v-model="form.transmission" id="transmission" :options="transmission"
                     name="transmission" :class="{ 'is-invalid': form.errors.has('transmission') }">
                     </b-form-radio-group>
                     <has-error :form="form" field="transmission"></has-error>
+                    </b-form-group>
+                </div>
+
+                <!-- Fuel Type -->
+                <div class="form-group" v-if="form.category_id != 2 && form.category_id != 3">
+                    <b-form-group label="Fuel Type: ">
+                    <b-form-radio-group v-model="form.fuel_type" id="fuel_type" :options="fuelType"
+                    name="fuel_type" :class="{ 'is-invalid': form.errors.has('fuel_type') }">
+                    </b-form-radio-group>
+                    <has-error :form="form" field="fuel_type"></has-error>
+                    </b-form-group>
                 </div>
 
                 <!-- Model -->
                 <div class="form-group">
                     <input v-model="form.model" type="text" name="model"
-                    placeholder="Model Name"
+                    placeholder="Model Details"
                     class="form-control" :class="{ 'is-invalid': form.errors.has('model') }">
                     <has-error :form="form" field="model"></has-error>
                 </div>
@@ -298,22 +283,6 @@
                     class="form-control" :class="{ 'is-invalid': form.errors.has('size') }">
                     <has-error :form="form" field="size"></has-error>
                 </div>
-
-                <!-- Email -->
-                <!-- <div class="form-group">
-                    <input v-model="form.email" type="email" name="email"
-                    placeholder="Email Address"
-                    class="form-control" :class="{ 'is-invalid': form.errors.has('email') }">
-                    <has-error :form="form" field="email"></has-error>
-                </div> -->
-
-                <!-- Address -->
-                <!-- <div class="form-group">
-                    <input v-model="form.address" type="address" name="address"
-                    placeholder="Address"
-                    class="form-control" :class="{ 'is-invalid': form.errors.has('address') }">
-                    <has-error :form="form" field="address"></has-error>
-                </div> -->
 
                 <!-- Description -->
                 <div class="form-group">
@@ -377,7 +346,8 @@
                         <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo4" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo4">
                     </div>
                     <div class="mt-2 mb-2 text-center">
-                        <h3>{{selectedProduct.name}}</h3>
+                        <h3 style="font-family: Georgia;" class="p-1 blue">{{selectedProduct.name}}</h3>
+                        <h4 style="font-family: Arial Narrow;" class="p-1 red"><strong>₦{{formatPrice(selectedProduct.price)}}</strong></h4>
                     </div>
 
                     <div class="mt-4 mb-4">
@@ -390,48 +360,34 @@
                         <ul class="list-unstyled mb-0 border-bottom-0">
                             <li class="row border-bottom-0">
                                 <div class="col-sm-3 text-muted mb-2">Brand</div>
-                                <div class="col-sm-3 mb-2">Fas-track</div>
-                            </li>
-                            <li class=" row border-bottom-0">
-                                <div class="col-sm-3 text-muted mb-2">Model Number</div>
-                                <div class="col-sm-3 mb-2">RDF016</div>
+                                <div class="col-sm-3 mb-2" v-if="selectedProduct.brand">
+                                <img class="brand-sm-img img-circle" v-bind:src="'/img/BrandLogo/' + selectedProduct.brand.logo" alt="User profile picture">    {{selectedProduct.brand.name}}
+                                </div>
                             </li>
                             <li class="p-b-20 row border-bottom-0">
-                                <div class="col-sm-3 text-muted mb-2">Model Name</div>
-                                <div class="col-sm-3 mb-2">RS10</div>
+                                <div class="col-sm-3 text-muted mb-2">Model Details</div>
+                                <div class="col-sm-3 mb-2" v-if="selectedProduct.category">{{selectedProduct.category.name}}</div>
                             </li>
                             <li class="p-b-20 row border-bottom-0">
-                                <div class="col-sm-3 text-muted mb-2">Suitable For</div>
-                                <div class="col-sm-3 mb-2">Men, Women</div>
-                            </li>
-                            <li class="p-b-20 row border-bottom-0">
-                                <div class="col-sm-3 text-muted mb-2">Material</div>
-                                <div class="col-sm-3 mb-2">Leather</div>
-                            </li>
-                            <li class="p-b-20 row border-bottom-0">
-                                <div class="col-sm-3 text-muted">Color</div>
-                                <div class="col-sm-3">Black</div>
+                                <div class="col-sm-3 text-muted mb-2">Model Details</div>
+                                <div class="col-sm-3 mb-2">{{selectedProduct.model}}</div>
                             </li>
                         </ul>
                     </div>
-                    <div class="pro_detail border p-4 border-top-0">
-                        <h5 class="m-l-0 m-t-0">Dimensions</h5>
-                        <ul class="list-unstyled mb-0 ">
+                    <div class="pro_detail border p-4 border-top-0" v-if="selectedProduct.category">
+                        <h5 class="m-l-0 m-t-0">Qualities</h5>
+                        <ul class="list-unstyled mb-0 " v-if="selectedProduct.category.id = 1">
                             <li class="row border-bottom-0">
-                                <div class="col-sm-3 text-muted mb-2">Width</div>
-                                <div class="col-sm-3 mb-2">3 inch</div>
+                                <div class="col-sm-3 text-muted mb-2">Transmission</div>
+                                <div class="col-sm-3 mb-2">{{selectedProduct.transmission}}</div>
                             </li>
                             <li class="p-b-20 row border-bottom-0">
-                                <div class="col-sm-3 text-muted mb-2">Works</div>
-                                <div class="col-sm-3 mb-2">Alarm, Digital counter</div>
+                                <div class="col-sm-3 text-muted mb-2">Colour</div>
+                                <div class="col-sm-3 mb-2">{{selectedProduct.colour}}</div>
                             </li>
                             <li class="p-b-20 row border-bottom-0">
-                                <div class="col-sm-3 text-muted mb-2">Warranty</div>
-                                <div class="col-sm-3 mb-2">3 yrs</div>
-                            </li>
-                            <li class="p-b-20 row border-bottom-0">
-                                <div class="col-sm-3 text-muted ">Others</div>
-                                <div class="col-sm-3 "> Pulse Measurement</div>
+                                <div class="col-sm-3 text-muted ">Fuel Type</div>
+                                <div class="col-sm-3 "> {{selectedProduct.fuel_type}}</div>
                             </li>
                         </ul>
                     </div>
@@ -467,6 +423,7 @@ let cTValues;
                 categories: {},
                 sub_categories: {},
                 brands: {},
+                mechanics: {},
                 selectedBrand: {},
                 selectedProduct: {},
                 selectedProductImage: {},
@@ -480,6 +437,7 @@ let cTValues;
                     colour: '',
                     model: '',
                     transmission: '',
+                    fuel_type: '',
                     year: '',
                     size: '',
                     email: '',
@@ -502,8 +460,18 @@ let cTValues;
                     { value: 'Automatic', text: 'Automatic' },
                     { value: 'Manual', text: 'Manual' },
                 ],
+
+                fuelType:[
+                    { value: 'Petrol', text: 'Petrol' },
+                    { value: 'Diesel', text: 'Diesel' },
+                    { value: 'Electricity', text: 'Electricity' },
+                    { value: 'Gas', text: 'Gas' },
+                ],
                 colours: ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"],
                 cTOptions: cTValues,
+                cars_cat: {},
+                carP_cat: {},
+                carA_cat: {},
                 searchP: ''
 
             }
@@ -520,10 +488,15 @@ let cTValues;
             Fire.$emit('searching');
             }, 1000),
 
+            formatPrice(value) {
+                let val = (value / 1).toFixed(2).replace(',', '.')
+                return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+            },
+
             showProduct(productId) {
                 this.selectedProduct = productId;
                 this.selectedProductImage = this.selectedProduct.photo1;
-                // console.log(this.selectedProductId);
+                console.log(this.selectedProduct);
             },
             addPhoto1(e) {
             // Converting image to base64
@@ -628,14 +601,23 @@ let cTValues;
         },
 
             onChange(event) {
+
+                if(event = 1){
+                    this.cars_cat = this.sub_categories.filter(function (obj) {
+                        return obj.category_id === 1;
+                    });
+                }
+
+
+
                 if(event.target.value === "1"){
                     console.log('cars: Correct');
 
-                    this.cTOptions = this.subcategories.filter(function (obj) {
+                    this.cTOptions = this.sub_categories.filter(function (obj) {
                         return obj.category_id === 1;
                     });
 
-                        // this.cTOptions = this.subcategories.find(x => x.all.category_id = 1);
+                        // this.cTOptions = this.sub_categories.find(x => x.all.category_id = 1);
 
 
                 console.log(this.options);
@@ -644,14 +626,14 @@ let cTValues;
                 else if(event.target.value === "2"){
                     console.log('car parts: Correct')
 
-                    this.cTOptions = this.subcategories.filter(function (obj) {
+                    this.cTOptions = this.sub_categories.filter(function (obj) {
                         return obj.category_id === 2;
                     });
                     console.log(this.cTOptions);
                 }
                 else if(event.target.value === "3"){
 
-                    this.cTOptions = this.subcategories.filter(function (obj) {
+                    this.cTOptions = this.sub_categories.filter(function (obj) {
                         return obj.category_id === 3;
                     });
 
@@ -736,6 +718,9 @@ let cTValues;
                 // }
 
             },
+            loadMechanic(){
+                axios.get("api/mechanic").then(({ data }) => (this.mechanics = data));
+            },
 
             loadCategory(){
                 // if(this.$gate.isAdminORAuthor()){
@@ -747,8 +732,10 @@ let cTValues;
             loadSubCategory(){
                 // if(this.$gate.isAdminORAuthor()){
                     axios.get("api/allSubCategories")
-                    .then(({ data }) => (this.subcategories = data));
-
+                    .then(({ data }) => (this.sub_categories = data))
+                    .then(({ data }) => (this.cars_cat = this.sub_categories.filter((obj) => {return obj.category_id === 1})))
+                    .then(({ data }) => (this.carP_cat = this.sub_categories.filter((obj) => {return obj.category_id === 2})))
+                    .then(({ data }) => (this.carA_cat = this.sub_categories.filter((obj) => {return obj.category_id === 3})))
             },
 
             loadBrand(){
@@ -797,15 +784,17 @@ let cTValues;
 
                 })
             })
+            this.loadUser();
             this.loadProducts();
             this.loadCategory();
             this.loadSubCategory();
-            this.loadUser();
             this.loadBrand();
+
+
             // on listen to trigger a function
             Fire.$on('ActionCreate',() => {
-                this.loadProducts();
                 this.loadUser();
+                this.loadProducts();
             });
             // setInterval(()=> this.loadUsers(), 3000);
         },

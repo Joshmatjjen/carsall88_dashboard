@@ -53,9 +53,11 @@ let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
     { path: '/users', component: require('./components/Users.vue').default },
     { path: '/developer', component: require('./components/Developer.vue').default },
+    { path: '/mechanic', component: require('./components/Mechanic.vue').default },
     { path: '/profile', component: require('./components/Profile.vue').default },
     { path: '/products', component: require('./components/Products.vue').default },
-    { path: '/productcategories', component: require('./components/ProductCategories.vue').default },
+    { path: '/product_categories', component: require('./components/ProductCategories.vue').default },
+    { path: '/product_subcategories', component: require('./components/ProductSubCategories.vue').default },
     { path: '/productbrands', component: require('./components/ProductBrands.vue').default },
     { path: '/myproducts', component: require('./components/MyProducts.vue').default },
     { path: '*', component: require('./components/NotFound.vue').default }

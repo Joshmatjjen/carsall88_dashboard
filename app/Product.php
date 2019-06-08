@@ -10,7 +10,7 @@ class Product extends Model
     // use SoftDeletes;
 
         protected $fillable = [
-            'user_id', 'category_id',  'sub_category_id', 'brand_id', 'name', 'price', 'model', 'colour', 'year', 'size', 'email', 'address', 'description', 'photo1', 'photo2', 'photo3', 'photo4'
+            'user_id', 'category_id',  'sub_category_id', 'brand_id', 'name', 'price', 'model', 'colour', 'transmission', 'fuel_type', 'year', 'size', 'email', 'address', 'description', 'photo1', 'photo2', 'photo3', 'photo4'
         ];
 
         public function user(){

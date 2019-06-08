@@ -13143,6 +13143,10 @@ a.text-muted:hover {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }@charset "UTF-8";
 
+.black {
+  color: #000;
+}
+
 .avacado {
   color: #568203;
 }
@@ -24927,8 +24931,8 @@ input[type=color].form-control:disabled {
 }
 
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Font Awesome Pro 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
  */
 
 .fa,
@@ -25169,12 +25173,20 @@ readers do not read off random characters that represent icons */
   content: "\F26E";
 }
 
+.fa-abacus:before {
+  content: "\F640";
+}
+
 .fa-accessible-icon:before {
   content: "\F368";
 }
 
 .fa-accusoft:before {
   content: "\F369";
+}
+
+.fa-acorn:before {
+  content: "\F6AE";
 }
 
 .fa-acquisitions-incorporated:before {
@@ -25221,8 +25233,16 @@ readers do not read off random characters that represent icons */
   content: "\F834";
 }
 
+.fa-alarm-clock:before {
+  content: "\F34E";
+}
+
 .fa-algolia:before {
   content: "\F36C";
+}
+
+.fa-alicorn:before {
+  content: "\F6B0";
 }
 
 .fa-align-center:before {
@@ -25269,12 +25289,20 @@ readers do not read off random characters that represent icons */
   content: "\F36D";
 }
 
+.fa-analytics:before {
+  content: "\F643";
+}
+
 .fa-anchor:before {
   content: "\F13D";
 }
 
 .fa-android:before {
   content: "\F17B";
+}
+
+.fa-angel:before {
+  content: "\F779";
 }
 
 .fa-angellist:before {
@@ -25349,6 +25377,10 @@ readers do not read off random characters that represent icons */
   content: "\F5D1";
 }
 
+.fa-apple-crate:before {
+  content: "\F6B1";
+}
+
 .fa-apple-pay:before {
   content: "\F415";
 }
@@ -25377,6 +25409,70 @@ readers do not read off random characters that represent icons */
   content: "\F35B";
 }
 
+.fa-arrow-alt-down:before {
+  content: "\F354";
+}
+
+.fa-arrow-alt-from-bottom:before {
+  content: "\F346";
+}
+
+.fa-arrow-alt-from-left:before {
+  content: "\F347";
+}
+
+.fa-arrow-alt-from-right:before {
+  content: "\F348";
+}
+
+.fa-arrow-alt-from-top:before {
+  content: "\F349";
+}
+
+.fa-arrow-alt-left:before {
+  content: "\F355";
+}
+
+.fa-arrow-alt-right:before {
+  content: "\F356";
+}
+
+.fa-arrow-alt-square-down:before {
+  content: "\F350";
+}
+
+.fa-arrow-alt-square-left:before {
+  content: "\F351";
+}
+
+.fa-arrow-alt-square-right:before {
+  content: "\F352";
+}
+
+.fa-arrow-alt-square-up:before {
+  content: "\F353";
+}
+
+.fa-arrow-alt-to-bottom:before {
+  content: "\F34A";
+}
+
+.fa-arrow-alt-to-left:before {
+  content: "\F34B";
+}
+
+.fa-arrow-alt-to-right:before {
+  content: "\F34C";
+}
+
+.fa-arrow-alt-to-top:before {
+  content: "\F34D";
+}
+
+.fa-arrow-alt-up:before {
+  content: "\F357";
+}
+
 .fa-arrow-circle-down:before {
   content: "\F0AB";
 }
@@ -25397,6 +25493,22 @@ readers do not read off random characters that represent icons */
   content: "\F063";
 }
 
+.fa-arrow-from-bottom:before {
+  content: "\F342";
+}
+
+.fa-arrow-from-left:before {
+  content: "\F343";
+}
+
+.fa-arrow-from-right:before {
+  content: "\F344";
+}
+
+.fa-arrow-from-top:before {
+  content: "\F345";
+}
+
 .fa-arrow-left:before {
   content: "\F060";
 }
@@ -25405,8 +25517,44 @@ readers do not read off random characters that represent icons */
   content: "\F061";
 }
 
+.fa-arrow-square-down:before {
+  content: "\F339";
+}
+
+.fa-arrow-square-left:before {
+  content: "\F33A";
+}
+
+.fa-arrow-square-right:before {
+  content: "\F33B";
+}
+
+.fa-arrow-square-up:before {
+  content: "\F33C";
+}
+
+.fa-arrow-to-bottom:before {
+  content: "\F33D";
+}
+
+.fa-arrow-to-left:before {
+  content: "\F33E";
+}
+
+.fa-arrow-to-right:before {
+  content: "\F340";
+}
+
+.fa-arrow-to-top:before {
+  content: "\F341";
+}
+
 .fa-arrow-up:before {
   content: "\F062";
+}
+
+.fa-arrows:before {
+  content: "\F047";
 }
 
 .fa-arrows-alt:before {
@@ -25419,6 +25567,14 @@ readers do not read off random characters that represent icons */
 
 .fa-arrows-alt-v:before {
   content: "\F338";
+}
+
+.fa-arrows-h:before {
+  content: "\F07E";
+}
+
+.fa-arrows-v:before {
+  content: "\F07D";
 }
 
 .fa-artstation:before {
@@ -25453,6 +25609,10 @@ readers do not read off random characters that represent icons */
   content: "\F5D2";
 }
 
+.fa-atom-alt:before {
+  content: "\F5D3";
+}
+
 .fa-audible:before {
   content: "\F373";
 }
@@ -25481,12 +25641,24 @@ readers do not read off random characters that represent icons */
   content: "\F375";
 }
 
+.fa-axe:before {
+  content: "\F6B2";
+}
+
+.fa-axe-battle:before {
+  content: "\F6B3";
+}
+
 .fa-baby:before {
   content: "\F77C";
 }
 
 .fa-baby-carriage:before {
   content: "\F77D";
+}
+
+.fa-backpack:before {
+  content: "\F5D4";
 }
 
 .fa-backspace:before {
@@ -25501,8 +25673,48 @@ readers do not read off random characters that represent icons */
   content: "\F7E5";
 }
 
+.fa-badge:before {
+  content: "\F335";
+}
+
+.fa-badge-check:before {
+  content: "\F336";
+}
+
+.fa-badge-dollar:before {
+  content: "\F645";
+}
+
+.fa-badge-percent:before {
+  content: "\F646";
+}
+
+.fa-badger-honey:before {
+  content: "\F6B4";
+}
+
 .fa-balance-scale:before {
   content: "\F24E";
+}
+
+.fa-balance-scale-left:before {
+  content: "\F515";
+}
+
+.fa-balance-scale-right:before {
+  content: "\F516";
+}
+
+.fa-ball-pile:before {
+  content: "\F77E";
+}
+
+.fa-ballot:before {
+  content: "\F732";
+}
+
+.fa-ballot-check:before {
+  content: "\F733";
 }
 
 .fa-ban:before {
@@ -25521,8 +25733,24 @@ readers do not read off random characters that represent icons */
   content: "\F02A";
 }
 
+.fa-barcode-alt:before {
+  content: "\F463";
+}
+
+.fa-barcode-read:before {
+  content: "\F464";
+}
+
+.fa-barcode-scan:before {
+  content: "\F465";
+}
+
 .fa-bars:before {
   content: "\F0C9";
+}
+
+.fa-baseball:before {
+  content: "\F432";
 }
 
 .fa-baseball-ball:before {
@@ -25533,8 +25761,20 @@ readers do not read off random characters that represent icons */
   content: "\F434";
 }
 
+.fa-basketball-hoop:before {
+  content: "\F435";
+}
+
+.fa-bat:before {
+  content: "\F6B5";
+}
+
 .fa-bath:before {
   content: "\F2CD";
+}
+
+.fa-battery-bolt:before {
+  content: "\F376";
 }
 
 .fa-battery-empty:before {
@@ -25551,6 +25791,10 @@ readers do not read off random characters that represent icons */
 
 .fa-battery-quarter:before {
   content: "\F243";
+}
+
+.fa-battery-slash:before {
+  content: "\F377";
 }
 
 .fa-battery-three-quarters:before {
@@ -25581,8 +25825,20 @@ readers do not read off random characters that represent icons */
   content: "\F0F3";
 }
 
+.fa-bell-school:before {
+  content: "\F5D5";
+}
+
+.fa-bell-school-slash:before {
+  content: "\F5D6";
+}
+
 .fa-bell-slash:before {
   content: "\F1F6";
+}
+
+.fa-bells:before {
+  content: "\F77F";
 }
 
 .fa-bezier-curve:before {
@@ -25633,6 +25889,10 @@ readers do not read off random characters that represent icons */
   content: "\F37B";
 }
 
+.fa-blanket:before {
+  content: "\F498";
+}
+
 .fa-blender:before {
   content: "\F517";
 }
@@ -25681,6 +25941,10 @@ readers do not read off random characters that represent icons */
   content: "\F5D7";
 }
 
+.fa-bone-break:before {
+  content: "\F5D8";
+}
+
 .fa-bong:before {
   content: "\F55C";
 }
@@ -25689,8 +25953,16 @@ readers do not read off random characters that represent icons */
   content: "\F02D";
 }
 
+.fa-book-alt:before {
+  content: "\F5D9";
+}
+
 .fa-book-dead:before {
   content: "\F6B7";
+}
+
+.fa-book-heart:before {
+  content: "\F499";
 }
 
 .fa-book-medical:before {
@@ -25705,28 +25977,108 @@ readers do not read off random characters that represent icons */
   content: "\F5DA";
 }
 
+.fa-book-spells:before {
+  content: "\F6B8";
+}
+
+.fa-book-user:before {
+  content: "\F7E7";
+}
+
 .fa-bookmark:before {
   content: "\F02E";
+}
+
+.fa-books:before {
+  content: "\F5DB";
+}
+
+.fa-books-medical:before {
+  content: "\F7E8";
+}
+
+.fa-boot:before {
+  content: "\F782";
+}
+
+.fa-booth-curtain:before {
+  content: "\F734";
 }
 
 .fa-bootstrap:before {
   content: "\F836";
 }
 
+.fa-bow-arrow:before {
+  content: "\F6B9";
+}
+
 .fa-bowling-ball:before {
   content: "\F436";
+}
+
+.fa-bowling-pins:before {
+  content: "\F437";
 }
 
 .fa-box:before {
   content: "\F466";
 }
 
+.fa-box-alt:before {
+  content: "\F49A";
+}
+
+.fa-box-ballot:before {
+  content: "\F735";
+}
+
+.fa-box-check:before {
+  content: "\F467";
+}
+
+.fa-box-fragile:before {
+  content: "\F49B";
+}
+
+.fa-box-full:before {
+  content: "\F49C";
+}
+
+.fa-box-heart:before {
+  content: "\F49D";
+}
+
 .fa-box-open:before {
   content: "\F49E";
 }
 
+.fa-box-up:before {
+  content: "\F49F";
+}
+
+.fa-box-usd:before {
+  content: "\F4A0";
+}
+
 .fa-boxes:before {
   content: "\F468";
+}
+
+.fa-boxes-alt:before {
+  content: "\F4A1";
+}
+
+.fa-boxing-glove:before {
+  content: "\F438";
+}
+
+.fa-brackets:before {
+  content: "\F7E9";
+}
+
+.fa-brackets-curly:before {
+  content: "\F7EA";
 }
 
 .fa-braille:before {
@@ -25735,6 +26087,10 @@ readers do not read off random characters that represent icons */
 
 .fa-brain:before {
   content: "\F5DC";
+}
+
+.fa-bread-loaf:before {
+  content: "\F7EB";
 }
 
 .fa-bread-slice:before {
@@ -25755,6 +26111,10 @@ readers do not read off random characters that represent icons */
 
 .fa-broom:before {
   content: "\F51A";
+}
+
+.fa-browser:before {
+  content: "\F37E";
 }
 
 .fa-brush:before {
@@ -25785,12 +26145,24 @@ readers do not read off random characters that represent icons */
   content: "\F140";
 }
 
+.fa-bullseye-arrow:before {
+  content: "\F648";
+}
+
+.fa-bullseye-pointer:before {
+  content: "\F649";
+}
+
 .fa-burn:before {
   content: "\F46A";
 }
 
 .fa-buromobelexperte:before {
   content: "\F37F";
+}
+
+.fa-burrito:before {
+  content: "\F7ED";
 }
 
 .fa-bus:before {
@@ -25801,6 +26173,10 @@ readers do not read off random characters that represent icons */
   content: "\F55E";
 }
 
+.fa-bus-school:before {
+  content: "\F5DD";
+}
+
 .fa-business-time:before {
   content: "\F64A";
 }
@@ -25809,8 +26185,16 @@ readers do not read off random characters that represent icons */
   content: "\F20D";
 }
 
+.fa-cabinet-filing:before {
+  content: "\F64B";
+}
+
 .fa-calculator:before {
   content: "\F1EC";
+}
+
+.fa-calculator-alt:before {
+  content: "\F64C";
 }
 
 .fa-calendar:before {
@@ -25829,12 +26213,24 @@ readers do not read off random characters that represent icons */
   content: "\F783";
 }
 
+.fa-calendar-edit:before {
+  content: "\F333";
+}
+
+.fa-calendar-exclamation:before {
+  content: "\F334";
+}
+
 .fa-calendar-minus:before {
   content: "\F272";
 }
 
 .fa-calendar-plus:before {
   content: "\F271";
+}
+
+.fa-calendar-star:before {
+  content: "\F736";
 }
 
 .fa-calendar-times:before {
@@ -25849,8 +26245,16 @@ readers do not read off random characters that represent icons */
   content: "\F030";
 }
 
+.fa-camera-alt:before {
+  content: "\F332";
+}
+
 .fa-camera-retro:before {
   content: "\F083";
+}
+
+.fa-campfire:before {
+  content: "\F6BA";
 }
 
 .fa-campground:before {
@@ -25861,8 +26265,16 @@ readers do not read off random characters that represent icons */
   content: "\F785";
 }
 
+.fa-candle-holder:before {
+  content: "\F6BC";
+}
+
 .fa-candy-cane:before {
   content: "\F786";
+}
+
+.fa-candy-corn:before {
+  content: "\F6BD";
 }
 
 .fa-cannabis:before {
@@ -25885,12 +26297,48 @@ readers do not read off random characters that represent icons */
   content: "\F5DF";
 }
 
+.fa-car-bump:before {
+  content: "\F5E0";
+}
+
 .fa-car-crash:before {
   content: "\F5E1";
 }
 
+.fa-car-garage:before {
+  content: "\F5E2";
+}
+
+.fa-car-mechanic:before {
+  content: "\F5E3";
+}
+
 .fa-car-side:before {
   content: "\F5E4";
+}
+
+.fa-car-tilt:before {
+  content: "\F5E5";
+}
+
+.fa-car-wash:before {
+  content: "\F5E6";
+}
+
+.fa-caret-circle-down:before {
+  content: "\F32D";
+}
+
+.fa-caret-circle-left:before {
+  content: "\F32E";
+}
+
+.fa-caret-circle-right:before {
+  content: "\F330";
+}
+
+.fa-caret-circle-up:before {
+  content: "\F331";
 }
 
 .fa-caret-down:before {
@@ -25943,6 +26391,10 @@ readers do not read off random characters that represent icons */
 
 .fa-cat:before {
   content: "\F6BE";
+}
+
+.fa-cauldron:before {
+  content: "\F6BF";
 }
 
 .fa-cc-amazon-pay:before {
@@ -26001,6 +26453,10 @@ readers do not read off random characters that represent icons */
   content: "\F6C0";
 }
 
+.fa-chair-office:before {
+  content: "\F6C1";
+}
+
 .fa-chalkboard:before {
   content: "\F51B";
 }
@@ -26025,8 +26481,24 @@ readers do not read off random characters that represent icons */
   content: "\F201";
 }
 
+.fa-chart-line-down:before {
+  content: "\F64D";
+}
+
+.fa-chart-network:before {
+  content: "\F78A";
+}
+
 .fa-chart-pie:before {
   content: "\F200";
+}
+
+.fa-chart-pie-alt:before {
+  content: "\F64E";
+}
+
+.fa-chart-scatter:before {
+  content: "\F7EE";
 }
 
 .fa-check:before {
@@ -26049,6 +26521,14 @@ readers do not read off random characters that represent icons */
   content: "\F7EF";
 }
 
+.fa-cheese-swiss:before {
+  content: "\F7F0";
+}
+
+.fa-cheeseburger:before {
+  content: "\F7F1";
+}
+
 .fa-chess:before {
   content: "\F439";
 }
@@ -26057,28 +26537,60 @@ readers do not read off random characters that represent icons */
   content: "\F43A";
 }
 
+.fa-chess-bishop-alt:before {
+  content: "\F43B";
+}
+
 .fa-chess-board:before {
   content: "\F43C";
+}
+
+.fa-chess-clock:before {
+  content: "\F43D";
+}
+
+.fa-chess-clock-alt:before {
+  content: "\F43E";
 }
 
 .fa-chess-king:before {
   content: "\F43F";
 }
 
+.fa-chess-king-alt:before {
+  content: "\F440";
+}
+
 .fa-chess-knight:before {
   content: "\F441";
+}
+
+.fa-chess-knight-alt:before {
+  content: "\F442";
 }
 
 .fa-chess-pawn:before {
   content: "\F443";
 }
 
+.fa-chess-pawn-alt:before {
+  content: "\F444";
+}
+
 .fa-chess-queen:before {
   content: "\F445";
 }
 
+.fa-chess-queen-alt:before {
+  content: "\F446";
+}
+
 .fa-chess-rook:before {
   content: "\F447";
+}
+
+.fa-chess-rook-alt:before {
+  content: "\F448";
 }
 
 .fa-chevron-circle-down:before {
@@ -26097,6 +26609,22 @@ readers do not read off random characters that represent icons */
   content: "\F139";
 }
 
+.fa-chevron-double-down:before {
+  content: "\F322";
+}
+
+.fa-chevron-double-left:before {
+  content: "\F323";
+}
+
+.fa-chevron-double-right:before {
+  content: "\F324";
+}
+
+.fa-chevron-double-up:before {
+  content: "\F325";
+}
+
 .fa-chevron-down:before {
   content: "\F078";
 }
@@ -26109,12 +26637,32 @@ readers do not read off random characters that represent icons */
   content: "\F054";
 }
 
+.fa-chevron-square-down:before {
+  content: "\F329";
+}
+
+.fa-chevron-square-left:before {
+  content: "\F32A";
+}
+
+.fa-chevron-square-right:before {
+  content: "\F32B";
+}
+
+.fa-chevron-square-up:before {
+  content: "\F32C";
+}
+
 .fa-chevron-up:before {
   content: "\F077";
 }
 
 .fa-child:before {
   content: "\F1AE";
+}
+
+.fa-chimney:before {
+  content: "\F78B";
 }
 
 .fa-chrome:before {
@@ -26141,6 +26689,10 @@ readers do not read off random characters that represent icons */
   content: "\F64F";
 }
 
+.fa-claw-marks:before {
+  content: "\F6C2";
+}
+
 .fa-clinic-medical:before {
   content: "\F7F2";
 }
@@ -26155,6 +26707,18 @@ readers do not read off random characters that represent icons */
 
 .fa-clipboard-list:before {
   content: "\F46D";
+}
+
+.fa-clipboard-list-check:before {
+  content: "\F737";
+}
+
+.fa-clipboard-prescription:before {
+  content: "\F5E8";
+}
+
+.fa-clipboard-user:before {
+  content: "\F7F3";
 }
 
 .fa-clock:before {
@@ -26173,8 +26737,24 @@ readers do not read off random characters that represent icons */
   content: "\F0C2";
 }
 
+.fa-cloud-download:before {
+  content: "\F0ED";
+}
+
 .fa-cloud-download-alt:before {
   content: "\F381";
+}
+
+.fa-cloud-drizzle:before {
+  content: "\F738";
+}
+
+.fa-cloud-hail:before {
+  content: "\F739";
+}
+
+.fa-cloud-hail-mixed:before {
+  content: "\F73A";
 }
 
 .fa-cloud-meatball:before {
@@ -26193,8 +26773,24 @@ readers do not read off random characters that represent icons */
   content: "\F73D";
 }
 
+.fa-cloud-rainbow:before {
+  content: "\F73E";
+}
+
+.fa-cloud-showers:before {
+  content: "\F73F";
+}
+
 .fa-cloud-showers-heavy:before {
   content: "\F740";
+}
+
+.fa-cloud-sleet:before {
+  content: "\F741";
+}
+
+.fa-cloud-snow:before {
+  content: "\F742";
 }
 
 .fa-cloud-sun:before {
@@ -26205,8 +26801,24 @@ readers do not read off random characters that represent icons */
   content: "\F743";
 }
 
+.fa-cloud-upload:before {
+  content: "\F0EE";
+}
+
 .fa-cloud-upload-alt:before {
   content: "\F382";
+}
+
+.fa-clouds:before {
+  content: "\F744";
+}
+
+.fa-clouds-moon:before {
+  content: "\F745";
+}
+
+.fa-clouds-sun:before {
+  content: "\F746";
 }
 
 .fa-cloudscale:before {
@@ -26221,6 +26833,10 @@ readers do not read off random characters that represent icons */
   content: "\F385";
 }
 
+.fa-club:before {
+  content: "\F327";
+}
+
 .fa-cocktail:before {
   content: "\F561";
 }
@@ -26233,6 +26849,14 @@ readers do not read off random characters that represent icons */
   content: "\F126";
 }
 
+.fa-code-commit:before {
+  content: "\F386";
+}
+
+.fa-code-merge:before {
+  content: "\F387";
+}
+
 .fa-codepen:before {
   content: "\F1CB";
 }
@@ -26243,6 +26867,14 @@ readers do not read off random characters that represent icons */
 
 .fa-coffee:before {
   content: "\F0F4";
+}
+
+.fa-coffee-togo:before {
+  content: "\F6C5";
+}
+
+.fa-coffin:before {
+  content: "\F6C6";
 }
 
 .fa-cog:before {
@@ -26269,6 +26901,58 @@ readers do not read off random characters that represent icons */
   content: "\F27A";
 }
 
+.fa-comment-alt-check:before {
+  content: "\F4A2";
+}
+
+.fa-comment-alt-dollar:before {
+  content: "\F650";
+}
+
+.fa-comment-alt-dots:before {
+  content: "\F4A3";
+}
+
+.fa-comment-alt-edit:before {
+  content: "\F4A4";
+}
+
+.fa-comment-alt-exclamation:before {
+  content: "\F4A5";
+}
+
+.fa-comment-alt-lines:before {
+  content: "\F4A6";
+}
+
+.fa-comment-alt-medical:before {
+  content: "\F7F4";
+}
+
+.fa-comment-alt-minus:before {
+  content: "\F4A7";
+}
+
+.fa-comment-alt-plus:before {
+  content: "\F4A8";
+}
+
+.fa-comment-alt-slash:before {
+  content: "\F4A9";
+}
+
+.fa-comment-alt-smile:before {
+  content: "\F4AA";
+}
+
+.fa-comment-alt-times:before {
+  content: "\F4AB";
+}
+
+.fa-comment-check:before {
+  content: "\F4AC";
+}
+
 .fa-comment-dollar:before {
   content: "\F651";
 }
@@ -26277,16 +26961,52 @@ readers do not read off random characters that represent icons */
   content: "\F4AD";
 }
 
+.fa-comment-edit:before {
+  content: "\F4AE";
+}
+
+.fa-comment-exclamation:before {
+  content: "\F4AF";
+}
+
+.fa-comment-lines:before {
+  content: "\F4B0";
+}
+
 .fa-comment-medical:before {
   content: "\F7F5";
+}
+
+.fa-comment-minus:before {
+  content: "\F4B1";
+}
+
+.fa-comment-plus:before {
+  content: "\F4B2";
 }
 
 .fa-comment-slash:before {
   content: "\F4B3";
 }
 
+.fa-comment-smile:before {
+  content: "\F4B4";
+}
+
+.fa-comment-times:before {
+  content: "\F4B5";
+}
+
 .fa-comments:before {
   content: "\F086";
+}
+
+.fa-comments-alt:before {
+  content: "\F4B6";
+}
+
+.fa-comments-alt-dollar:before {
+  content: "\F652";
 }
 
 .fa-comments-dollar:before {
@@ -26301,12 +27021,24 @@ readers do not read off random characters that represent icons */
   content: "\F14E";
 }
 
+.fa-compass-slash:before {
+  content: "\F5E9";
+}
+
 .fa-compress:before {
   content: "\F066";
 }
 
+.fa-compress-alt:before {
+  content: "\F422";
+}
+
 .fa-compress-arrows-alt:before {
   content: "\F78C";
+}
+
+.fa-compress-wide:before {
+  content: "\F326";
 }
 
 .fa-concierge-bell:before {
@@ -26321,8 +27053,20 @@ readers do not read off random characters that represent icons */
   content: "\F20E";
 }
 
+.fa-container-storage:before {
+  content: "\F4B7";
+}
+
 .fa-contao:before {
   content: "\F26D";
+}
+
+.fa-conveyor-belt:before {
+  content: "\F46E";
+}
+
+.fa-conveyor-belt-alt:before {
+  content: "\F46F";
 }
 
 .fa-cookie:before {
@@ -26341,8 +27085,16 @@ readers do not read off random characters that represent icons */
   content: "\F1F9";
 }
 
+.fa-corn:before {
+  content: "\F6C7";
+}
+
 .fa-couch:before {
   content: "\F4B8";
+}
+
+.fa-cow:before {
+  content: "\F6C8";
 }
 
 .fa-cpanel:before {
@@ -26409,8 +27161,24 @@ readers do not read off random characters that represent icons */
   content: "\F09D";
 }
 
+.fa-credit-card-blank:before {
+  content: "\F389";
+}
+
+.fa-credit-card-front:before {
+  content: "\F38A";
+}
+
+.fa-cricket:before {
+  content: "\F449";
+}
+
 .fa-critical-role:before {
   content: "\F6C9";
+}
+
+.fa-croissant:before {
+  content: "\F7F6";
 }
 
 .fa-crop:before {
@@ -26441,6 +27209,10 @@ readers do not read off random characters that represent icons */
   content: "\F7F7";
 }
 
+.fa-crutches:before {
+  content: "\F7F8";
+}
+
 .fa-css3:before {
   content: "\F13C";
 }
@@ -26455,6 +27227,10 @@ readers do not read off random characters that represent icons */
 
 .fa-cubes:before {
   content: "\F1B3";
+}
+
+.fa-curling:before {
+  content: "\F44A";
 }
 
 .fa-cut:before {
@@ -26473,6 +27249,10 @@ readers do not read off random characters that represent icons */
   content: "\F6CA";
 }
 
+.fa-dagger:before {
+  content: "\F6CB";
+}
+
 .fa-dashcube:before {
   content: "\F210";
 }
@@ -26483,6 +27263,18 @@ readers do not read off random characters that represent icons */
 
 .fa-deaf:before {
   content: "\F2A4";
+}
+
+.fa-debug:before {
+  content: "\F7F9";
+}
+
+.fa-deer:before {
+  content: "\F78E";
+}
+
+.fa-deer-rudolph:before {
+  content: "\F78F";
 }
 
 .fa-delicious:before {
@@ -26505,12 +27297,20 @@ readers do not read off random characters that represent icons */
   content: "\F108";
 }
 
+.fa-desktop-alt:before {
+  content: "\F390";
+}
+
 .fa-dev:before {
   content: "\F6CC";
 }
 
 .fa-deviantart:before {
   content: "\F1BD";
+}
+
+.fa-dewpoint:before {
+  content: "\F748";
 }
 
 .fa-dharmachakra:before {
@@ -26525,6 +27325,10 @@ readers do not read off random characters that represent icons */
   content: "\F470";
 }
 
+.fa-diamond:before {
+  content: "\F219";
+}
+
 .fa-diaspora:before {
   content: "\F791";
 }
@@ -26533,12 +27337,28 @@ readers do not read off random characters that represent icons */
   content: "\F522";
 }
 
+.fa-dice-d10:before {
+  content: "\F6CD";
+}
+
+.fa-dice-d12:before {
+  content: "\F6CE";
+}
+
 .fa-dice-d20:before {
   content: "\F6CF";
 }
 
+.fa-dice-d4:before {
+  content: "\F6D0";
+}
+
 .fa-dice-d6:before {
   content: "\F6D1";
+}
+
+.fa-dice-d8:before {
+  content: "\F6D2";
 }
 
 .fa-dice-five:before {
@@ -26577,6 +27397,10 @@ readers do not read off random characters that represent icons */
   content: "\F566";
 }
 
+.fa-diploma:before {
+  content: "\F5EA";
+}
+
 .fa-directions:before {
   content: "\F5EB";
 }
@@ -26587,6 +27411,10 @@ readers do not read off random characters that represent icons */
 
 .fa-discourse:before {
   content: "\F393";
+}
+
+.fa-disease:before {
+  content: "\F7FA";
 }
 
 .fa-divide:before {
@@ -26601,6 +27429,10 @@ readers do not read off random characters that represent icons */
   content: "\F471";
 }
 
+.fa-do-not-enter:before {
+  content: "\F5EC";
+}
+
 .fa-dochub:before {
   content: "\F394";
 }
@@ -26613,6 +27445,10 @@ readers do not read off random characters that represent icons */
   content: "\F6D3";
 }
 
+.fa-dog-leashed:before {
+  content: "\F6D4";
+}
+
 .fa-dollar-sign:before {
   content: "\F155";
 }
@@ -26621,8 +27457,20 @@ readers do not read off random characters that represent icons */
   content: "\F472";
 }
 
+.fa-dolly-empty:before {
+  content: "\F473";
+}
+
 .fa-dolly-flatbed:before {
   content: "\F474";
+}
+
+.fa-dolly-flatbed-alt:before {
+  content: "\F475";
+}
+
+.fa-dolly-flatbed-empty:before {
+  content: "\F476";
 }
 
 .fa-donate:before {
@@ -26661,8 +27509,20 @@ readers do not read off random characters that represent icons */
   content: "\F6D5";
 }
 
+.fa-draw-circle:before {
+  content: "\F5ED";
+}
+
 .fa-draw-polygon:before {
   content: "\F5EE";
+}
+
+.fa-draw-square:before {
+  content: "\F5EF";
+}
+
+.fa-dreidel:before {
+  content: "\F792";
 }
 
 .fa-dribbble:before {
@@ -26685,12 +27545,20 @@ readers do not read off random characters that represent icons */
   content: "\F56A";
 }
 
+.fa-drumstick:before {
+  content: "\F6D6";
+}
+
 .fa-drumstick-bite:before {
   content: "\F6D7";
 }
 
 .fa-drupal:before {
   content: "\F1A9";
+}
+
+.fa-duck:before {
+  content: "\F6D8";
 }
 
 .fa-dumbbell:before {
@@ -26713,12 +27581,28 @@ readers do not read off random characters that represent icons */
   content: "\F399";
 }
 
+.fa-ear:before {
+  content: "\F5F0";
+}
+
+.fa-ear-muffs:before {
+  content: "\F795";
+}
+
 .fa-earlybirds:before {
   content: "\F39A";
 }
 
 .fa-ebay:before {
   content: "\F4F4";
+}
+
+.fa-eclipse:before {
+  content: "\F749";
+}
+
+.fa-eclipse-alt:before {
+  content: "\F74A";
 }
 
 .fa-edge:before {
@@ -26733,6 +27617,10 @@ readers do not read off random characters that represent icons */
   content: "\F7FB";
 }
 
+.fa-egg-fried:before {
+  content: "\F7FC";
+}
+
 .fa-eject:before {
   content: "\F052";
 }
@@ -26741,12 +27629,24 @@ readers do not read off random characters that represent icons */
   content: "\F430";
 }
 
+.fa-elephant:before {
+  content: "\F6DA";
+}
+
 .fa-ellipsis-h:before {
   content: "\F141";
 }
 
+.fa-ellipsis-h-alt:before {
+  content: "\F39B";
+}
+
 .fa-ellipsis-v:before {
   content: "\F142";
+}
+
+.fa-ellipsis-v-alt:before {
+  content: "\F39C";
 }
 
 .fa-ello:before {
@@ -26761,12 +27661,24 @@ readers do not read off random characters that represent icons */
   content: "\F1D1";
 }
 
+.fa-empty-set:before {
+  content: "\F656";
+}
+
+.fa-engine-warning:before {
+  content: "\F5F2";
+}
+
 .fa-envelope:before {
   content: "\F0E0";
 }
 
 .fa-envelope-open:before {
   content: "\F2B6";
+}
+
+.fa-envelope-open-dollar:before {
+  content: "\F657";
 }
 
 .fa-envelope-open-text:before {
@@ -26813,6 +27725,10 @@ readers do not read off random characters that represent icons */
   content: "\F839";
 }
 
+.fa-exchange:before {
+  content: "\F0EC";
+}
+
 .fa-exchange-alt:before {
   content: "\F362";
 }
@@ -26825,6 +27741,10 @@ readers do not read off random characters that represent icons */
   content: "\F06A";
 }
 
+.fa-exclamation-square:before {
+  content: "\F321";
+}
+
 .fa-exclamation-triangle:before {
   content: "\F071";
 }
@@ -26833,16 +27753,36 @@ readers do not read off random characters that represent icons */
   content: "\F065";
 }
 
+.fa-expand-alt:before {
+  content: "\F424";
+}
+
+.fa-expand-arrows:before {
+  content: "\F31D";
+}
+
 .fa-expand-arrows-alt:before {
   content: "\F31E";
+}
+
+.fa-expand-wide:before {
+  content: "\F320";
 }
 
 .fa-expeditedssl:before {
   content: "\F23E";
 }
 
+.fa-external-link:before {
+  content: "\F08E";
+}
+
 .fa-external-link-alt:before {
   content: "\F35D";
+}
+
+.fa-external-link-square:before {
+  content: "\F14C";
 }
 
 .fa-external-link-square-alt:before {
@@ -26855,6 +27795,10 @@ readers do not read off random characters that represent icons */
 
 .fa-eye-dropper:before {
   content: "\F1FB";
+}
+
+.fa-eye-evil:before {
+  content: "\F6DB";
 }
 
 .fa-eye-slash:before {
@@ -26913,6 +27857,10 @@ readers do not read off random characters that represent icons */
   content: "\F182";
 }
 
+.fa-field-hockey:before {
+  content: "\F44C";
+}
+
 .fa-fighter-jet:before {
   content: "\F0FB";
 }
@@ -26937,6 +27885,22 @@ readers do not read off random characters that represent icons */
   content: "\F1C7";
 }
 
+.fa-file-certificate:before {
+  content: "\F5F3";
+}
+
+.fa-file-chart-line:before {
+  content: "\F659";
+}
+
+.fa-file-chart-pie:before {
+  content: "\F65A";
+}
+
+.fa-file-check:before {
+  content: "\F316";
+}
+
 .fa-file-code:before {
   content: "\F1C9";
 }
@@ -26953,8 +27917,16 @@ readers do not read off random characters that represent icons */
   content: "\F56D";
 }
 
+.fa-file-edit:before {
+  content: "\F31C";
+}
+
 .fa-file-excel:before {
   content: "\F1C3";
+}
+
+.fa-file-exclamation:before {
+  content: "\F31A";
 }
 
 .fa-file-export:before {
@@ -26985,8 +27957,16 @@ readers do not read off random characters that represent icons */
   content: "\F478";
 }
 
+.fa-file-minus:before {
+  content: "\F318";
+}
+
 .fa-file-pdf:before {
   content: "\F1C1";
+}
+
+.fa-file-plus:before {
+  content: "\F319";
 }
 
 .fa-file-powerpoint:before {
@@ -27001,8 +27981,20 @@ readers do not read off random characters that represent icons */
   content: "\F573";
 }
 
+.fa-file-spreadsheet:before {
+  content: "\F65B";
+}
+
+.fa-file-times:before {
+  content: "\F317";
+}
+
 .fa-file-upload:before {
   content: "\F574";
+}
+
+.fa-file-user:before {
+  content: "\F65C";
 }
 
 .fa-file-video:before {
@@ -27011,6 +28003,10 @@ readers do not read off random characters that represent icons */
 
 .fa-file-word:before {
   content: "\F1C2";
+}
+
+.fa-files-medical:before {
+  content: "\F7FD";
 }
 
 .fa-fill:before {
@@ -27023,6 +28019,10 @@ readers do not read off random characters that represent icons */
 
 .fa-film:before {
   content: "\F008";
+}
+
+.fa-film-alt:before {
+  content: "\F3A0";
 }
 
 .fa-filter:before {
@@ -27045,8 +28045,16 @@ readers do not read off random characters that represent icons */
   content: "\F134";
 }
 
+.fa-fire-smoke:before {
+  content: "\F74B";
+}
+
 .fa-firefox:before {
   content: "\F269";
+}
+
+.fa-fireplace:before {
+  content: "\F79A";
 }
 
 .fa-first-aid:before {
@@ -27069,12 +28077,20 @@ readers do not read off random characters that represent icons */
   content: "\F578";
 }
 
+.fa-fish-cooked:before {
+  content: "\F7FE";
+}
+
 .fa-fist-raised:before {
   content: "\F6DE";
 }
 
 .fa-flag:before {
   content: "\F024";
+}
+
+.fa-flag-alt:before {
+  content: "\F74C";
 }
 
 .fa-flag-checkered:before {
@@ -27085,8 +28101,20 @@ readers do not read off random characters that represent icons */
   content: "\F74D";
 }
 
+.fa-flame:before {
+  content: "\F6DF";
+}
+
 .fa-flask:before {
   content: "\F0C3";
+}
+
+.fa-flask-poison:before {
+  content: "\F6E0";
+}
+
+.fa-flask-potion:before {
+  content: "\F6E1";
 }
 
 .fa-flickr:before {
@@ -27097,12 +28125,28 @@ readers do not read off random characters that represent icons */
   content: "\F44D";
 }
 
+.fa-flower:before {
+  content: "\F7FF";
+}
+
+.fa-flower-daffodil:before {
+  content: "\F800";
+}
+
+.fa-flower-tulip:before {
+  content: "\F801";
+}
+
 .fa-flushed:before {
   content: "\F579";
 }
 
 .fa-fly:before {
   content: "\F417";
+}
+
+.fa-fog:before {
+  content: "\F74E";
 }
 
 .fa-folder:before {
@@ -27119,6 +28163,18 @@ readers do not read off random characters that represent icons */
 
 .fa-folder-plus:before {
   content: "\F65E";
+}
+
+.fa-folder-times:before {
+  content: "\F65F";
+}
+
+.fa-folder-tree:before {
+  content: "\F802";
+}
+
+.fa-folders:before {
+  content: "\F660";
 }
 
 .fa-font:before {
@@ -27153,6 +28209,14 @@ readers do not read off random characters that represent icons */
   content: "\F44E";
 }
 
+.fa-football-helmet:before {
+  content: "\F44F";
+}
+
+.fa-forklift:before {
+  content: "\F47A";
+}
+
 .fa-fort-awesome:before {
   content: "\F286";
 }
@@ -27173,6 +28237,10 @@ readers do not read off random characters that represent icons */
   content: "\F180";
 }
 
+.fa-fragile:before {
+  content: "\F4BB";
+}
+
 .fa-free-code-camp:before {
   content: "\F2C5";
 }
@@ -27181,8 +28249,16 @@ readers do not read off random characters that represent icons */
   content: "\F3A4";
 }
 
+.fa-french-fries:before {
+  content: "\F803";
+}
+
 .fa-frog:before {
   content: "\F52E";
+}
+
+.fa-frosty-head:before {
+  content: "\F79B";
 }
 
 .fa-frown:before {
@@ -27195,6 +28271,10 @@ readers do not read off random characters that represent icons */
 
 .fa-fulcrum:before {
   content: "\F50B";
+}
+
+.fa-function:before {
+  content: "\F661";
 }
 
 .fa-funnel-dollar:before {
@@ -27219,6 +28299,10 @@ readers do not read off random characters that represent icons */
 
 .fa-gas-pump:before {
   content: "\F52F";
+}
+
+.fa-gas-pump-slash:before {
+  content: "\F5F4";
 }
 
 .fa-gavel:before {
@@ -27253,8 +28337,16 @@ readers do not read off random characters that represent icons */
   content: "\F06B";
 }
 
+.fa-gift-card:before {
+  content: "\F663";
+}
+
 .fa-gifts:before {
   content: "\F79C";
+}
+
+.fa-gingerbread-man:before {
+  content: "\F79D";
 }
 
 .fa-git:before {
@@ -27293,6 +28385,14 @@ readers do not read off random characters that represent icons */
   content: "\F426";
 }
 
+.fa-glass:before {
+  content: "\F804";
+}
+
+.fa-glass-champagne:before {
+  content: "\F79E";
+}
+
 .fa-glass-cheers:before {
   content: "\F79F";
 }
@@ -27309,8 +28409,16 @@ readers do not read off random characters that represent icons */
   content: "\F7A0";
 }
 
+.fa-glass-whiskey-rocks:before {
+  content: "\F7A1";
+}
+
 .fa-glasses:before {
   content: "\F530";
+}
+
+.fa-glasses-alt:before {
+  content: "\F5F5";
 }
 
 .fa-glide:before {
@@ -27341,12 +28449,24 @@ readers do not read off random characters that represent icons */
   content: "\F7A2";
 }
 
+.fa-globe-snow:before {
+  content: "\F7A3";
+}
+
+.fa-globe-stand:before {
+  content: "\F5F6";
+}
+
 .fa-gofore:before {
   content: "\F3A7";
 }
 
 .fa-golf-ball:before {
   content: "\F450";
+}
+
+.fa-golf-club:before {
+  content: "\F451";
 }
 
 .fa-goodreads:before {
@@ -27501,6 +28621,18 @@ readers do not read off random characters that represent icons */
   content: "\F0FD";
 }
 
+.fa-h1:before {
+  content: "\F313";
+}
+
+.fa-h2:before {
+  content: "\F314";
+}
+
+.fa-h3:before {
+  content: "\F315";
+}
+
 .fa-hacker-news:before {
   content: "\F1D4";
 }
@@ -27521,20 +28653,44 @@ readers do not read off random characters that represent icons */
   content: "\F6E3";
 }
 
+.fa-hammer-war:before {
+  content: "\F6E4";
+}
+
 .fa-hamsa:before {
   content: "\F665";
+}
+
+.fa-hand-heart:before {
+  content: "\F4BC";
 }
 
 .fa-hand-holding:before {
   content: "\F4BD";
 }
 
+.fa-hand-holding-box:before {
+  content: "\F47B";
+}
+
 .fa-hand-holding-heart:before {
   content: "\F4BE";
 }
 
+.fa-hand-holding-magic:before {
+  content: "\F6E5";
+}
+
+.fa-hand-holding-seedling:before {
+  content: "\F4BF";
+}
+
 .fa-hand-holding-usd:before {
   content: "\F4C0";
+}
+
+.fa-hand-holding-water:before {
+  content: "\F4C1";
 }
 
 .fa-hand-lizard:before {
@@ -27573,6 +28729,10 @@ readers do not read off random characters that represent icons */
   content: "\F25A";
 }
 
+.fa-hand-receiving:before {
+  content: "\F47C";
+}
+
 .fa-hand-rock:before {
   content: "\F255";
 }
@@ -27589,12 +28749,24 @@ readers do not read off random characters that represent icons */
   content: "\F4C2";
 }
 
+.fa-hands-heart:before {
+  content: "\F4C3";
+}
+
 .fa-hands-helping:before {
   content: "\F4C4";
 }
 
+.fa-hands-usd:before {
+  content: "\F4C5";
+}
+
 .fa-handshake:before {
   content: "\F2B5";
+}
+
+.fa-handshake-alt:before {
+  content: "\F4C6";
 }
 
 .fa-hanukiah:before {
@@ -27609,6 +28781,18 @@ readers do not read off random characters that represent icons */
   content: "\F292";
 }
 
+.fa-hat-santa:before {
+  content: "\F7A7";
+}
+
+.fa-hat-winter:before {
+  content: "\F7A8";
+}
+
+.fa-hat-witch:before {
+  content: "\F6E7";
+}
+
 .fa-hat-wizard:before {
   content: "\F6E8";
 }
@@ -27619,6 +28803,22 @@ readers do not read off random characters that represent icons */
 
 .fa-hdd:before {
   content: "\F0A0";
+}
+
+.fa-head-side:before {
+  content: "\F6E9";
+}
+
+.fa-head-side-brain:before {
+  content: "\F808";
+}
+
+.fa-head-side-medical:before {
+  content: "\F809";
+}
+
+.fa-head-vr:before {
+  content: "\F6EA";
 }
 
 .fa-heading:before {
@@ -27645,12 +28845,32 @@ readers do not read off random characters that represent icons */
   content: "\F7A9";
 }
 
+.fa-heart-circle:before {
+  content: "\F4C7";
+}
+
+.fa-heart-rate:before {
+  content: "\F5F8";
+}
+
+.fa-heart-square:before {
+  content: "\F4C8";
+}
+
 .fa-heartbeat:before {
   content: "\F21E";
 }
 
 .fa-helicopter:before {
   content: "\F533";
+}
+
+.fa-helmet-battle:before {
+  content: "\F6EB";
+}
+
+.fa-hexagon:before {
+  content: "\F312";
 }
 
 .fa-highlighter:before {
@@ -27677,8 +28897,16 @@ readers do not read off random characters that represent icons */
   content: "\F1DA";
 }
 
+.fa-hockey-mask:before {
+  content: "\F6EE";
+}
+
 .fa-hockey-puck:before {
   content: "\F453";
+}
+
+.fa-hockey-sticks:before {
+  content: "\F454";
 }
 
 .fa-holly-berry:before {
@@ -27687,6 +28915,26 @@ readers do not read off random characters that represent icons */
 
 .fa-home:before {
   content: "\F015";
+}
+
+.fa-home-alt:before {
+  content: "\F80A";
+}
+
+.fa-home-heart:before {
+  content: "\F4C9";
+}
+
+.fa-home-lg:before {
+  content: "\F80B";
+}
+
+.fa-home-lg-alt:before {
+  content: "\F80C";
+}
+
+.fa-hood-cloak:before {
+  content: "\F6EF";
 }
 
 .fa-hooli:before {
@@ -27715,6 +28963,14 @@ readers do not read off random characters that represent icons */
 
 .fa-hospital-symbol:before {
   content: "\F47E";
+}
+
+.fa-hospital-user:before {
+  content: "\F80D";
+}
+
+.fa-hospitals:before {
+  content: "\F80E";
 }
 
 .fa-hot-tub:before {
@@ -27753,6 +29009,10 @@ readers do not read off random characters that represent icons */
   content: "\F6F1";
 }
 
+.fa-house-flood:before {
+  content: "\F74F";
+}
+
 .fa-houzz:before {
   content: "\F27C";
 }
@@ -27769,12 +29029,24 @@ readers do not read off random characters that represent icons */
   content: "\F3B2";
 }
 
+.fa-humidity:before {
+  content: "\F750";
+}
+
+.fa-hurricane:before {
+  content: "\F751";
+}
+
 .fa-i-cursor:before {
   content: "\F246";
 }
 
 .fa-ice-cream:before {
   content: "\F810";
+}
+
+.fa-ice-skate:before {
+  content: "\F7AC";
 }
 
 .fa-icicles:before {
@@ -27813,12 +29085,24 @@ readers do not read off random characters that represent icons */
   content: "\F01C";
 }
 
+.fa-inbox-in:before {
+  content: "\F310";
+}
+
+.fa-inbox-out:before {
+  content: "\F311";
+}
+
 .fa-indent:before {
   content: "\F03C";
 }
 
 .fa-industry:before {
   content: "\F275";
+}
+
+.fa-industry-alt:before {
+  content: "\F3B3";
 }
 
 .fa-infinity:before {
@@ -27833,8 +29117,20 @@ readers do not read off random characters that represent icons */
   content: "\F05A";
 }
 
+.fa-info-square:before {
+  content: "\F30F";
+}
+
+.fa-inhaler:before {
+  content: "\F5F9";
+}
+
 .fa-instagram:before {
   content: "\F16D";
+}
+
+.fa-integral:before {
+  content: "\F667";
 }
 
 .fa-intercom:before {
@@ -27845,12 +29141,24 @@ readers do not read off random characters that represent icons */
   content: "\F26B";
 }
 
+.fa-intersection:before {
+  content: "\F668";
+}
+
+.fa-inventory:before {
+  content: "\F480";
+}
+
 .fa-invision:before {
   content: "\F7B0";
 }
 
 .fa-ioxhost:before {
   content: "\F208";
+}
+
+.fa-island-tropical:before {
+  content: "\F811";
 }
 
 .fa-italic:before {
@@ -27867,6 +29175,10 @@ readers do not read off random characters that represent icons */
 
 .fa-itunes-note:before {
   content: "\F3B5";
+}
+
+.fa-jack-o-lantern:before {
+  content: "\F30E";
 }
 
 .fa-java:before {
@@ -27929,6 +29241,10 @@ readers do not read off random characters that represent icons */
   content: "\F084";
 }
 
+.fa-key-skeleton:before {
+  content: "\F6F3";
+}
+
 .fa-keybase:before {
   content: "\F4F5";
 }
@@ -27939,6 +29255,10 @@ readers do not read off random characters that represent icons */
 
 .fa-keycdn:before {
   content: "\F3BA";
+}
+
+.fa-keynote:before {
+  content: "\F66C";
 }
 
 .fa-khanda:before {
@@ -27953,6 +29273,10 @@ readers do not read off random characters that represent icons */
   content: "\F3BC";
 }
 
+.fa-kidneys:before {
+  content: "\F5FB";
+}
+
 .fa-kiss:before {
   content: "\F596";
 }
@@ -27965,16 +29289,36 @@ readers do not read off random characters that represent icons */
   content: "\F598";
 }
 
+.fa-kite:before {
+  content: "\F6F4";
+}
+
 .fa-kiwi-bird:before {
   content: "\F535";
+}
+
+.fa-knife-kitchen:before {
+  content: "\F6F5";
 }
 
 .fa-korvue:before {
   content: "\F42F";
 }
 
+.fa-lambda:before {
+  content: "\F66E";
+}
+
+.fa-lamp:before {
+  content: "\F4CA";
+}
+
 .fa-landmark:before {
   content: "\F66F";
+}
+
+.fa-landmark-alt:before {
+  content: "\F752";
 }
 
 .fa-language:before {
@@ -28025,8 +29369,28 @@ readers do not read off random characters that represent icons */
   content: "\F5FD";
 }
 
+.fa-layer-minus:before {
+  content: "\F5FE";
+}
+
+.fa-layer-plus:before {
+  content: "\F5FF";
+}
+
 .fa-leaf:before {
   content: "\F06C";
+}
+
+.fa-leaf-heart:before {
+  content: "\F4CB";
+}
+
+.fa-leaf-maple:before {
+  content: "\F6F6";
+}
+
+.fa-leaf-oak:before {
+  content: "\F6F7";
 }
 
 .fa-leanpub:before {
@@ -28049,8 +29413,16 @@ readers do not read off random characters that represent icons */
   content: "\F537";
 }
 
+.fa-level-down:before {
+  content: "\F149";
+}
+
 .fa-level-down-alt:before {
   content: "\F3BE";
+}
+
+.fa-level-up:before {
+  content: "\F148";
 }
 
 .fa-level-up-alt:before {
@@ -28063,6 +29435,26 @@ readers do not read off random characters that represent icons */
 
 .fa-lightbulb:before {
   content: "\F0EB";
+}
+
+.fa-lightbulb-dollar:before {
+  content: "\F670";
+}
+
+.fa-lightbulb-exclamation:before {
+  content: "\F671";
+}
+
+.fa-lightbulb-on:before {
+  content: "\F672";
+}
+
+.fa-lightbulb-slash:before {
+  content: "\F673";
+}
+
+.fa-lights-holiday:before {
+  content: "\F7B2";
 }
 
 .fa-line:before {
@@ -28089,6 +29481,10 @@ readers do not read off random characters that represent icons */
   content: "\F17C";
 }
 
+.fa-lips:before {
+  content: "\F600";
+}
+
 .fa-lira-sign:before {
   content: "\F195";
 }
@@ -28109,16 +29505,36 @@ readers do not read off random characters that represent icons */
   content: "\F0CA";
 }
 
+.fa-location:before {
+  content: "\F601";
+}
+
 .fa-location-arrow:before {
   content: "\F124";
+}
+
+.fa-location-circle:before {
+  content: "\F602";
+}
+
+.fa-location-slash:before {
+  content: "\F603";
 }
 
 .fa-lock:before {
   content: "\F023";
 }
 
+.fa-lock-alt:before {
+  content: "\F30D";
+}
+
 .fa-lock-open:before {
   content: "\F3C1";
+}
+
+.fa-lock-open-alt:before {
+  content: "\F3C2";
 }
 
 .fa-long-arrow-alt-down:before {
@@ -28137,16 +29553,48 @@ readers do not read off random characters that represent icons */
   content: "\F30C";
 }
 
+.fa-long-arrow-down:before {
+  content: "\F175";
+}
+
+.fa-long-arrow-left:before {
+  content: "\F177";
+}
+
+.fa-long-arrow-right:before {
+  content: "\F178";
+}
+
+.fa-long-arrow-up:before {
+  content: "\F176";
+}
+
+.fa-loveseat:before {
+  content: "\F4CC";
+}
+
 .fa-low-vision:before {
   content: "\F2A8";
+}
+
+.fa-luchador:before {
+  content: "\F455";
 }
 
 .fa-luggage-cart:before {
   content: "\F59D";
 }
 
+.fa-lungs:before {
+  content: "\F604";
+}
+
 .fa-lyft:before {
   content: "\F3C3";
+}
+
+.fa-mace:before {
+  content: "\F6F8";
 }
 
 .fa-magento:before {
@@ -28165,6 +29613,10 @@ readers do not read off random characters that represent icons */
   content: "\F674";
 }
 
+.fa-mailbox:before {
+  content: "\F813";
+}
+
 .fa-mailchimp:before {
   content: "\F59E";
 }
@@ -28175,6 +29627,10 @@ readers do not read off random characters that represent icons */
 
 .fa-mandalorian:before {
   content: "\F50F";
+}
+
+.fa-mandolin:before {
+  content: "\F6F9";
 }
 
 .fa-map:before {
@@ -28195,6 +29651,46 @@ readers do not read off random characters that represent icons */
 
 .fa-map-marker-alt:before {
   content: "\F3C5";
+}
+
+.fa-map-marker-alt-slash:before {
+  content: "\F605";
+}
+
+.fa-map-marker-check:before {
+  content: "\F606";
+}
+
+.fa-map-marker-edit:before {
+  content: "\F607";
+}
+
+.fa-map-marker-exclamation:before {
+  content: "\F608";
+}
+
+.fa-map-marker-minus:before {
+  content: "\F609";
+}
+
+.fa-map-marker-plus:before {
+  content: "\F60A";
+}
+
+.fa-map-marker-question:before {
+  content: "\F60B";
+}
+
+.fa-map-marker-slash:before {
+  content: "\F60C";
+}
+
+.fa-map-marker-smile:before {
+  content: "\F60D";
+}
+
+.fa-map-marker-times:before {
+  content: "\F60E";
 }
 
 .fa-map-pin:before {
@@ -28245,6 +29741,10 @@ readers do not read off random characters that represent icons */
   content: "\F136";
 }
 
+.fa-meat:before {
+  content: "\F814";
+}
+
 .fa-medal:before {
   content: "\F5A2";
 }
@@ -28271,6 +29771,10 @@ readers do not read off random characters that represent icons */
 
 .fa-meetup:before {
   content: "\F2E0";
+}
+
+.fa-megaphone:before {
+  content: "\F675";
 }
 
 .fa-megaport:before {
@@ -28337,6 +29841,10 @@ readers do not read off random characters that represent icons */
   content: "\F3CA";
 }
 
+.fa-mind-share:before {
+  content: "\F677";
+}
+
 .fa-minus:before {
   content: "\F068";
 }
@@ -28345,8 +29853,20 @@ readers do not read off random characters that represent icons */
   content: "\F056";
 }
 
+.fa-minus-hexagon:before {
+  content: "\F307";
+}
+
+.fa-minus-octagon:before {
+  content: "\F308";
+}
+
 .fa-minus-square:before {
   content: "\F146";
+}
+
+.fa-mistletoe:before {
+  content: "\F7B4";
 }
 
 .fa-mitten:before {
@@ -28371,6 +29891,14 @@ readers do not read off random characters that represent icons */
 
 .fa-mobile-alt:before {
   content: "\F3CD";
+}
+
+.fa-mobile-android:before {
+  content: "\F3CE";
+}
+
+.fa-mobile-android-alt:before {
+  content: "\F3CF";
 }
 
 .fa-modx:before {
@@ -28405,12 +29933,28 @@ readers do not read off random characters that represent icons */
   content: "\F53D";
 }
 
+.fa-monitor-heart-rate:before {
+  content: "\F611";
+}
+
+.fa-monkey:before {
+  content: "\F6FB";
+}
+
 .fa-monument:before {
   content: "\F5A6";
 }
 
 .fa-moon:before {
   content: "\F186";
+}
+
+.fa-moon-cloud:before {
+  content: "\F754";
+}
+
+.fa-moon-stars:before {
+  content: "\F755";
 }
 
 .fa-mortar-pestle:before {
@@ -28429,6 +29973,10 @@ readers do not read off random characters that represent icons */
   content: "\F6FC";
 }
 
+.fa-mountains:before {
+  content: "\F6FD";
+}
+
 .fa-mouse-pointer:before {
   content: "\F245";
 }
@@ -28437,12 +29985,20 @@ readers do not read off random characters that represent icons */
   content: "\F7B6";
 }
 
+.fa-mug-marshmallows:before {
+  content: "\F7B7";
+}
+
 .fa-music:before {
   content: "\F001";
 }
 
 .fa-napster:before {
   content: "\F3D2";
+}
+
+.fa-narwhal:before {
+  content: "\F6FE";
 }
 
 .fa-neos:before {
@@ -28505,6 +30061,10 @@ readers do not read off random characters that represent icons */
   content: "\F248";
 }
 
+.fa-octagon:before {
+  content: "\F306";
+}
+
 .fa-odnoklassniki:before {
   content: "\F263";
 }
@@ -28517,12 +30077,20 @@ readers do not read off random characters that represent icons */
   content: "\F613";
 }
 
+.fa-oil-temp:before {
+  content: "\F614";
+}
+
 .fa-old-republic:before {
   content: "\F510";
 }
 
 .fa-om:before {
   content: "\F679";
+}
+
+.fa-omega:before {
+  content: "\F67A";
 }
 
 .fa-opencart:before {
@@ -28539,6 +30107,10 @@ readers do not read off random characters that represent icons */
 
 .fa-optin-monster:before {
   content: "\F23C";
+}
+
+.fa-ornament:before {
+  content: "\F7B8";
 }
 
 .fa-osi:before {
@@ -28569,6 +30141,10 @@ readers do not read off random characters that represent icons */
   content: "\F1FC";
 }
 
+.fa-paint-brush-alt:before {
+  content: "\F5A9";
+}
+
 .fa-paint-roller:before {
   content: "\F5AA";
 }
@@ -28583,6 +30159,10 @@ readers do not read off random characters that represent icons */
 
 .fa-pallet:before {
   content: "\F482";
+}
+
+.fa-pallet-alt:before {
+  content: "\F483";
 }
 
 .fa-paper-plane:before {
@@ -28603,6 +30183,18 @@ readers do not read off random characters that represent icons */
 
 .fa-parking:before {
   content: "\F540";
+}
+
+.fa-parking-circle:before {
+  content: "\F615";
+}
+
+.fa-parking-circle-slash:before {
+  content: "\F616";
+}
+
+.fa-parking-slash:before {
+  content: "\F617";
 }
 
 .fa-passport:before {
@@ -28633,12 +30225,24 @@ readers do not read off random characters that represent icons */
   content: "\F1B0";
 }
 
+.fa-paw-alt:before {
+  content: "\F701";
+}
+
+.fa-paw-claws:before {
+  content: "\F702";
+}
+
 .fa-paypal:before {
   content: "\F1ED";
 }
 
 .fa-peace:before {
   content: "\F67C";
+}
+
+.fa-pegasus:before {
+  content: "\F703";
 }
 
 .fa-pen:before {
@@ -28661,12 +30265,24 @@ readers do not read off random characters that represent icons */
   content: "\F14B";
 }
 
+.fa-pencil:before {
+  content: "\F040";
+}
+
 .fa-pencil-alt:before {
   content: "\F303";
 }
 
+.fa-pencil-paintbrush:before {
+  content: "\F618";
+}
+
 .fa-pencil-ruler:before {
   content: "\F5AE";
+}
+
+.fa-pennant:before {
+  content: "\F456";
 }
 
 .fa-penny-arcade:before {
@@ -28697,6 +30313,22 @@ readers do not read off random characters that represent icons */
   content: "\F756";
 }
 
+.fa-person-carry:before {
+  content: "\F4CF";
+}
+
+.fa-person-dolly:before {
+  content: "\F4D0";
+}
+
+.fa-person-dolly-empty:before {
+  content: "\F4D1";
+}
+
+.fa-person-sign:before {
+  content: "\F757";
+}
+
 .fa-phabricator:before {
   content: "\F3DB";
 }
@@ -28711,6 +30343,14 @@ readers do not read off random characters that represent icons */
 
 .fa-phone:before {
   content: "\F095";
+}
+
+.fa-phone-office:before {
+  content: "\F67D";
+}
+
+.fa-phone-plus:before {
+  content: "\F4D2";
 }
 
 .fa-phone-slash:before {
@@ -28729,6 +30369,14 @@ readers do not read off random characters that represent icons */
   content: "\F457";
 }
 
+.fa-pi:before {
+  content: "\F67E";
+}
+
+.fa-pie:before {
+  content: "\F705";
+}
+
 .fa-pied-piper:before {
   content: "\F2AE";
 }
@@ -28743,6 +30391,10 @@ readers do not read off random characters that represent icons */
 
 .fa-pied-piper-pp:before {
   content: "\F1A7";
+}
+
+.fa-pig:before {
+  content: "\F706";
 }
 
 .fa-piggy-bank:before {
@@ -28765,6 +30417,10 @@ readers do not read off random characters that represent icons */
   content: "\F0D3";
 }
 
+.fa-pizza:before {
+  content: "\F817";
+}
+
 .fa-pizza-slice:before {
   content: "\F818";
 }
@@ -28775,6 +30431,10 @@ readers do not read off random characters that represent icons */
 
 .fa-plane:before {
   content: "\F072";
+}
+
+.fa-plane-alt:before {
+  content: "\F3DE";
 }
 
 .fa-plane-arrival:before {
@@ -28809,6 +30469,14 @@ readers do not read off random characters that represent icons */
   content: "\F055";
 }
 
+.fa-plus-hexagon:before {
+  content: "\F300";
+}
+
+.fa-plus-octagon:before {
+  content: "\F301";
+}
+
 .fa-plus-square:before {
   content: "\F0FE";
 }
@@ -28817,12 +30485,24 @@ readers do not read off random characters that represent icons */
   content: "\F2CE";
 }
 
+.fa-podium:before {
+  content: "\F680";
+}
+
+.fa-podium-star:before {
+  content: "\F758";
+}
+
 .fa-poll:before {
   content: "\F681";
 }
 
 .fa-poll-h:before {
   content: "\F682";
+}
+
+.fa-poll-people:before {
+  content: "\F759";
 }
 
 .fa-poo:before {
@@ -28835,6 +30515,10 @@ readers do not read off random characters that represent icons */
 
 .fa-poop:before {
   content: "\F619";
+}
+
+.fa-popcorn:before {
+  content: "\F819";
 }
 
 .fa-portrait:before {
@@ -28869,8 +30553,20 @@ readers do not read off random characters that represent icons */
   content: "\F486";
 }
 
+.fa-presentation:before {
+  content: "\F685";
+}
+
 .fa-print:before {
   content: "\F02F";
+}
+
+.fa-print-search:before {
+  content: "\F81A";
+}
+
+.fa-print-slash:before {
+  content: "\F686";
 }
 
 .fa-procedures:before {
@@ -28883,6 +30579,10 @@ readers do not read off random characters that represent icons */
 
 .fa-project-diagram:before {
   content: "\F542";
+}
+
+.fa-pumpkin:before {
+  content: "\F707";
 }
 
 .fa-pushed:before {
@@ -28913,6 +30613,10 @@ readers do not read off random characters that represent icons */
   content: "\F059";
 }
 
+.fa-question-square:before {
+  content: "\F2FD";
+}
+
 .fa-quidditch:before {
   content: "\F458";
 }
@@ -28941,6 +30645,18 @@ readers do not read off random characters that represent icons */
   content: "\F4F7";
 }
 
+.fa-rabbit:before {
+  content: "\F708";
+}
+
+.fa-rabbit-fast:before {
+  content: "\F709";
+}
+
+.fa-racquet:before {
+  content: "\F45A";
+}
+
 .fa-radiation:before {
   content: "\F7B9";
 }
@@ -28951,6 +30667,18 @@ readers do not read off random characters that represent icons */
 
 .fa-rainbow:before {
   content: "\F75B";
+}
+
+.fa-raindrops:before {
+  content: "\F75C";
+}
+
+.fa-ram:before {
+  content: "\F70A";
+}
+
+.fa-ramp-loading:before {
+  content: "\F4D4";
 }
 
 .fa-random:before {
@@ -28983,6 +30711,18 @@ readers do not read off random characters that represent icons */
 
 .fa-receipt:before {
   content: "\F543";
+}
+
+.fa-rectangle-landscape:before {
+  content: "\F2FA";
+}
+
+.fa-rectangle-portrait:before {
+  content: "\F2FB";
+}
+
+.fa-rectangle-wide:before {
+  content: "\F2FC";
 }
 
 .fa-recycle:before {
@@ -29025,6 +30765,22 @@ readers do not read off random characters that represent icons */
   content: "\F18B";
 }
 
+.fa-repeat:before {
+  content: "\F363";
+}
+
+.fa-repeat-1:before {
+  content: "\F365";
+}
+
+.fa-repeat-1-alt:before {
+  content: "\F366";
+}
+
+.fa-repeat-alt:before {
+  content: "\F364";
+}
+
 .fa-reply:before {
   content: "\F3E5";
 }
@@ -29057,6 +30813,10 @@ readers do not read off random characters that represent icons */
   content: "\F079";
 }
 
+.fa-retweet-alt:before {
+  content: "\F361";
+}
+
 .fa-rev:before {
   content: "\F5B2";
 }
@@ -29067,6 +30827,10 @@ readers do not read off random characters that represent icons */
 
 .fa-ring:before {
   content: "\F70B";
+}
+
+.fa-rings-wedding:before {
+  content: "\F81B";
 }
 
 .fa-road:before {
@@ -29093,6 +30857,14 @@ readers do not read off random characters that represent icons */
   content: "\F4D7";
 }
 
+.fa-route-highway:before {
+  content: "\F61A";
+}
+
+.fa-route-interstate:before {
+  content: "\F61B";
+}
+
 .fa-rss:before {
   content: "\F09E";
 }
@@ -29117,6 +30889,10 @@ readers do not read off random characters that represent icons */
   content: "\F547";
 }
 
+.fa-ruler-triangle:before {
+  content: "\F61C";
+}
+
 .fa-ruler-vertical:before {
   content: "\F548";
 }
@@ -29127,6 +30903,18 @@ readers do not read off random characters that represent icons */
 
 .fa-rupee-sign:before {
   content: "\F156";
+}
+
+.fa-rv:before {
+  content: "\F7BE";
+}
+
+.fa-sack:before {
+  content: "\F81C";
+}
+
+.fa-sack-dollar:before {
+  content: "\F81D";
 }
 
 .fa-sad-cry:before {
@@ -29141,8 +30929,16 @@ readers do not read off random characters that represent icons */
   content: "\F267";
 }
 
+.fa-salad:before {
+  content: "\F81E";
+}
+
 .fa-salesforce:before {
   content: "\F83B";
+}
+
+.fa-sandwich:before {
+  content: "\F81F";
 }
 
 .fa-sass:before {
@@ -29157,8 +30953,40 @@ readers do not read off random characters that represent icons */
   content: "\F7C0";
 }
 
+.fa-sausage:before {
+  content: "\F820";
+}
+
 .fa-save:before {
   content: "\F0C7";
+}
+
+.fa-scalpel:before {
+  content: "\F61D";
+}
+
+.fa-scalpel-path:before {
+  content: "\F61E";
+}
+
+.fa-scanner:before {
+  content: "\F488";
+}
+
+.fa-scanner-keyboard:before {
+  content: "\F489";
+}
+
+.fa-scanner-touchscreen:before {
+  content: "\F48A";
+}
+
+.fa-scarecrow:before {
+  content: "\F70D";
+}
+
+.fa-scarf:before {
+  content: "\F7C1";
 }
 
 .fa-schlix:before {
@@ -29179,6 +31007,18 @@ readers do not read off random characters that represent icons */
 
 .fa-scroll:before {
   content: "\F70E";
+}
+
+.fa-scroll-old:before {
+  content: "\F70F";
+}
+
+.fa-scrubber:before {
+  content: "\F2F8";
+}
+
+.fa-scythe:before {
+  content: "\F710";
 }
 
 .fa-sd-card:before {
@@ -29237,6 +31077,10 @@ readers do not read off random characters that represent icons */
   content: "\F064";
 }
 
+.fa-share-all:before {
+  content: "\F367";
+}
+
 .fa-share-alt:before {
   content: "\F1E0";
 }
@@ -29249,12 +31093,28 @@ readers do not read off random characters that represent icons */
   content: "\F14D";
 }
 
+.fa-sheep:before {
+  content: "\F711";
+}
+
 .fa-shekel-sign:before {
   content: "\F20B";
 }
 
+.fa-shield:before {
+  content: "\F132";
+}
+
 .fa-shield-alt:before {
   content: "\F3ED";
+}
+
+.fa-shield-check:before {
+  content: "\F2F7";
+}
+
+.fa-shield-cross:before {
+  content: "\F712";
 }
 
 .fa-ship:before {
@@ -29265,8 +31125,16 @@ readers do not read off random characters that represent icons */
   content: "\F48B";
 }
 
+.fa-shipping-timed:before {
+  content: "\F48C";
+}
+
 .fa-shirtsinbulk:before {
   content: "\F214";
+}
+
+.fa-shish-kebab:before {
+  content: "\F821";
 }
 
 .fa-shoe-prints:before {
@@ -29289,16 +31157,44 @@ readers do not read off random characters that represent icons */
   content: "\F5B5";
 }
 
+.fa-shovel:before {
+  content: "\F713";
+}
+
+.fa-shovel-snow:before {
+  content: "\F7C3";
+}
+
 .fa-shower:before {
   content: "\F2CC";
+}
+
+.fa-shredder:before {
+  content: "\F68A";
 }
 
 .fa-shuttle-van:before {
   content: "\F5B6";
 }
 
+.fa-shuttlecock:before {
+  content: "\F45B";
+}
+
+.fa-sickle:before {
+  content: "\F822";
+}
+
+.fa-sigma:before {
+  content: "\F68B";
+}
+
 .fa-sign:before {
   content: "\F4D9";
+}
+
+.fa-sign-in:before {
+  content: "\F090";
 }
 
 .fa-sign-in-alt:before {
@@ -29309,12 +31205,56 @@ readers do not read off random characters that represent icons */
   content: "\F2A7";
 }
 
+.fa-sign-out:before {
+  content: "\F08B";
+}
+
 .fa-sign-out-alt:before {
   content: "\F2F5";
 }
 
 .fa-signal:before {
   content: "\F012";
+}
+
+.fa-signal-1:before {
+  content: "\F68C";
+}
+
+.fa-signal-2:before {
+  content: "\F68D";
+}
+
+.fa-signal-3:before {
+  content: "\F68E";
+}
+
+.fa-signal-4:before {
+  content: "\F68F";
+}
+
+.fa-signal-alt:before {
+  content: "\F690";
+}
+
+.fa-signal-alt-1:before {
+  content: "\F691";
+}
+
+.fa-signal-alt-2:before {
+  content: "\F692";
+}
+
+.fa-signal-alt-3:before {
+  content: "\F693";
+}
+
+.fa-signal-alt-slash:before {
+  content: "\F694";
+}
+
+.fa-signal-slash:before {
+  content: "\F695";
 }
 
 .fa-signature:before {
@@ -29345,8 +31285,20 @@ readers do not read off random characters that represent icons */
   content: "\F7C5";
 }
 
+.fa-skeleton:before {
+  content: "\F620";
+}
+
 .fa-sketch:before {
   content: "\F7C6";
+}
+
+.fa-ski-jump:before {
+  content: "\F7C7";
+}
+
+.fa-ski-lift:before {
+  content: "\F7C8";
 }
 
 .fa-skiing:before {
@@ -29385,12 +31337,28 @@ readers do not read off random characters that represent icons */
   content: "\F715";
 }
 
+.fa-sledding:before {
+  content: "\F7CB";
+}
+
 .fa-sleigh:before {
   content: "\F7CC";
 }
 
 .fa-sliders-h:before {
   content: "\F1DE";
+}
+
+.fa-sliders-h-square:before {
+  content: "\F3F0";
+}
+
+.fa-sliders-v:before {
+  content: "\F3F1";
+}
+
+.fa-sliders-v-square:before {
+  content: "\F3F2";
 }
 
 .fa-slideshare:before {
@@ -29405,12 +31373,20 @@ readers do not read off random characters that represent icons */
   content: "\F5B8";
 }
 
+.fa-smile-plus:before {
+  content: "\F5B9";
+}
+
 .fa-smile-wink:before {
   content: "\F4DA";
 }
 
 .fa-smog:before {
   content: "\F75F";
+}
+
+.fa-smoke:before {
+  content: "\F760";
 }
 
 .fa-smoking:before {
@@ -29425,6 +31401,10 @@ readers do not read off random characters that represent icons */
   content: "\F7CD";
 }
 
+.fa-snake:before {
+  content: "\F716";
+}
+
 .fa-snapchat:before {
   content: "\F2AB";
 }
@@ -29437,6 +31417,10 @@ readers do not read off random characters that represent icons */
   content: "\F2AD";
 }
 
+.fa-snow-blowing:before {
+  content: "\F761";
+}
+
 .fa-snowboarding:before {
   content: "\F7CE";
 }
@@ -29445,8 +31429,16 @@ readers do not read off random characters that represent icons */
   content: "\F2DC";
 }
 
+.fa-snowflakes:before {
+  content: "\F7CF";
+}
+
 .fa-snowman:before {
   content: "\F7D0";
+}
+
+.fa-snowmobile:before {
+  content: "\F7D1";
 }
 
 .fa-snowplow:before {
@@ -29501,6 +31493,10 @@ readers do not read off random characters that represent icons */
   content: "\F1BE";
 }
 
+.fa-soup:before {
+  content: "\F823";
+}
+
 .fa-sourcetree:before {
   content: "\F7D3";
 }
@@ -29511,6 +31507,10 @@ readers do not read off random characters that represent icons */
 
 .fa-space-shuttle:before {
   content: "\F197";
+}
+
+.fa-spade:before {
+  content: "\F2F4";
 }
 
 .fa-speakap:before {
@@ -29525,8 +31525,20 @@ readers do not read off random characters that represent icons */
   content: "\F717";
 }
 
+.fa-spider-black-widow:before {
+  content: "\F718";
+}
+
+.fa-spider-web:before {
+  content: "\F719";
+}
+
 .fa-spinner:before {
   content: "\F110";
+}
+
+.fa-spinner-third:before {
+  content: "\F3F4";
 }
 
 .fa-splotch:before {
@@ -29549,12 +31561,20 @@ readers do not read off random characters that represent icons */
   content: "\F45C";
 }
 
+.fa-square-root:before {
+  content: "\F697";
+}
+
 .fa-square-root-alt:before {
   content: "\F698";
 }
 
 .fa-squarespace:before {
   content: "\F5BE";
+}
+
+.fa-squirrel:before {
+  content: "\F71A";
 }
 
 .fa-stack-exchange:before {
@@ -29569,6 +31589,10 @@ readers do not read off random characters that represent icons */
   content: "\F842";
 }
 
+.fa-staff:before {
+  content: "\F71B";
+}
+
 .fa-stamp:before {
   content: "\F5BF";
 }
@@ -29579,6 +31603,14 @@ readers do not read off random characters that represent icons */
 
 .fa-star-and-crescent:before {
   content: "\F699";
+}
+
+.fa-star-christmas:before {
+  content: "\F7D4";
+}
+
+.fa-star-exclamation:before {
+  content: "\F2F3";
 }
 
 .fa-star-half:before {
@@ -29597,8 +31629,16 @@ readers do not read off random characters that represent icons */
   content: "\F621";
 }
 
+.fa-stars:before {
+  content: "\F762";
+}
+
 .fa-staylinked:before {
   content: "\F3F5";
+}
+
+.fa-steak:before {
+  content: "\F824";
 }
 
 .fa-steam:before {
@@ -29611,6 +31651,10 @@ readers do not read off random characters that represent icons */
 
 .fa-steam-symbol:before {
   content: "\F3F6";
+}
+
+.fa-steering-wheel:before {
+  content: "\F622";
 }
 
 .fa-step-backward:before {
@@ -29631,6 +31675,14 @@ readers do not read off random characters that represent icons */
 
 .fa-sticky-note:before {
   content: "\F249";
+}
+
+.fa-stocking:before {
+  content: "\F7D5";
+}
+
+.fa-stomach:before {
+  content: "\F623";
 }
 
 .fa-stop:before {
@@ -29663,6 +31715,10 @@ readers do not read off random characters that represent icons */
 
 .fa-street-view:before {
   content: "\F21D";
+}
+
+.fa-stretcher:before {
+  content: "\F825";
 }
 
 .fa-strikethrough:before {
@@ -29713,6 +31769,26 @@ readers do not read off random characters that represent icons */
   content: "\F185";
 }
 
+.fa-sun-cloud:before {
+  content: "\F763";
+}
+
+.fa-sun-dust:before {
+  content: "\F764";
+}
+
+.fa-sun-haze:before {
+  content: "\F765";
+}
+
+.fa-sunrise:before {
+  content: "\F766";
+}
+
+.fa-sunset:before {
+  content: "\F767";
+}
+
 .fa-superpowers:before {
   content: "\F2DD";
 }
@@ -29743,6 +31819,14 @@ readers do not read off random characters that represent icons */
 
 .fa-swimming-pool:before {
   content: "\F5C5";
+}
+
+.fa-sword:before {
+  content: "\F71C";
+}
+
+.fa-swords:before {
+  content: "\F71D";
 }
 
 .fa-symfony:before {
@@ -29781,12 +31865,72 @@ readers do not read off random characters that represent icons */
   content: "\F3FA";
 }
 
+.fa-tablet-android:before {
+  content: "\F3FB";
+}
+
+.fa-tablet-android-alt:before {
+  content: "\F3FC";
+}
+
+.fa-tablet-rugged:before {
+  content: "\F48F";
+}
+
 .fa-tablets:before {
   content: "\F490";
 }
 
+.fa-tachometer:before {
+  content: "\F0E4";
+}
+
 .fa-tachometer-alt:before {
   content: "\F3FD";
+}
+
+.fa-tachometer-alt-average:before {
+  content: "\F624";
+}
+
+.fa-tachometer-alt-fast:before {
+  content: "\F625";
+}
+
+.fa-tachometer-alt-fastest:before {
+  content: "\F626";
+}
+
+.fa-tachometer-alt-slow:before {
+  content: "\F627";
+}
+
+.fa-tachometer-alt-slowest:before {
+  content: "\F628";
+}
+
+.fa-tachometer-average:before {
+  content: "\F629";
+}
+
+.fa-tachometer-fast:before {
+  content: "\F62A";
+}
+
+.fa-tachometer-fastest:before {
+  content: "\F62B";
+}
+
+.fa-tachometer-slow:before {
+  content: "\F62C";
+}
+
+.fa-tachometer-slowest:before {
+  content: "\F62D";
+}
+
+.fa-taco:before {
+  content: "\F826";
 }
 
 .fa-tag:before {
@@ -29797,12 +31941,24 @@ readers do not read off random characters that represent icons */
   content: "\F02C";
 }
 
+.fa-tally:before {
+  content: "\F69C";
+}
+
+.fa-tanakh:before {
+  content: "\F827";
+}
+
 .fa-tape:before {
   content: "\F4DB";
 }
 
 .fa-tasks:before {
   content: "\F0AE";
+}
+
+.fa-tasks-alt:before {
+  content: "\F828";
 }
 
 .fa-taxi:before {
@@ -29829,8 +31985,16 @@ readers do not read off random characters that represent icons */
   content: "\F3FE";
 }
 
+.fa-temperature-frigid:before {
+  content: "\F768";
+}
+
 .fa-temperature-high:before {
   content: "\F769";
+}
+
+.fa-temperature-hot:before {
+  content: "\F76A";
 }
 
 .fa-temperature-low:before {
@@ -29843,6 +32007,10 @@ readers do not read off random characters that represent icons */
 
 .fa-tenge:before {
   content: "\F7D7";
+}
+
+.fa-tennis-ball:before {
+  content: "\F45E";
 }
 
 .fa-terminal:before {
@@ -29909,6 +32077,10 @@ readers do not read off random characters that represent icons */
   content: "\F2C8";
 }
 
+.fa-theta:before {
+  content: "\F69E";
+}
+
 .fa-think-peaks:before {
   content: "\F731";
 }
@@ -29925,8 +32097,28 @@ readers do not read off random characters that represent icons */
   content: "\F08D";
 }
 
+.fa-thunderstorm:before {
+  content: "\F76C";
+}
+
+.fa-thunderstorm-moon:before {
+  content: "\F76D";
+}
+
+.fa-thunderstorm-sun:before {
+  content: "\F76E";
+}
+
+.fa-ticket:before {
+  content: "\F145";
+}
+
 .fa-ticket-alt:before {
   content: "\F3FF";
+}
+
+.fa-tilde:before {
+  content: "\F69F";
 }
 
 .fa-times:before {
@@ -29937,12 +32129,40 @@ readers do not read off random characters that represent icons */
   content: "\F057";
 }
 
+.fa-times-hexagon:before {
+  content: "\F2EE";
+}
+
+.fa-times-octagon:before {
+  content: "\F2F0";
+}
+
+.fa-times-square:before {
+  content: "\F2D3";
+}
+
 .fa-tint:before {
   content: "\F043";
 }
 
 .fa-tint-slash:before {
   content: "\F5C7";
+}
+
+.fa-tire:before {
+  content: "\F631";
+}
+
+.fa-tire-flat:before {
+  content: "\F632";
+}
+
+.fa-tire-pressure-warning:before {
+  content: "\F633";
+}
+
+.fa-tire-rugged:before {
+  content: "\F634";
 }
 
 .fa-tired:before {
@@ -29965,6 +32185,18 @@ readers do not read off random characters that represent icons */
   content: "\F71E";
 }
 
+.fa-toilet-paper-alt:before {
+  content: "\F71F";
+}
+
+.fa-tombstone:before {
+  content: "\F720";
+}
+
+.fa-tombstone-alt:before {
+  content: "\F721";
+}
+
 .fa-toolbox:before {
   content: "\F552";
 }
@@ -29977,12 +32209,20 @@ readers do not read off random characters that represent icons */
   content: "\F5C9";
 }
 
+.fa-toothbrush:before {
+  content: "\F635";
+}
+
 .fa-torah:before {
   content: "\F6A0";
 }
 
 .fa-torii-gate:before {
   content: "\F6A1";
+}
+
+.fa-tornado:before {
+  content: "\F76F";
 }
 
 .fa-tractor:before {
@@ -29997,8 +32237,24 @@ readers do not read off random characters that represent icons */
   content: "\F25C";
 }
 
+.fa-traffic-cone:before {
+  content: "\F636";
+}
+
 .fa-traffic-light:before {
   content: "\F637";
+}
+
+.fa-traffic-light-go:before {
+  content: "\F638";
+}
+
+.fa-traffic-light-slow:before {
+  content: "\F639";
+}
+
+.fa-traffic-light-stop:before {
+  content: "\F63A";
 }
 
 .fa-train:before {
@@ -30033,12 +32289,44 @@ readers do not read off random characters that represent icons */
   content: "\F82A";
 }
 
+.fa-treasure-chest:before {
+  content: "\F723";
+}
+
 .fa-tree:before {
   content: "\F1BB";
 }
 
+.fa-tree-alt:before {
+  content: "\F400";
+}
+
+.fa-tree-christmas:before {
+  content: "\F7DB";
+}
+
+.fa-tree-decorated:before {
+  content: "\F7DC";
+}
+
+.fa-tree-large:before {
+  content: "\F7DD";
+}
+
+.fa-tree-palm:before {
+  content: "\F82B";
+}
+
+.fa-trees:before {
+  content: "\F724";
+}
+
 .fa-trello:before {
   content: "\F181";
+}
+
+.fa-triangle:before {
+  content: "\F2EC";
 }
 
 .fa-tripadvisor:before {
@@ -30049,8 +32337,20 @@ readers do not read off random characters that represent icons */
   content: "\F091";
 }
 
+.fa-trophy-alt:before {
+  content: "\F2EB";
+}
+
 .fa-truck:before {
   content: "\F0D1";
+}
+
+.fa-truck-container:before {
+  content: "\F4DC";
+}
+
+.fa-truck-couch:before {
+  content: "\F4DD";
 }
 
 .fa-truck-loading:before {
@@ -30069,6 +32369,14 @@ readers do not read off random characters that represent icons */
   content: "\F63C";
 }
 
+.fa-truck-plow:before {
+  content: "\F7DE";
+}
+
+.fa-truck-ramp:before {
+  content: "\F4E0";
+}
+
 .fa-tshirt:before {
   content: "\F553";
 }
@@ -30085,8 +32393,20 @@ readers do not read off random characters that represent icons */
   content: "\F174";
 }
 
+.fa-turkey:before {
+  content: "\F725";
+}
+
+.fa-turtle:before {
+  content: "\F726";
+}
+
 .fa-tv:before {
   content: "\F26C";
+}
+
+.fa-tv-retro:before {
+  content: "\F401";
 }
 
 .fa-twitch:before {
@@ -30137,6 +32457,14 @@ readers do not read off random characters that represent icons */
   content: "\F2EA";
 }
 
+.fa-unicorn:before {
+  content: "\F727";
+}
+
+.fa-union:before {
+  content: "\F6A2";
+}
+
 .fa-uniregistry:before {
   content: "\F404";
 }
@@ -30177,6 +32505,14 @@ readers do not read off random characters that represent icons */
   content: "\F287";
 }
 
+.fa-usd-circle:before {
+  content: "\F2E8";
+}
+
+.fa-usd-square:before {
+  content: "\F2E9";
+}
+
 .fa-user:before {
   content: "\F007";
 }
@@ -30191,6 +32527,10 @@ readers do not read off random characters that represent icons */
 
 .fa-user-astronaut:before {
   content: "\F4FB";
+}
+
+.fa-user-chart:before {
+  content: "\F6A3";
 }
 
 .fa-user-check:before {
@@ -30209,6 +32549,10 @@ readers do not read off random characters that represent icons */
   content: "\F4FE";
 }
 
+.fa-user-crown:before {
+  content: "\F6A4";
+}
+
 .fa-user-edit:before {
   content: "\F4FF";
 }
@@ -30221,6 +32565,14 @@ readers do not read off random characters that represent icons */
   content: "\F501";
 }
 
+.fa-user-hard-hat:before {
+  content: "\F82C";
+}
+
+.fa-user-headset:before {
+  content: "\F82D";
+}
+
 .fa-user-injured:before {
   content: "\F728";
 }
@@ -30231,6 +32583,10 @@ readers do not read off random characters that represent icons */
 
 .fa-user-md:before {
   content: "\F0F0";
+}
+
+.fa-user-md-chat:before {
+  content: "\F82E";
 }
 
 .fa-user-minus:before {
@@ -30277,8 +32633,20 @@ readers do not read off random characters that represent icons */
   content: "\F0C0";
 }
 
+.fa-users-class:before {
+  content: "\F63D";
+}
+
 .fa-users-cog:before {
   content: "\F509";
+}
+
+.fa-users-crown:before {
+  content: "\F6A5";
+}
+
+.fa-users-medical:before {
+  content: "\F830";
 }
 
 .fa-usps:before {
@@ -30289,6 +32657,14 @@ readers do not read off random characters that represent icons */
   content: "\F407";
 }
 
+.fa-utensil-fork:before {
+  content: "\F2E3";
+}
+
+.fa-utensil-knife:before {
+  content: "\F2E4";
+}
+
 .fa-utensil-spoon:before {
   content: "\F2E5";
 }
@@ -30297,8 +32673,16 @@ readers do not read off random characters that represent icons */
   content: "\F2E7";
 }
 
+.fa-utensils-alt:before {
+  content: "\F2E6";
+}
+
 .fa-vaadin:before {
   content: "\F408";
+}
+
+.fa-value-absolute:before {
+  content: "\F6A6";
 }
 
 .fa-vector-square:before {
@@ -30345,6 +32729,10 @@ readers do not read off random characters that represent icons */
   content: "\F03D";
 }
 
+.fa-video-plus:before {
+  content: "\F4E1";
+}
+
 .fa-video-slash:before {
   content: "\F4E2";
 }
@@ -30377,8 +32765,16 @@ readers do not read off random characters that represent icons */
   content: "\F40B";
 }
 
+.fa-volcano:before {
+  content: "\F770";
+}
+
 .fa-volleyball-ball:before {
   content: "\F45F";
+}
+
+.fa-volume:before {
+  content: "\F6A8";
 }
 
 .fa-volume-down:before {
@@ -30393,8 +32789,16 @@ readers do not read off random characters that represent icons */
   content: "\F026";
 }
 
+.fa-volume-slash:before {
+  content: "\F2E2";
+}
+
 .fa-volume-up:before {
   content: "\F028";
+}
+
+.fa-vote-nay:before {
+  content: "\F771";
 }
 
 .fa-vote-yea:before {
@@ -30409,6 +32813,10 @@ readers do not read off random characters that represent icons */
   content: "\F41F";
 }
 
+.fa-walker:before {
+  content: "\F831";
+}
+
 .fa-walking:before {
   content: "\F554";
 }
@@ -30417,12 +32825,40 @@ readers do not read off random characters that represent icons */
   content: "\F555";
 }
 
+.fa-wand:before {
+  content: "\F72A";
+}
+
+.fa-wand-magic:before {
+  content: "\F72B";
+}
+
 .fa-warehouse:before {
   content: "\F494";
 }
 
+.fa-warehouse-alt:before {
+  content: "\F495";
+}
+
+.fa-watch:before {
+  content: "\F2E1";
+}
+
+.fa-watch-fitness:before {
+  content: "\F63E";
+}
+
 .fa-water:before {
   content: "\F773";
+}
+
+.fa-water-lower:before {
+  content: "\F774";
+}
+
+.fa-water-rise:before {
+  content: "\F775";
 }
 
 .fa-wave-square:before {
@@ -30431,6 +32867,14 @@ readers do not read off random characters that represent icons */
 
 .fa-waze:before {
   content: "\F83F";
+}
+
+.fa-webcam:before {
+  content: "\F832";
+}
+
+.fa-webcam-slash:before {
+  content: "\F833";
 }
 
 .fa-weebly:before {
@@ -30453,6 +32897,10 @@ readers do not read off random characters that represent icons */
   content: "\F1D7";
 }
 
+.fa-whale:before {
+  content: "\F72C";
+}
+
 .fa-whatsapp:before {
   content: "\F232";
 }
@@ -30461,8 +32909,16 @@ readers do not read off random characters that represent icons */
   content: "\F40C";
 }
 
+.fa-wheat:before {
+  content: "\F72D";
+}
+
 .fa-wheelchair:before {
   content: "\F193";
+}
+
+.fa-whistle:before {
+  content: "\F460";
 }
 
 .fa-whmcs:before {
@@ -30473,12 +32929,36 @@ readers do not read off random characters that represent icons */
   content: "\F1EB";
 }
 
+.fa-wifi-1:before {
+  content: "\F6AA";
+}
+
+.fa-wifi-2:before {
+  content: "\F6AB";
+}
+
+.fa-wifi-slash:before {
+  content: "\F6AC";
+}
+
 .fa-wikipedia-w:before {
   content: "\F266";
 }
 
 .fa-wind:before {
   content: "\F72E";
+}
+
+.fa-wind-warning:before {
+  content: "\F776";
+}
+
+.fa-window:before {
+  content: "\F40E";
+}
+
+.fa-window-alt:before {
+  content: "\F40F";
 }
 
 .fa-window-close:before {
@@ -30499,6 +32979,10 @@ readers do not read off random characters that represent icons */
 
 .fa-windows:before {
   content: "\F17A";
+}
+
+.fa-windsock:before {
+  content: "\F777";
 }
 
 .fa-wine-bottle:before {
@@ -30551,6 +33035,10 @@ readers do not read off random characters that represent icons */
 
 .fa-wpressr:before {
   content: "\F3E4";
+}
+
+.fa-wreath:before {
+  content: "\F7E2";
 }
 
 .fa-wrench:before {
@@ -30647,28 +33135,66 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Font Awesome Pro 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
  */
 
 @font-face {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?e2675a616b68f446fa6284c111554c7f);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?e2675a616b68f446fa6284c111554c7f) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?64b3e814a66c2719b15abf8f7998bd73) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?0be94a07755ba9b88f2ebcac0f23a3da) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?f14c3b2ff7c821a4c838debbffd6ad2d) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?7726a281c1d436eb038f78c6e9048c96) format("svg");
+  src: url(/fonts/fa-solid-900.eot?f960deb9deac0887dd0d1a63a5383d93);
+  src: url(/fonts/fa-solid-900.eot?f960deb9deac0887dd0d1a63a5383d93) format("embedded-opentype"), url(/fonts/fa-solid-900.woff2?6832e004c9705a8332676bcd85c4138c) format("woff2"), url(/fonts/fa-solid-900.woff?f4e059be1b950e36ae69150aba13a2ad) format("woff"), url(/fonts/fa-solid-900.ttf?a5b659740171febe765cc5c2dbd4dd00) format("truetype"), url(/fonts/fa-solid-900.svg?a2506b776dd7b96599faeaa3fbc2a3af) format("svg");
 }
 
 .fa,
 .fas {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
   font-weight: 900;
 }
 
 /*!
- * Font Awesome Free 5.8.2 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Font Awesome Pro 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url(/fonts/fa-regular-400.eot?cdff9c2c9dab6c9aabd7c3da65b7c8d3);
+  src: url(/fonts/fa-regular-400.eot?cdff9c2c9dab6c9aabd7c3da65b7c8d3) format("embedded-opentype"), url(/fonts/fa-regular-400.woff2?751ce4031742c06c5b4ab34d00d16bd4) format("woff2"), url(/fonts/fa-regular-400.woff?7a9d78e9abadc2e97e5f48226e8ad829) format("woff"), url(/fonts/fa-regular-400.ttf?4bf83cd68a11908a738f3b0c9640e4df) format("truetype"), url(/fonts/fa-regular-400.svg?25f201e551ca74e4846a50125416029c) format("svg");
+}
+
+.far {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Pro 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+
+@font-face {
+  font-family: "Font Awesome 5 Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: auto;
+  src: url(/fonts/fa-light-300.eot?12f8d0eeba4504e025f30e4bf6326cd6);
+  src: url(/fonts/fa-light-300.eot?12f8d0eeba4504e025f30e4bf6326cd6) format("embedded-opentype"), url(/fonts/fa-light-300.woff2?1d4e499e402761b86c26b5fa3ad51c30) format("woff2"), url(/fonts/fa-light-300.woff?83c52b7102d3b3586554677f947792e7) format("woff"), url(/fonts/fa-light-300.ttf?da5526bf0f7fae09080945b15da77066) format("truetype"), url(/fonts/fa-light-300.svg?a53e2e1deb2df9bf484c1ea6291cb120) format("svg");
+}
+
+.fal {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 300;
+}
+
+/*!
+ * Font Awesome Pro 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
  */
 
 @font-face {
@@ -30676,16 +33202,2800 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: normal;
   font-display: auto;
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?8e49b728413079dfd9ee45d0c58d54e4);
-  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?8e49b728413079dfd9ee45d0c58d54e4) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?9f4ce3dc689981a1b87faab0f5484f9e) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?9f018d1025561e96439f7c0e9026301a) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?b7d071b9c3c197bff4af902070622423) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?38975343b586296e9b73e6b56cc3ec5d) format("svg");
+  src: url(/fonts/fa-brands-400.eot?2e45aa3fbc16f59a11849c3de08b2d70);
+  src: url(/fonts/fa-brands-400.eot?2e45aa3fbc16f59a11849c3de08b2d70) format("embedded-opentype"), url(/fonts/fa-brands-400.woff2?983d5f613da1fe0aebda986a7cc4d091) format("woff2"), url(/fonts/fa-brands-400.woff?73fb2ac5fbb5bd77b6874904ec7ec949) format("woff"), url(/fonts/fa-brands-400.ttf?0f1d490f450771ccd93c68c81fd25d2d) format("truetype"), url(/fonts/fa-brands-400.svg?b85c148cc8390d62b0b9c9e743fe293f) format("svg");
 }
 
 .fab {
   font-family: "Font Awesome 5 Brands";
 }
 
+/*!
+ * Font Awesome Pro 5.8.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+
+.fa.fa-glass:before {
+  content: "\F000";
+}
+
+.fa.fa-meetup {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-star-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-star-o:before {
+  content: "\F005";
+}
+
+.fa.fa-remove:before {
+  content: "\F00D";
+}
+
+.fa.fa-close:before {
+  content: "\F00D";
+}
+
+.fa.fa-gear:before {
+  content: "\F013";
+}
+
+.fa.fa-trash-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-trash-o:before {
+  content: "\F2ED";
+}
+
+.fa.fa-file-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-o:before {
+  content: "\F15B";
+}
+
+.fa.fa-clock-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-clock-o:before {
+  content: "\F017";
+}
+
+.fa.fa-arrow-circle-o-down {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-down:before {
+  content: "\F358";
+}
+
+.fa.fa-arrow-circle-o-up {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-up:before {
+  content: "\F35B";
+}
+
+.fa.fa-play-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-play-circle-o:before {
+  content: "\F144";
+}
+
+.fa.fa-repeat:before {
+  content: "\F01E";
+}
+
+.fa.fa-rotate-right:before {
+  content: "\F01E";
+}
+
+.fa.fa-refresh:before {
+  content: "\F021";
+}
+
+.fa.fa-list-alt {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-dedent:before {
+  content: "\F03B";
+}
+
+.fa.fa-video-camera:before {
+  content: "\F03D";
+}
+
+.fa.fa-picture-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-picture-o:before {
+  content: "\F03E";
+}
+
+.fa.fa-photo {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-photo:before {
+  content: "\F03E";
+}
+
+.fa.fa-image {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-image:before {
+  content: "\F03E";
+}
+
+.fa.fa-pencil:before {
+  content: "\F303";
+}
+
+.fa.fa-map-marker:before {
+  content: "\F3C5";
+}
+
+.fa.fa-pencil-square-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-pencil-square-o:before {
+  content: "\F044";
+}
+
+.fa.fa-share-square-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-share-square-o:before {
+  content: "\F14D";
+}
+
+.fa.fa-check-square-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-check-square-o:before {
+  content: "\F14A";
+}
+
+.fa.fa-arrows:before {
+  content: "\F0B2";
+}
+
+.fa.fa-times-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-times-circle-o:before {
+  content: "\F057";
+}
+
+.fa.fa-check-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-check-circle-o:before {
+  content: "\F058";
+}
+
+.fa.fa-mail-forward:before {
+  content: "\F064";
+}
+
+.fa.fa-eye {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-eye-slash {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-warning:before {
+  content: "\F071";
+}
+
+.fa.fa-calendar:before {
+  content: "\F073";
+}
+
+.fa.fa-arrows-v:before {
+  content: "\F338";
+}
+
+.fa.fa-arrows-h:before {
+  content: "\F337";
+}
+
+.fa.fa-bar-chart {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-bar-chart:before {
+  content: "\F080";
+}
+
+.fa.fa-bar-chart-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-bar-chart-o:before {
+  content: "\F080";
+}
+
+.fa.fa-twitter-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gears:before {
+  content: "\F085";
+}
+
+.fa.fa-thumbs-o-up {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-thumbs-o-up:before {
+  content: "\F164";
+}
+
+.fa.fa-thumbs-o-down {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-thumbs-o-down:before {
+  content: "\F165";
+}
+
+.fa.fa-heart-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-heart-o:before {
+  content: "\F004";
+}
+
+.fa.fa-sign-out:before {
+  content: "\F2F5";
+}
+
+.fa.fa-linkedin-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-linkedin-square:before {
+  content: "\F08C";
+}
+
+.fa.fa-thumb-tack:before {
+  content: "\F08D";
+}
+
+.fa.fa-external-link:before {
+  content: "\F35D";
+}
+
+.fa.fa-sign-in:before {
+  content: "\F2F6";
+}
+
+.fa.fa-github-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-lemon-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-lemon-o:before {
+  content: "\F094";
+}
+
+.fa.fa-square-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-square-o:before {
+  content: "\F0C8";
+}
+
+.fa.fa-bookmark-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-bookmark-o:before {
+  content: "\F02E";
+}
+
+.fa.fa-twitter {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook:before {
+  content: "\F39E";
+}
+
+.fa.fa-facebook-f {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook-f:before {
+  content: "\F39E";
+}
+
+.fa.fa-github {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-credit-card {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-feed:before {
+  content: "\F09E";
+}
+
+.fa.fa-hdd-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hdd-o:before {
+  content: "\F0A0";
+}
+
+.fa.fa-hand-o-right {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-right:before {
+  content: "\F0A4";
+}
+
+.fa.fa-hand-o-left {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-left:before {
+  content: "\F0A5";
+}
+
+.fa.fa-hand-o-up {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-up:before {
+  content: "\F0A6";
+}
+
+.fa.fa-hand-o-down {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-down:before {
+  content: "\F0A7";
+}
+
+.fa.fa-arrows-alt:before {
+  content: "\F31E";
+}
+
+.fa.fa-group:before {
+  content: "\F0C0";
+}
+
+.fa.fa-chain:before {
+  content: "\F0C1";
+}
+
+.fa.fa-scissors:before {
+  content: "\F0C4";
+}
+
+.fa.fa-files-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-files-o:before {
+  content: "\F0C5";
+}
+
+.fa.fa-floppy-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-floppy-o:before {
+  content: "\F0C7";
+}
+
+.fa.fa-navicon:before {
+  content: "\F0C9";
+}
+
+.fa.fa-reorder:before {
+  content: "\F0C9";
+}
+
+.fa.fa-pinterest {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pinterest-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus:before {
+  content: "\F0D5";
+}
+
+.fa.fa-money {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-money:before {
+  content: "\F3D1";
+}
+
+.fa.fa-unsorted:before {
+  content: "\F0DC";
+}
+
+.fa.fa-sort-desc:before {
+  content: "\F0DD";
+}
+
+.fa.fa-sort-asc:before {
+  content: "\F0DE";
+}
+
+.fa.fa-linkedin {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-linkedin:before {
+  content: "\F0E1";
+}
+
+.fa.fa-rotate-left:before {
+  content: "\F0E2";
+}
+
+.fa.fa-legal:before {
+  content: "\F0E3";
+}
+
+.fa.fa-tachometer:before {
+  content: "\F3FD";
+}
+
+.fa.fa-dashboard:before {
+  content: "\F3FD";
+}
+
+.fa.fa-comment-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-comment-o:before {
+  content: "\F075";
+}
+
+.fa.fa-comments-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-comments-o:before {
+  content: "\F086";
+}
+
+.fa.fa-flash:before {
+  content: "\F0E7";
+}
+
+.fa.fa-clipboard {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-paste {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-paste:before {
+  content: "\F328";
+}
+
+.fa.fa-lightbulb-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-lightbulb-o:before {
+  content: "\F0EB";
+}
+
+.fa.fa-exchange:before {
+  content: "\F362";
+}
+
+.fa.fa-cloud-download:before {
+  content: "\F381";
+}
+
+.fa.fa-cloud-upload:before {
+  content: "\F382";
+}
+
+.fa.fa-bell-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-bell-o:before {
+  content: "\F0F3";
+}
+
+.fa.fa-cutlery:before {
+  content: "\F2E7";
+}
+
+.fa.fa-file-text-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-text-o:before {
+  content: "\F15C";
+}
+
+.fa.fa-building-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-building-o:before {
+  content: "\F1AD";
+}
+
+.fa.fa-hospital-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hospital-o:before {
+  content: "\F0F8";
+}
+
+.fa.fa-tablet:before {
+  content: "\F3FA";
+}
+
+.fa.fa-mobile:before {
+  content: "\F3CD";
+}
+
+.fa.fa-mobile-phone:before {
+  content: "\F3CD";
+}
+
+.fa.fa-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-circle-o:before {
+  content: "\F111";
+}
+
+.fa.fa-mail-reply:before {
+  content: "\F3E5";
+}
+
+.fa.fa-github-alt {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-folder-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-folder-o:before {
+  content: "\F07B";
+}
+
+.fa.fa-folder-open-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-folder-open-o:before {
+  content: "\F07C";
+}
+
+.fa.fa-smile-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-smile-o:before {
+  content: "\F118";
+}
+
+.fa.fa-frown-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-frown-o:before {
+  content: "\F119";
+}
+
+.fa.fa-meh-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-meh-o:before {
+  content: "\F11A";
+}
+
+.fa.fa-keyboard-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-keyboard-o:before {
+  content: "\F11C";
+}
+
+.fa.fa-flag-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-flag-o:before {
+  content: "\F024";
+}
+
+.fa.fa-mail-reply-all:before {
+  content: "\F122";
+}
+
+.fa.fa-star-half-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-star-half-o:before {
+  content: "\F089";
+}
+
+.fa.fa-star-half-empty {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-star-half-empty:before {
+  content: "\F089";
+}
+
+.fa.fa-star-half-full {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-star-half-full:before {
+  content: "\F089";
+}
+
+.fa.fa-code-fork:before {
+  content: "\F126";
+}
+
+.fa.fa-chain-broken:before {
+  content: "\F127";
+}
+
+.fa.fa-shield:before {
+  content: "\F3ED";
+}
+
+.fa.fa-calendar-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-o:before {
+  content: "\F133";
+}
+
+.fa.fa-maxcdn {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-html5 {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-css3 {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ticket:before {
+  content: "\F3FF";
+}
+
+.fa.fa-minus-square-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-minus-square-o:before {
+  content: "\F146";
+}
+
+.fa.fa-level-up:before {
+  content: "\F3BF";
+}
+
+.fa.fa-level-down:before {
+  content: "\F3BE";
+}
+
+.fa.fa-pencil-square:before {
+  content: "\F14B";
+}
+
+.fa.fa-external-link-square:before {
+  content: "\F360";
+}
+
+.fa.fa-compass {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-down {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-down:before {
+  content: "\F150";
+}
+
+.fa.fa-toggle-down {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-down:before {
+  content: "\F150";
+}
+
+.fa.fa-caret-square-o-up {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-up:before {
+  content: "\F151";
+}
+
+.fa.fa-toggle-up {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-up:before {
+  content: "\F151";
+}
+
+.fa.fa-caret-square-o-right {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-right:before {
+  content: "\F152";
+}
+
+.fa.fa-toggle-right {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-right:before {
+  content: "\F152";
+}
+
+.fa.fa-eur:before {
+  content: "\F153";
+}
+
+.fa.fa-euro:before {
+  content: "\F153";
+}
+
+.fa.fa-gbp:before {
+  content: "\F154";
+}
+
+.fa.fa-usd:before {
+  content: "\F155";
+}
+
+.fa.fa-dollar:before {
+  content: "\F155";
+}
+
+.fa.fa-inr:before {
+  content: "\F156";
+}
+
+.fa.fa-rupee:before {
+  content: "\F156";
+}
+
+.fa.fa-jpy:before {
+  content: "\F157";
+}
+
+.fa.fa-cny:before {
+  content: "\F157";
+}
+
+.fa.fa-rmb:before {
+  content: "\F157";
+}
+
+.fa.fa-yen:before {
+  content: "\F157";
+}
+
+.fa.fa-rub:before {
+  content: "\F158";
+}
+
+.fa.fa-ruble:before {
+  content: "\F158";
+}
+
+.fa.fa-rouble:before {
+  content: "\F158";
+}
+
+.fa.fa-krw:before {
+  content: "\F159";
+}
+
+.fa.fa-won:before {
+  content: "\F159";
+}
+
+.fa.fa-btc {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitcoin {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitcoin:before {
+  content: "\F15A";
+}
+
+.fa.fa-file-text:before {
+  content: "\F15C";
+}
+
+.fa.fa-sort-alpha-asc:before {
+  content: "\F15D";
+}
+
+.fa.fa-sort-alpha-desc:before {
+  content: "\F15E";
+}
+
+.fa.fa-sort-amount-asc:before {
+  content: "\F160";
+}
+
+.fa.fa-sort-amount-desc:before {
+  content: "\F161";
+}
+
+.fa.fa-sort-numeric-asc:before {
+  content: "\F162";
+}
+
+.fa.fa-sort-numeric-desc:before {
+  content: "\F163";
+}
+
+.fa.fa-youtube-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-youtube {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-xing {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-xing-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-youtube-play {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-youtube-play:before {
+  content: "\F167";
+}
+
+.fa.fa-dropbox {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-stack-overflow {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-instagram {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-flickr {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-adn {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitbucket {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitbucket-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitbucket-square:before {
+  content: "\F171";
+}
+
+.fa.fa-tumblr {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-tumblr-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-long-arrow-down:before {
+  content: "\F309";
+}
+
+.fa.fa-long-arrow-up:before {
+  content: "\F30C";
+}
+
+.fa.fa-long-arrow-left:before {
+  content: "\F30A";
+}
+
+.fa.fa-long-arrow-right:before {
+  content: "\F30B";
+}
+
+.fa.fa-apple {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-windows {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-android {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-linux {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-dribbble {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-skype {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-foursquare {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-trello {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gratipay {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gittip {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gittip:before {
+  content: "\F184";
+}
+
+.fa.fa-sun-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-sun-o:before {
+  content: "\F185";
+}
+
+.fa.fa-moon-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-moon-o:before {
+  content: "\F186";
+}
+
+.fa.fa-vk {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-weibo {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-renren {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pagelines {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-stack-exchange {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-right {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-right:before {
+  content: "\F35A";
+}
+
+.fa.fa-arrow-circle-o-left {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-left:before {
+  content: "\F359";
+}
+
+.fa.fa-caret-square-o-left {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-left:before {
+  content: "\F191";
+}
+
+.fa.fa-toggle-left {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-left:before {
+  content: "\F191";
+}
+
+.fa.fa-dot-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-dot-circle-o:before {
+  content: "\F192";
+}
+
+.fa.fa-vimeo-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-try:before {
+  content: "\F195";
+}
+
+.fa.fa-turkish-lira:before {
+  content: "\F195";
+}
+
+.fa.fa-plus-square-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-plus-square-o:before {
+  content: "\F0FE";
+}
+
+.fa.fa-slack {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wordpress {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-openid {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-institution:before {
+  content: "\F19C";
+}
+
+.fa.fa-bank:before {
+  content: "\F19C";
+}
+
+.fa.fa-mortar-board:before {
+  content: "\F19D";
+}
+
+.fa.fa-yahoo {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-reddit {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-reddit-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-stumbleupon-circle {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-stumbleupon {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-delicious {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-digg {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pied-piper-pp {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pied-piper-alt {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-drupal {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-joomla {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-spoon:before {
+  content: "\F2E5";
+}
+
+.fa.fa-behance {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-behance-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-steam {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-steam-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-automobile:before {
+  content: "\F1B9";
+}
+
+.fa.fa-cab:before {
+  content: "\F1BA";
+}
+
+.fa.fa-envelope-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-envelope-o:before {
+  content: "\F0E0";
+}
+
+.fa.fa-deviantart {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-soundcloud {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-file-pdf-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-pdf-o:before {
+  content: "\F1C1";
+}
+
+.fa.fa-file-word-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-word-o:before {
+  content: "\F1C2";
+}
+
+.fa.fa-file-excel-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-excel-o:before {
+  content: "\F1C3";
+}
+
+.fa.fa-file-powerpoint-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-powerpoint-o:before {
+  content: "\F1C4";
+}
+
+.fa.fa-file-image-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-image-o:before {
+  content: "\F1C5";
+}
+
+.fa.fa-file-photo-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-photo-o:before {
+  content: "\F1C5";
+}
+
+.fa.fa-file-picture-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-picture-o:before {
+  content: "\F1C5";
+}
+
+.fa.fa-file-archive-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-archive-o:before {
+  content: "\F1C6";
+}
+
+.fa.fa-file-zip-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-zip-o:before {
+  content: "\F1C6";
+}
+
+.fa.fa-file-audio-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-audio-o:before {
+  content: "\F1C7";
+}
+
+.fa.fa-file-sound-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-sound-o:before {
+  content: "\F1C7";
+}
+
+.fa.fa-file-video-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-video-o:before {
+  content: "\F1C8";
+}
+
+.fa.fa-file-movie-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-movie-o:before {
+  content: "\F1C8";
+}
+
+.fa.fa-file-code-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-file-code-o:before {
+  content: "\F1C9";
+}
+
+.fa.fa-vine {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-codepen {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-jsfiddle {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-life-ring {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-life-bouy {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-life-bouy:before {
+  content: "\F1CD";
+}
+
+.fa.fa-life-buoy {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-life-buoy:before {
+  content: "\F1CD";
+}
+
+.fa.fa-life-saver {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-life-saver:before {
+  content: "\F1CD";
+}
+
+.fa.fa-support {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-support:before {
+  content: "\F1CD";
+}
+
+.fa.fa-circle-o-notch:before {
+  content: "\F1CE";
+}
+
+.fa.fa-rebel {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ra {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ra:before {
+  content: "\F1D0";
+}
+
+.fa.fa-resistance {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-resistance:before {
+  content: "\F1D0";
+}
+
+.fa.fa-empire {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ge {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ge:before {
+  content: "\F1D1";
+}
+
+.fa.fa-git-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-git {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-hacker-news {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-y-combinator-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-y-combinator-square:before {
+  content: "\F1D4";
+}
+
+.fa.fa-yc-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yc-square:before {
+  content: "\F1D4";
+}
+
+.fa.fa-tencent-weibo {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-qq {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-weixin {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wechat {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wechat:before {
+  content: "\F1D7";
+}
+
+.fa.fa-send:before {
+  content: "\F1D8";
+}
+
+.fa.fa-paper-plane-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-paper-plane-o:before {
+  content: "\F1D8";
+}
+
+.fa.fa-send-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-send-o:before {
+  content: "\F1D8";
+}
+
+.fa.fa-circle-thin {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-circle-thin:before {
+  content: "\F111";
+}
+
+.fa.fa-header:before {
+  content: "\F1DC";
+}
+
+.fa.fa-sliders:before {
+  content: "\F1DE";
+}
+
+.fa.fa-futbol-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-futbol-o:before {
+  content: "\F1E3";
+}
+
+.fa.fa-soccer-ball-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-soccer-ball-o:before {
+  content: "\F1E3";
+}
+
+.fa.fa-slideshare {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-twitch {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yelp {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-newspaper-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-newspaper-o:before {
+  content: "\F1EA";
+}
+
+.fa.fa-paypal {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-wallet {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-visa {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-mastercard {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-discover {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-amex {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-paypal {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-stripe {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bell-slash-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-bell-slash-o:before {
+  content: "\F1F6";
+}
+
+.fa.fa-trash:before {
+  content: "\F2ED";
+}
+
+.fa.fa-copyright {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-eyedropper:before {
+  content: "\F1FB";
+}
+
+.fa.fa-area-chart:before {
+  content: "\F1FE";
+}
+
+.fa.fa-pie-chart:before {
+  content: "\F200";
+}
+
+.fa.fa-line-chart:before {
+  content: "\F201";
+}
+
+.fa.fa-lastfm {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-lastfm-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ioxhost {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-angellist {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-cc:before {
+  content: "\F20A";
+}
+
+.fa.fa-ils:before {
+  content: "\F20B";
+}
+
+.fa.fa-shekel:before {
+  content: "\F20B";
+}
+
+.fa.fa-sheqel:before {
+  content: "\F20B";
+}
+
+.fa.fa-meanpath {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-meanpath:before {
+  content: "\F2B4";
+}
+
+.fa.fa-buysellads {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-connectdevelop {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-dashcube {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-forumbee {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-leanpub {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-sellsy {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-shirtsinbulk {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-simplybuilt {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-skyatlas {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-diamond {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-diamond:before {
+  content: "\F3A5";
+}
+
+.fa.fa-intersex:before {
+  content: "\F224";
+}
+
+.fa.fa-facebook-official {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook-official:before {
+  content: "\F09A";
+}
+
+.fa.fa-pinterest-p {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-whatsapp {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-hotel:before {
+  content: "\F236";
+}
+
+.fa.fa-viacoin {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-medium {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-y-combinator {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yc {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yc:before {
+  content: "\F23B";
+}
+
+.fa.fa-optin-monster {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-opencart {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-expeditedssl {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-battery-4:before {
+  content: "\F240";
+}
+
+.fa.fa-battery:before {
+  content: "\F240";
+}
+
+.fa.fa-battery-3:before {
+  content: "\F241";
+}
+
+.fa.fa-battery-2:before {
+  content: "\F242";
+}
+
+.fa.fa-battery-1:before {
+  content: "\F243";
+}
+
+.fa.fa-battery-0:before {
+  content: "\F244";
+}
+
+.fa.fa-object-group {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-object-ungroup {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-sticky-note-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-sticky-note-o:before {
+  content: "\F249";
+}
+
+.fa.fa-cc-jcb {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-diners-club {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-clone {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hourglass-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hourglass-o:before {
+  content: "\F254";
+}
+
+.fa.fa-hourglass-1:before {
+  content: "\F251";
+}
+
+.fa.fa-hourglass-2:before {
+  content: "\F252";
+}
+
+.fa.fa-hourglass-3:before {
+  content: "\F253";
+}
+
+.fa.fa-hand-rock-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-rock-o:before {
+  content: "\F255";
+}
+
+.fa.fa-hand-grab-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-grab-o:before {
+  content: "\F255";
+}
+
+.fa.fa-hand-paper-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-paper-o:before {
+  content: "\F256";
+}
+
+.fa.fa-hand-stop-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-stop-o:before {
+  content: "\F256";
+}
+
+.fa.fa-hand-scissors-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-scissors-o:before {
+  content: "\F257";
+}
+
+.fa.fa-hand-lizard-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-lizard-o:before {
+  content: "\F258";
+}
+
+.fa.fa-hand-spock-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-spock-o:before {
+  content: "\F259";
+}
+
+.fa.fa-hand-pointer-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-pointer-o:before {
+  content: "\F25A";
+}
+
+.fa.fa-hand-peace-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-hand-peace-o:before {
+  content: "\F25B";
+}
+
+.fa.fa-registered {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-creative-commons {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gg {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gg-circle {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-tripadvisor {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-odnoklassniki {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-odnoklassniki-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-get-pocket {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wikipedia-w {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-safari {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-chrome {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-firefox {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-opera {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-internet-explorer {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-television:before {
+  content: "\F26C";
+}
+
+.fa.fa-contao {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-500px {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-amazon {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-plus-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-plus-o:before {
+  content: "\F271";
+}
+
+.fa.fa-calendar-minus-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-minus-o:before {
+  content: "\F272";
+}
+
+.fa.fa-calendar-times-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-times-o:before {
+  content: "\F273";
+}
+
+.fa.fa-calendar-check-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-check-o:before {
+  content: "\F274";
+}
+
+.fa.fa-map-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-map-o:before {
+  content: "\F279";
+}
+
+.fa.fa-commenting:before {
+  content: "\F4AD";
+}
+
+.fa.fa-commenting-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-commenting-o:before {
+  content: "\F4AD";
+}
+
+.fa.fa-houzz {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-vimeo {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-vimeo:before {
+  content: "\F27D";
+}
+
+.fa.fa-black-tie {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fonticons {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-reddit-alien {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-edge {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-credit-card-alt:before {
+  content: "\F09D";
+}
+
+.fa.fa-codiepie {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-modx {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fort-awesome {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-usb {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-product-hunt {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-mixcloud {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-scribd {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pause-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-pause-circle-o:before {
+  content: "\F28B";
+}
+
+.fa.fa-stop-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-stop-circle-o:before {
+  content: "\F28D";
+}
+
+.fa.fa-bluetooth {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bluetooth-b {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gitlab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wpbeginner {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wpforms {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-envira {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wheelchair-alt {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wheelchair-alt:before {
+  content: "\F368";
+}
+
+.fa.fa-question-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-question-circle-o:before {
+  content: "\F059";
+}
+
+.fa.fa-volume-control-phone:before {
+  content: "\F2A0";
+}
+
+.fa.fa-asl-interpreting:before {
+  content: "\F2A3";
+}
+
+.fa.fa-deafness:before {
+  content: "\F2A4";
+}
+
+.fa.fa-hard-of-hearing:before {
+  content: "\F2A4";
+}
+
+.fa.fa-glide {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-glide-g {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-signing:before {
+  content: "\F2A7";
+}
+
+.fa.fa-viadeo {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-viadeo-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-snapchat {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-snapchat-ghost {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-snapchat-square {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pied-piper {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-first-order {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yoast {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-themeisle {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-official {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-official:before {
+  content: "\F2B3";
+}
+
+.fa.fa-google-plus-circle {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-circle:before {
+  content: "\F2B3";
+}
+
+.fa.fa-font-awesome {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fa {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fa:before {
+  content: "\F2B4";
+}
+
+.fa.fa-handshake-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-handshake-o:before {
+  content: "\F2B5";
+}
+
+.fa.fa-envelope-open-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-envelope-open-o:before {
+  content: "\F2B6";
+}
+
+.fa.fa-linode {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-address-book-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-address-book-o:before {
+  content: "\F2B9";
+}
+
+.fa.fa-vcard:before {
+  content: "\F2BB";
+}
+
+.fa.fa-address-card-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-address-card-o:before {
+  content: "\F2BB";
+}
+
+.fa.fa-vcard-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-vcard-o:before {
+  content: "\F2BB";
+}
+
+.fa.fa-user-circle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-user-circle-o:before {
+  content: "\F2BD";
+}
+
+.fa.fa-user-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-user-o:before {
+  content: "\F007";
+}
+
+.fa.fa-id-badge {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-drivers-license:before {
+  content: "\F2C2";
+}
+
+.fa.fa-id-card-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-id-card-o:before {
+  content: "\F2C2";
+}
+
+.fa.fa-drivers-license-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-drivers-license-o:before {
+  content: "\F2C2";
+}
+
+.fa.fa-quora {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-free-code-camp {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-telegram {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-thermometer-4:before {
+  content: "\F2C7";
+}
+
+.fa.fa-thermometer:before {
+  content: "\F2C7";
+}
+
+.fa.fa-thermometer-3:before {
+  content: "\F2C8";
+}
+
+.fa.fa-thermometer-2:before {
+  content: "\F2C9";
+}
+
+.fa.fa-thermometer-1:before {
+  content: "\F2CA";
+}
+
+.fa.fa-thermometer-0:before {
+  content: "\F2CB";
+}
+
+.fa.fa-bathtub:before {
+  content: "\F2CD";
+}
+
+.fa.fa-s15:before {
+  content: "\F2CD";
+}
+
+.fa.fa-window-maximize {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-window-restore {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-times-rectangle:before {
+  content: "\F410";
+}
+
+.fa.fa-window-close-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-window-close-o:before {
+  content: "\F410";
+}
+
+.fa.fa-times-rectangle-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-times-rectangle-o:before {
+  content: "\F410";
+}
+
+.fa.fa-bandcamp {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-grav {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-etsy {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-imdb {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ravelry {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-eercast {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-eercast:before {
+  content: "\F2DA";
+}
+
+.fa.fa-snowflake-o {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 400;
+}
+
+.fa.fa-snowflake-o:before {
+  content: "\F2DC";
+}
+
+.fa.fa-superpowers {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wpexplorer {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-spotify {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
 label:not(.form-check-label):not(.custom-file-label) {
   font-weight: normal;
+}
+
+.c-bdy {
+  flex: 1 1 auto;
+  padding: 0.5rem;
 }
 
 /* Important part */
@@ -30697,16 +36007,34 @@ label:not(.form-check-label):not(.custom-file-label) {
 .mod-bdy {
   height: 450px;
   overflow-y: auto;
+  padding: 0;
 }
 
-.div-small-p-img .small-p-img {
+.small-p-img {
   height: 100px;
+  width: 24.5%;
+  padding: 5px 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+.small-p-img :hover {
+  background: black;
+  opacity: 0.4;
+}
+
+.div-small-p-img img:hover {
+  -webkit-filter: brightness(50%);
+}
+
+.product-img {
+  height: 100px;
+  width: 100%;
+}
+
 .product-detail-img {
   height: 25vw;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -30722,8 +36050,17 @@ label:not(.form-check-label):not(.custom-file-label) {
   color: #fff !important;
 }
 
+.brand-sm-img {
+  width: 25px;
+}
+
 .profile-user-img {
   width: 50px;
+}
+
+.item-card .product-img {
+  width: 100%;
+  height: 220px;
 }
 
 .item-card img:hover {
@@ -30733,13 +36070,18 @@ label:not(.form-check-label):not(.custom-file-label) {
 
 .item-card img {
   width: 100%;
-  height: 150px;
+  height: 140px;
+}
+
+.product-grid {
+  flex: 1 1 auto;
+  padding: 0.6rem;
 }
 
 .product-grid .product-content {
   text-align: center;
   transition: all 0.5s ease 0s;
-  padding: 15px;
+  padding: 0 15px;
   border: 1px solid #eaeaea;
 }
 
@@ -30749,7 +36091,7 @@ label:not(.form-check-label):not(.custom-file-label) {
 
 .product-grid:hover .icons {
   opacity: 1;
-  bottom: 33px;
+  bottom: 35px;
 }
 
 .product-grid .icons {
