@@ -7,20 +7,22 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 import BootstrapVue from 'bootstrap-vue';
 Vue.use(BootstrapVue);
 
+import StarRating from 'vue-star-rating';
+Vue.component('star-rating', StarRating);
 
 import moment from 'moment';
-import { Form, HasError, AlertError } from 'vform'
+import { Form, HasError, AlertError } from 'vform';
 
-import Gate from "./Gate";;
+import Gate from "./Gate";
 Vue.prototype.$gate = new Gate(window.user);
 
-import swal from 'sweetalert2'
+import swal from 'sweetalert2';
 window.swal = swal;
 
 const toast = swal.mixin({
@@ -53,7 +55,8 @@ let routes = [
     { path: '/dashboard', component: require('./components/Dashboard.vue').default },
     { path: '/users', component: require('./components/Users.vue').default },
     { path: '/developer', component: require('./components/Developer.vue').default },
-    { path: '/mechanic', component: require('./components/Mechanic.vue').default },
+    { path: '/mechanics', component: require('./components/Mechanics.vue').default },
+    { path: '/services', component: require('./components/Services.vue').default },
     { path: '/profile', component: require('./components/Profile.vue').default },
     { path: '/products', component: require('./components/Products.vue').default },
     { path: '/product_categories', component: require('./components/ProductCategories.vue').default },

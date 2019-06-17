@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef881722223cfdb2eef74b86e0636d5c",
+    "content-hash": "9b372fc1f8262a8b7fd3a37d4236dd8f",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -3501,6 +3501,57 @@
             "time": "2017-11-27T11:13:29+00:00"
         },
         {
+            "name": "trexology/reviewrateable",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Trexology/laravel-reviewRateable.git",
+                "reference": "2fec46a6acdcd53d63f630ff2cb5c2228b3b2bfd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Trexology/laravel-reviewRateable/zipball/2fec46a6acdcd53d63f630ff2cb5c2228b3b2bfd",
+                "reference": "2fec46a6acdcd53d63f630ff2cb5c2228b3b2bfd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Trexology\\ReviewRateable\\ReviewRateableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Trexology\\ReviewRateable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Trex Lim",
+                    "email": "trexlim@gmail.com"
+                }
+            ],
+            "description": "Rating syetem for Laravel 5",
+            "keywords": [
+                "Ratable",
+                "Rating",
+                "ReviewRateable",
+                "laravel",
+                "reviewable"
+            ],
+            "time": "2019-06-04T03:13:42+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v3.3.3",
             "source": {
@@ -3551,6 +3602,65 @@
                 "environment"
             ],
             "time": "2019-03-06T09:39:45+00:00"
+        },
+        {
+            "name": "willvincent/laravel-rateable",
+            "version": "1.07",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/willvincent/laravel-rateable.git",
+                "reference": "010bcbf8d12cec79ba106d85ad7baeae48faa96c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/willvincent/laravel-rateable/zipball/010bcbf8d12cec79ba106d85ad7baeae48faa96c",
+                "reference": "010bcbf8d12cec79ba106d85ad7baeae48faa96c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "willvincent\\Rateable\\RateableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/commands"
+                ],
+                "psr-4": {
+                    "willvincent\\Rateable\\": "src/Rateable"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Will Vincent",
+                    "email": "tcindie@gmail.com"
+                }
+            ],
+            "description": "Allows multiple models to be rated with a fivestar like system.",
+            "keywords": [
+                "Rating",
+                "fivestar",
+                "laravel",
+                "laravel 5",
+                "rateable",
+                "vote"
+            ],
+            "time": "2018-08-27T16:13:28+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

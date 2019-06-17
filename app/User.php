@@ -4,12 +4,14 @@ namespace App;
 
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
+use Trexology\ReviewRateable\Contracts\ReviewRateable;
+use Trexology\ReviewRateable\Traits\ReviewRateable as ReviewRateableTrait;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements ReviewRateable
 {
-    use HasApiTokens, Notifiable;
+    use HasApiTokens, Notifiable, ReviewRateableTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'bio', 'address', 'photo', 'type'
+        'name', 'email', 'password', 'bio', 'address', 'photo', 'type', 'averageRating', 'reviews'
     ];
 
     /**

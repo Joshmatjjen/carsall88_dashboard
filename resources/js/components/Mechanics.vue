@@ -7,7 +7,7 @@
                 <h3 class="card-title">Mechanic Table</h3>
 
                 <div class="card-tools">
-                  <button class="btn btn-success" @click="newModal">Add New <i class="fas fa-user-plus fa-fw"></i></button>
+                  <button class="btn btn-success" @click="addRating">Add New <i class="fas fa-user-plus fa-fw"></i></button>
                 </div>
               </div>
               <!-- /.card-header -->
@@ -18,23 +18,25 @@
                     <th>Photo</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Rating</th>
                     <th>Registered At</th>
                     <th>Modify</th>
                   </tr>
 
-                  <tr v-for="user in users.data" :key="user.id">
+                  <tr v-for="mechanic in mechanics.data" :key="mechanic.id">
 
-                    <td>{{user.id}}</td>
-                    <td><img class="profile-user-img img-fluid img-circle" v-bind:src="'/img/profile/' + user.photo" alt="User profile picture"></td>
-                    <td>{{user.name}}</td>
-                    <td>{{user.email}}</td>
-                    <td>{{user.created_at | myDate}}</td>
+                    <td>{{mechanic.id}}</td>
+                    <td><img class="profile-user-img img-fluid img-circle" v-bind:src="'/img/profile/' + mechanic.photo" alt="User profile picture"></td>
+                    <td>{{mechanic.name}}</td>
+                    <td>{{mechanic.email}}</td>
+                    <td><star-rating v-if="mechanic.id" :rating="5" @rating-selected="addRating($event, mechanic.id)" :border-width="1" text-class="custom-text" :star-size="20" :glow="20"></star-rating><b-button variant="outline-primary" @click="showButton">Button</b-button><div float-right>AVG: {{mechanic.averageRating}}   Review:  {{mechanic.reviews}}</div></td>
+                    <td>{{mechanic.created_at | myDate}}</td>
                     <td>
-                        <a href="#" @click="editModal(user)">
+                        <a href="#" @click="editModal(mechanic)">
                             <i class="fa fa-user-edit blue"></i>
                         </a>
                         /
-                        <a href="#" @click="deleteUser(user.id)">
+                        <a href="#" @click="deleteUser(mechanic.id)">
                             <i class="fa fa-trash-alt red"></i>
                         </a>
                     </td>
@@ -43,7 +45,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
-                  <pagination :data="users" @pagination-change-page="getResults"></pagination>
+                  <pagination :data="mechanics" @pagination-change-page="getResults"></pagination>
               </div>
             </div>
             <!-- /.card -->
@@ -142,7 +144,9 @@ import { setInterval } from 'timers';
         data() {
             return {
                 editmode: false,
-                users: {},
+                mechanics: {},
+                user: {},
+                ratings: {},
                 form: new Form({
                     id: '',
                     name: '',
@@ -152,14 +156,35 @@ import { setInterval } from 'timers';
                     address: '',
                     photo: ''
 
+                }),
+                rating: new Form({
+                    rate: '',
                 })
             }
         },
         methods: {
+            showCurrentRating($mech_id, $rate_rev_id, $rate_auth_id , $rates){
+                if(($mech_id = $rate_rev_id) && (this.user.id = $rate_auth_id)){
+                    return $rates;
+                }
+                else{
+                    return $rates = 3;
+                }
+                // console.log($mech_id)
+                // console.log(this.ratings.reviewrateable_id)
+                // console.log(this.ratings.author_id)
+                // return $rates;
+            },
+            showButton(){
+                console.log(this.ratings.id)
+            },
+            getMechanicId($id){
+                console.log($id);
+            },
             getResults(page = 1) {
 			    axios.get('api/user?page=' + page)
 				.then(response => {
-					this.users = response.data;
+					this.mechanics = response.data;
 				});
             },
             updateUser(){
@@ -219,12 +244,49 @@ import { setInterval } from 'timers';
                     }
                     })
             },
-            loadUsers(){
+            loadMechanics(){
                 if(this.$gate.isAdminORDeveloper()){
-                    axios.get("api/mechanic").then(({ data }) => (this.users = data));
+                    axios.get("api/mechanic").then(({ data }) => (this.mechanics = data));
                 }
 
             },
+            loadUser(){
+                if(this.$gate.isAdminORDeveloper()){
+                    axios.get("api/profile").then(({ data }) => (this.user = data));
+                }
+
+            },
+            addRating(rating, $id){
+                // axios.post('api/updateRateMechanic/'+1);
+                this.rating.rate = rating;
+                this.$Progress.start();
+                this.rating.post('api/rateMechanic/'+$id)
+                .then(()=>{
+                    // emit create an event
+                    Fire.$emit('ActionCreate');
+                    $('#addNew').modal('hide');
+
+                    toast.fire({
+                        type: 'success',
+                        title: 'Signed in successfully'
+                        })
+                    this.$Progress.finish();
+                })
+                .catch(()=>{
+                    this.$Progress.fail();
+                })
+
+            },
+            getRating(){
+                if(this.$gate.isAdminORDeveloper()){
+                    axios.get("api/mechanicRatings").then(data  => {
+                        this.ratings = data.data;
+                        })
+
+                }
+
+            },
+
             createUser(){
                 this.$Progress.start();
                 this.form.photo = 'profile.png'
@@ -251,16 +313,20 @@ import { setInterval } from 'timers';
                 let query = this.$parent.search;
                 axios.get('api/findUser?q=' + query)
                 .then((data) => {
-                    this.users = data.data
+                    this.mechanics = data.data
                 })
                 .catch(() => {
 
                 })
             })
-            this.loadUsers();
+            this.loadUser();
+            this.loadMechanics();
+            this.getRating();
             // on listen to trigger a function
             Fire.$on('ActionCreate',() => {
-                this.loadUsers();
+                this.loadMechanics();
+                this.loadUser();
+                this.getRating();
             });
             // setInterval(()=> this.loadUsers(), 3000);
         }

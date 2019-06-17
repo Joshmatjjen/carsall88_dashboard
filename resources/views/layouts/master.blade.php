@@ -118,7 +118,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <router-link to="/mechanic" class="nav-link">
+                <router-link to="/mechanics" class="nav-link">
                   <i class="nav-icon fas fa-user-hard-hat teal"></i>
                   <p>Mechanics</p>
                 </router-link>

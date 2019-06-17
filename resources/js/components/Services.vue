@@ -27,7 +27,7 @@
                             <div class="product-grid  card-body">
                                 <div class="product-image">
                                     <a href="#">
-                                        <img class="product-img" v-bind:src="'/img/BrandLogo/' + brand.logo">
+                                        <img class="product-img" v-bind:src="'/img/Services/' + brand.photo">
                                     </a>
                                 </div>
                                 <!-- v-for="category in categories.data" :key="category.id" -->
@@ -255,7 +255,7 @@ let cTValues;
 
 
             getResults(page = 1) {
-			    axios.get('api/brand?page=' + page)
+			    axios.get('api/service?page=' + page)
 				.then(response => {
 					this.brands = response.data;
 				});
@@ -322,7 +322,7 @@ let cTValues;
             },
             loadBrands(){
                 // if(this.$gate.isAdminORAuthor()){
-                    axios.get("api/brand").then(({ data }) => (this.brands = data));
+                    axios.get("api/service").then(({ data }) => (this.brands = data));
                 // }
 
             },

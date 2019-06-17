@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Access\Gate;
+use Trexology\ReviewRateable\Models\Rating;
 
 class UserController extends Controller
 {
@@ -59,6 +60,40 @@ class UserController extends Controller
 
     public function mechanic(){
         return User::where('type', 'mechanic')->latest()->paginate(20);
+    }
+    public function rateMechanic($id,Request $request){
+        $user = auth('api')->user();
+        $mechanic = User::find($id);
+
+        $rating = $mechanic -> rating([
+            // 'title' => 'Some title',
+            // 'body' => 'Some body', //optional
+            'anonymous' => 1, //optional
+            'rating' => $request['rate'],
+        ], $user);
+        // $average = $mechanic->averageRating();
+        $request->merge(['averageRating' => $mechanic->averageRating()]);
+        $request->merge(['reviews' => $mechanic->countRating()]);
+        $mechanic->update($request->all());
+
+        dd($rating);
+    }
+    public function updateRateMechanic($id, $rating_id){
+        $mechanic = User::find($id);
+        $rating = $mechanic->updateRating(20, [
+            'title' => '',
+            'body' => '', //optional
+            'anonymous' => 1, //optional
+            'rating' => 2,
+        ]);
+        dd($rating);
+
+    }
+    public function mechanicRatings(){
+        // $mechanic = User::where('type', 'mechanic')->all();
+        if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper')){
+            return Rating::latest()->get();
+        }
     }
 
     public function updateProfile(Request $request)

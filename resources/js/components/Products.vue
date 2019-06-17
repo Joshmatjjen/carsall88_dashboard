@@ -602,11 +602,11 @@ let cTValues;
 
             onChange(event) {
 
-                if(event = 1){
-                    this.cars_cat = this.sub_categories.filter(function (obj) {
-                        return obj.category_id === 1;
-                    });
-                }
+                // if(event = 1){
+                //     this.cars_cat = this.sub_categories.filter(function (obj) {
+                //         return obj.category_id === 1;
+                //     });
+                // }
 
 
 
@@ -623,7 +623,7 @@ let cTValues;
                 console.log(this.options);
 
                 }
-                else if(event.target.value === "2"){
+                else if(event.target.value = 2){
                     console.log('car parts: Correct')
 
                     this.cTOptions = this.sub_categories.filter(function (obj) {
@@ -631,7 +631,7 @@ let cTValues;
                     });
                     console.log(this.cTOptions);
                 }
-                else if(event.target.value === "3"){
+                else if(event.target.value = 3){
 
                     this.cTOptions = this.sub_categories.filter(function (obj) {
                         return obj.category_id === 3;
