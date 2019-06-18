@@ -2634,6 +2634,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 var cTValues;
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2647,18 +2648,24 @@ var cTValues;
       form: new Form({
         id: '',
         category_id: '',
-        category_type_id: '',
+        sub_category_id: '',
         brand_id: '',
         name: '',
         price: '',
+        colour: '',
+        model: '',
+        transmission: '',
+        fuel_type: '',
+        year: '',
         size: '',
         email: '',
         address: '',
         condition: '',
         description: '',
-        photo_main: '',
-        photo_second: '',
-        photo_last: ''
+        photo1: '',
+        photo2: '',
+        photo3: '',
+        photo4: ''
       }),
       brands: [{
         value: '',
@@ -96121,13 +96128,12 @@ var render = function() {
                           attrs: {
                             alt: "Product",
                             src:
-                              "/img/productImage/" +
-                              _vm.selectedProduct.photo_main
+                              "/img/productImage/" + _vm.selectedProduct.photo1
                           },
                           on: {
                             click: function($event) {
                               _vm.selectedProductImage =
-                                _vm.selectedProduct.photo_main
+                                _vm.selectedProduct.photo1
                             }
                           }
                         }),
@@ -96137,13 +96143,12 @@ var render = function() {
                           attrs: {
                             alt: "Product",
                             src:
-                              "/img/productImage/" +
-                              _vm.selectedProduct.photo_second
+                              "/img/productImage/" + _vm.selectedProduct.photo2
                           },
                           on: {
                             click: function($event) {
                               _vm.selectedProductImage =
-                                _vm.selectedProduct.photo_second
+                                _vm.selectedProduct.photo2
                             }
                           }
                         }),
@@ -96153,13 +96158,27 @@ var render = function() {
                           attrs: {
                             alt: "Product",
                             src:
-                              "/img/productImage/" +
-                              _vm.selectedProduct.photo_last
+                              "/img/productImage/" + _vm.selectedProduct.photo3
                           },
                           on: {
                             click: function($event) {
                               _vm.selectedProductImage =
-                                _vm.selectedProduct.photo_last
+                                _vm.selectedProduct.photo3
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("img", {
+                          staticClass: "small-p-img",
+                          attrs: {
+                            alt: "Product",
+                            src:
+                              "/img/productImage/" + _vm.selectedProduct.photo4
+                          },
+                          on: {
+                            click: function($event) {
+                              _vm.selectedProductImage =
+                                _vm.selectedProduct.photo4
                             }
                           }
                         })

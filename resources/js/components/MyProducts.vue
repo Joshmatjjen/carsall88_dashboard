@@ -337,9 +337,10 @@
                                 <img class="product-detail-img" alt="Product" v-bind:src="'/img/productImage/' + selectedProductImage">
                     </div>
                     <div class="bg-light-gray div-small-p-img">
-                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_main" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_main">
-                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_second" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_second">
-                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo_last" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo_last">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo1" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo1">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo2" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo2">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo3" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo3">
+                        <img class="small-p-img" v-on:click="selectedProductImage = selectedProduct.photo4" alt="Product" v-bind:src="'/img/productImage/' + selectedProduct.photo4">
                     </div>
                     <div class="mt-2 mb-2 text-center">
                         <h3>{{selectedProduct.name}}</h3>
@@ -435,18 +436,24 @@ let cTValues;
                 form: new Form({
                     id: '',
                     category_id: '',
-                    category_type_id: '',
+                    sub_category_id: '',
                     brand_id: '',
                     name: '',
                     price: '',
+                    colour: '',
+                    model: '',
+                    transmission: '',
+                    fuel_type: '',
+                    year: '',
                     size: '',
                     email: '',
                     address: '',
                     condition: '',
                     description: '',
-                    photo_main: '',
-                    photo_second: '',
-                    photo_last: ''
+                    photo1: '',
+                    photo2: '',
+                    photo3: '',
+                    photo4: '',
 
                 }),
 
