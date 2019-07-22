@@ -13,33 +13,88 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => ['json.response']], function () {
+
+    Route::middleware('auth:api')->get('/user', function (Request $request) {
+        return $request->user();
+    });
+
+    // public routes
+    // Route::post('/login', 'Api\AuthController@login')->name('login.api');
+    // Route::post('/register', 'Api\AuthController@register')->name('register.api');
+    Route::post('login', 'API\AuthController@login');
+    Route::post('register', 'API\AuthController@register');
+    Route::get('logout', 'API\AuthController@logout');
+
+    Route::apiResources(['user'=>'API\UserController']);
+    Route::get('mechanic', 'API\UserController@mechanic');
+    Route::post('rateMechanic/{id}', 'API\UserController@rateMechanic');
+    Route::get('mechanicRatings', 'API\UserController@mechanicRatings');
+    Route::post('updateRateMechanic/{id}', 'API\UserController@updateRateMechanic');
+    Route::get('profile', 'API\UserController@profile');
+    Route::get('findUser', 'API\UserController@search');
+    Route::put('profile', 'API\UserController@updateProfile');
+
+    Route::apiResources(['service'=>'API\ServiceController']);
+
+    Route::apiResources(['product'=>'API\ProductController']);
+    Route::get('findProduct', 'API\ProductController@search');
+    Route::get('myProducts', 'API\ProductController@myProducts');
+    Route::get('brandsItem', 'API\ProductController@brandsItem');
+
+    Route::apiResources(['category'=>'API\CategoryController']);
+    Route::get('allCategories', 'API\CategoryController@allCategories');
+
+    Route::apiResources(['subcategory'=>'API\SubCategoryController']);
+    Route::get('allSubCategories', 'API\SubCategoryController@allSubCategories');
+
+    Route::apiResources(['brand'=>'API\BrandController']);
+    Route::get('findBrand', 'API\BrandController@search');
+    Route::get('allBrands', 'API\BrandController@allBrands');
+
+    // private routes
+    Route::middleware('auth:api')->group(function () {
+        Route::get('/logout', 'Api\AuthController@logout')->name('logout');
+    });
+
 });
 
-Route::apiResources(['user'=>'API\UserController']);
-Route::get('mechanic', 'API\UserController@mechanic');
-Route::post('rateMechanic/{id}', 'API\UserController@rateMechanic');
-Route::get('mechanicRatings', 'API\UserController@mechanicRatings');
-Route::post('updateRateMechanic/{id}', 'API\UserController@updateRateMechanic');
-Route::get('profile', 'API\UserController@profile');
-Route::get('findUser', 'API\UserController@search');
-Route::put('profile', 'API\UserController@updateProfile');
+// Route::group([
+//     'prefix' => 'auth'
+// ], function () {
+//     Route::post('login', 'API\AuthController@login')->name('login');
+//     Route::post('register', 'API\AuthController@register');
+//     Route::group([
+//       'middleware' => 'auth:api'
+//     ], function() {
+//         Route::get('logout', 'API\AuthController@logout');
+//         Route::get('user', 'API\AuthController@user');
+//         Route::apiResources(['user'=>'API\UserController']);
+//         Route::get('mechanic', 'API\UserController@mechanic');
+//         Route::post('rateMechanic/{id}', 'API\UserController@rateMechanic');
+//         Route::get('mechanicRatings', 'API\UserController@mechanicRatings');
+//         Route::post('updateRateMechanic/{id}', 'API\UserController@updateRateMechanic');
+//         Route::get('profile', 'API\UserController@profile');
+//         Route::get('findUser', 'API\UserController@search');
+//         Route::put('profile', 'API\UserController@updateProfile');
 
-Route::apiResources(['service'=>'API\ServiceController']);
+//         Route::apiResources(['service'=>'API\ServiceController']);
 
-Route::apiResources(['product'=>'API\ProductController']);
-Route::get('findProduct', 'API\ProductController@search');
-Route::get('myProducts', 'API\ProductController@myProducts');
-Route::get('brandsItem', 'API\ProductController@brandsItem');
+//         Route::apiResources(['product'=>'API\ProductController']);
+//         Route::get('findProduct', 'API\ProductController@search');
+//         Route::get('myProducts', 'API\ProductController@myProducts');
+//         Route::get('brandsItem', 'API\ProductController@brandsItem');
 
-Route::apiResources(['category'=>'API\CategoryController']);
-Route::get('allCategories', 'API\CategoryController@allCategories');
+//         Route::apiResources(['category'=>'API\CategoryController']);
+//         Route::get('allCategories', 'API\CategoryController@allCategories');
 
-Route::apiResources(['subcategory'=>'API\SubCategoryController']);
-Route::get('allSubCategories', 'API\SubCategoryController@allSubCategories');
+//         Route::apiResources(['subcategory'=>'API\SubCategoryController']);
+//         Route::get('allSubCategories', 'API\SubCategoryController@allSubCategories');
 
-Route::apiResources(['brand'=>'API\BrandController']);
-Route::get('findBrand', 'API\BrandController@search');
-Route::get('allBrands', 'API\BrandController@allBrands');
+//         Route::apiResources(['brand'=>'API\BrandController']);
+//         Route::get('findBrand', 'API\BrandController@search');
+//         Route::get('allBrands', 'API\BrandController@allBrands');
+//     });
+// });
+
 

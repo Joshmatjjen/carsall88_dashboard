@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 class LoginController extends Controller
 {
@@ -24,7 +25,13 @@ class LoginController extends Controller
         // if ($user -> isAdminOR()) { // do your margic here
         //     return redirect() -> route('dashboard');
         // }
-        return redirect('/home');
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->intended('dashboard');
+        }
+        // return redirect('/home');
     }
     /**
      * Where to redirect users after login.
