@@ -18,14 +18,19 @@ class CreateUsersTable extends Migration
         Schema::enableForeignKeyConstraints();
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('type')->default('user');
-            $table->mediumText('bio')->nullable();
             $table->mediumText('address')->nullable();
-            $table->string('photo')->default('profile.png');
+            $table->integer('mobileNumber');
+            $table->mediumText('bio')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('state')->nullable();
+            $table->string('city')->nullable();
+            $table->decimal('lat', 10, 8)->nullable();
+            $table->decimal('lng', 11, 8)->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
