@@ -27,29 +27,29 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::define('isAdmin', function($user){
-            return $user->type === 'admin';
+            return $user->type === 'Admin';
         });
 
         Gate::define('isDeveloper', function($user){
-            return $user->type === 'developer';
+            return $user->type === 'Developer';
         });
 
         Gate::define('isMechanic', function($user){
-            return $user->type === 'mechanic';
+            return $user->type === 'Mechanic';
         });
 
         Gate::define('isUser', function($user){
-            return $user->type === 'user';
+            return $user->type === 'User';
         });
 
         Gate::define('isAdminORDeveloper', function($user){
-            if($user->type === 'admin' || $user->type === 'developer'){
+            if($user->type === 'Admin' || $user->type === 'Developer'){
                 return  true;
             }
         });
 
         Gate::define('isAdminORDeveloperORMechanic', function($user){
-            if($user->type === 'admin' || $user->type === 'developer' || $user->type === 'mechanic'){
+            if($user->type === 'Admin' || $user->type === 'Developer' || $user->type === 'Mechanic'){
                 return  true;
             }
         });

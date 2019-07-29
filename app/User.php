@@ -19,7 +19,9 @@ class User extends Authenticatable implements ReviewRateable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'bio', 'address', 'photo', 'type', 'averageRating', 'reviews'
+        'name', 'email', 'password', 'type', 'address', 'mobileNumber', 'bio', 'state', 'city',
+        'photo',
+        // 'type', 'averageRating', 'reviews'
     ];
 
     /**

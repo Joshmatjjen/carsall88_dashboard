@@ -5,29 +5,29 @@ export default class Gate{
     }
 
     isAdmin(){
-        return this.user.type === 'admin';
+        return this.user.type === 'Admin';
     }
 
     isDeveloper(){
-        return this.user.type === 'developer';
+        return this.user.type === 'Developer';
     }
 
     isMechanic(){
-        return this.user.type === 'mechanic';
+        return this.user.type === 'Mechanic';
     }
 
     isUser(){
-        return this.user.type === 'user';
+        return this.user.type === 'User';
     }
 
     isAdminORDeveloper(){
-        if(this.user.type === 'admin' || this.user.type === 'developer'){
+        if(this.user.type === 'Admin' || this.user.type === 'Developer'){
             return true;
         }
     }
 
     isAdminORDeveloperORMechanic(){
-        if(this.user.type === 'admin' || this.user.type === 'developer' || this.user.type === 'mechanic'){
+        if(this.user.type === 'Admin' || this.user.type === 'Developer' || this.user.type === 'Mechanic'){
             return true;
         }
     }

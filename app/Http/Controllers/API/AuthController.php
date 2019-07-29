@@ -22,13 +22,13 @@ class AuthController extends Controller
             'password' => 'required|string|min:6',
             'type' => 'required|string',
             'address' => 'required|string',
-            'mobileNumber' => 'required|string',
+            'mobileNumber' => 'required',
             'bio' => 'required|string',
             'photo' => 'required|string',
             'state' => 'required|string',
             'city' => 'required|string',
-            'lat' => 'required|decimal',
-            'lng' => 'required|decimal'
+            // 'lat' => 'required|decimal',
+            // 'lng' => 'required|decimal'
 
 
         ]);
@@ -38,6 +38,19 @@ class AuthController extends Controller
             return response()->json(['errors'=>$validator->errors()->all()], 422);
         }
 
+        $currentPhoto = $request->photo;
+
+        // Code to take only the extension of the files
+        $name = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
+
+        \Image::make($request->photo)->save(public_path('img/profile/').$name);
+
+        $request->merge(['photo' => $name]);
+
+        $userPhoto = public_path('img/profile/').$currentPhoto;
+        if(file_exists($userPhoto)){
+            @unlink($userPhoto);
+        }
         $request['password']=Hash::make($request['password']);
         $user = User::create($request->toArray());
 
@@ -53,6 +66,7 @@ class AuthController extends Controller
             'name' => Auth::user()->name,
             'email' => Auth::user()->email,
             'type' => Auth::user()->type,
+            'photo' => Auth::user()->photo,
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
             'expires_at' => Carbon::parse(

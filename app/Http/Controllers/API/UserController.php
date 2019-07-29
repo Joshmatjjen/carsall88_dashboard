@@ -59,7 +59,7 @@ class UserController extends Controller
     }
 
     public function mechanic(){
-        return User::where('type', 'mechanic')->latest()->paginate(20);
+        return User::where('type', 'Mechanic')->latest()->paginate(20);
     }
     public function rateMechanic($id,Request $request){
         $user = auth('api')->user();
