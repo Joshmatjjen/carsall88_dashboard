@@ -102,6 +102,7 @@ class AuthController extends Controller
                     'name' => Auth::user()->name,
                     'email' => Auth::user()->email,
                     'type' => Auth::user()->type,
+                    'photo' => Auth::user()->photo,
                     'access_token' => $tokenResult->accessToken,
                     'token_type' => 'Bearer',
                     'expires_at' => Carbon::parse(

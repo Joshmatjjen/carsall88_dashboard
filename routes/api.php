@@ -26,6 +26,7 @@ Route::group(['middleware' => ['json.response']], function () {
     Route::post('register', 'API\AuthController@register');
     Route::get('logout', 'API\AuthController@logout');
 
+    Route::get('profilePhoto/{name}','API\PhotoController@profilePhoto');
     Route::apiResources(['user'=>'API\UserController']);
     Route::get('mechanic', 'API\UserController@mechanic');
     Route::post('rateMechanic/{id}', 'API\UserController@rateMechanic');

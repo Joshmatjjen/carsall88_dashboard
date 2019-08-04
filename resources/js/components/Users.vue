@@ -7,6 +7,7 @@
                 <h3 class="card-title">Users Table</h3>
 
                 <div class="card-tools">
+                <i class="fal fa-biking-mountain"></i>
                   <button class="btn btn-success" @click="newModal">Add New <i class="fas fa-user-plus fa-fw"></i></button>
                 </div>
               </div>
