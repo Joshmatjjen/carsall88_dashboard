@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Access\Gate;
 use Trexology\ReviewRateable\Models\Rating;
+use PhpParser\Error;
 
 class UserController extends Controller
 {
@@ -133,7 +134,13 @@ class UserController extends Controller
 
     public function profile()
     {
-        return auth('api')->user();
+        try {
+            return auth('api')->user();
+        } catch (Error $err) {
+            //throw $th;
+            return $err;
+        }
+
     }
     /**
      * Display the specified resource.
