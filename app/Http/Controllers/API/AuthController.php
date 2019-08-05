@@ -22,7 +22,7 @@ class AuthController extends Controller
             'password' => '|string|min:6',
             // 'type' => '|string',
             // 'address' => '|string',
-            'mobileNumber' => '',
+            // 'mobileNumber' => '',
             // 'bio' => '|string',
             // 'photo' => '|string',
             // 'state' => '|string',
