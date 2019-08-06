@@ -178,7 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Trexology\ReviewRateable\ReviewRateableServiceProvider::class,
-        Laravel\Passport\PassportServiceProvider::class
+        // Laravel\Passport\PassportServiceProvider::class
 
     ],
 
