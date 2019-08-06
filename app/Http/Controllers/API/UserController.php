@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Access\Gate;
 use Trexology\ReviewRateable\Models\Rating;
 use PhpParser\Error;
+use Error as GlobalError;
 
 class UserController extends Controller
 {
@@ -136,7 +137,7 @@ class UserController extends Controller
     {
         try {
             return auth('api')->user();
-        } catch (Error $err) {
+        } catch (GlobalError $err) {
             //throw $th;
             return $err;
         }
