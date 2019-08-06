@@ -135,13 +135,7 @@ class UserController extends Controller
 
     public function profile()
     {
-        try {
-            return auth('api')->user();
-        } catch (GlobalError $err) {
-            //throw $th;
-            return $err;
-        }
-
+        return auth('api')->user();
     }
     /**
      * Display the specified resource.
