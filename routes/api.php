@@ -19,7 +19,6 @@ Route::group(['middleware' => 'cors'], function () {
         return $request->user();
     });
 
-    // public routes
     // Route::post('/login', 'Api\AuthController@login')->name('login.api');
     // Route::post('/register', 'Api\AuthController@register')->name('register.api');
     Route::post('login', 'API\AuthController@login');
