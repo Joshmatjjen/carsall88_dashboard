@@ -123,7 +123,7 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
-    // 'log' => 'errorlog',
+    // 'log' => 'errorlog',g
 
     /*
     |--------------------------------------------------------------------------
@@ -177,7 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Trexology\ReviewRateable\ReviewRateableServiceProvider::class
+        Trexology\ReviewRateable\ReviewRateableServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class
 
     ],
 

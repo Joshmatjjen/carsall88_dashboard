@@ -8,6 +8,8 @@ use App\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Access\Gate;
 use Trexology\ReviewRateable\Models\Rating;
+use PhpParser\Error;
+use Error as GlobalError;
 
 class UserController extends Controller
 {
