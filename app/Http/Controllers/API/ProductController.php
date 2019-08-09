@@ -127,7 +127,7 @@ class ProductController extends Controller
 
     public function allProducts() {
         if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper') || \Gate::allows('isMechanic') || \Gate::allows('isUser')){
-            return Product::with('user', 'category', 'subcategory', 'brand')->latest();
+            return Product::with('user', 'category', 'subcategory', 'brand')->latest()->all();
         }
     }
 
