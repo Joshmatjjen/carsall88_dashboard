@@ -41,6 +41,7 @@ Route::group(['middleware' => 'cors'], function () {
     Route::get('findProduct', 'API\ProductController@search');
     Route::get('myProducts', 'API\ProductController@myProducts');
     Route::get('brandsItem', 'API\ProductController@brandsItem');
+    Route::get('allProducts', 'API\ProductController@allProducts');
 
     Route::apiResources(['category'=>'API\CategoryController']);
     Route::get('allCategories', 'API\CategoryController@allCategories');
