@@ -26,6 +26,8 @@ Route::group(['middleware' => 'cors'], function () {
     Route::get('logout', 'API\AuthController@logout');
 
     Route::get('profilePhoto/{name}','API\PhotoController@profilePhoto');
+    Route::get('productPhoto/{name}','API\PhotoController@productPhoto');
+
     Route::apiResources(['user'=>'API\UserController']);
     Route::get('mechanic', 'API\UserController@mechanic');
     Route::post('rateMechanic/{id}', 'API\UserController@rateMechanic');

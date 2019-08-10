@@ -16,6 +16,11 @@ class PhotoController extends Controller
         return Response::download($path);
     }
 
+    public function productPhoto($name){
+        $path = public_path('img/productImage/').$name;
+        return Response::download($path);
+    }
+
     public function servicePhoto($name){
         $path = public_path('img/Services/').$name;
         // return Response::download($path);

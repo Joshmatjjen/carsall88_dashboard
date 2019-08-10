@@ -41,8 +41,6 @@ class CreateProductsTable extends Migration
             $table->Integer('year')->nullable();
             $table->string('condition')->nullable();
             $table->string('size')->nullable();
-            $table->string('email');
-            $table->string('address');
             $table->mediumText('description')->nullable();
             $table->string('photo1')->default('product-placeholder.jpg');
             $table->string('photo2')->default('product-placeholder.jpg');
