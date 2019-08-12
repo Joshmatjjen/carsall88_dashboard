@@ -50,7 +50,7 @@ class ProductController extends Controller
 
         if($request->photo1 != ''){
             $photo1 = 'photo1-' . time().'.' . explode('/', explode(':', substr($request->photo1, 0, strpos($request->photo1, ';')))[1])[1];
-            \Image::make($request->photo1)->save(public_path('img/productImage/').$photo1);
+            \Image::make($request->photo1)->resize(1024, 768)->save(public_path('img/productImage/').$photo1);
         }else{
             $request->photo1 = 'product-placeholder.jpg';
             $photo1 = $request->photo1;
@@ -58,7 +58,8 @@ class ProductController extends Controller
 
         if($request->photo2 != ''){
             $photo2 = 'photo2-' . time().'.' . explode('/', explode(':', substr($request->photo2, 0, strpos($request->photo2, ';')))[1])[1];
-            \Image::make($request->photo2)->save(public_path('img/productImage/').$photo2);
+            \Image::make($request->photo2)->resize(1024, 768)->save(public_path('img/productImage/').$photo2);
+
         }else{
             $request->photo2 = 'product-placeholder.jpg';
             $photo2 = $request->photo2;
@@ -66,7 +67,8 @@ class ProductController extends Controller
 
         if($request->photo3 != ''){
             $photo3 = 'photo3-' . time().'.' . explode('/', explode(':', substr($request->photo3, 0, strpos($request->photo3, ';')))[1])[1];
-            \Image::make($request->photo3)->save(public_path('img/productImage/').$photo3);
+            \Image::make($request->photo3)->resize(1024, 768)->save(public_path('img/productImage/').$photo3);
+
         }else{
             $request->photo3 = 'product-placeholder.jpg';
             $photo3 = $request->photo3;
@@ -74,7 +76,8 @@ class ProductController extends Controller
 
         if($request->photo4 != ''){
         $photo4 = 'photo4-' . time().'.' . explode('/', explode(':', substr($request->photo4, 0, strpos($request->photo4, ';')))[1])[1];
-        \Image::make($request->photo4)->save(public_path('img/productImage/').$photo4);
+        \Image::make($request->photo4)->resize(1024, 768)->save(public_path('img/productImage/').$photo4);
+
         }else{
             $request->photo4 = 'product-placeholder.jpg';
             $photo4= $request->photo4;
@@ -111,8 +114,6 @@ class ProductController extends Controller
             'fuel_type' => $request['fuel_type'],
             'year' => $request['year'],
             'size' => $request['size'],
-            'email' => $request['email'],
-            'address' => $request['address'],
             'description' => $request['description'],
             'photo1' => $photo1,
             'photo2' => $photo2,
@@ -165,6 +166,72 @@ class ProductController extends Controller
             'name' => 'required|string|max:191',
         ]);
 
+        if(strlen($request->photo1) >= 25 ){
+            $photo1 = 'photo1-' . time().'.' . explode('/', explode(':', substr($request->photo1, 0, strpos($request->photo1, ';')))[1])[1];
+            \Image::make($request->photo1)->resize(1024, 768)->save(public_path('img/productImage/').$photo1);
+            $request->merge(['photo1' => $photo1]);
+
+            $currentPhoto1 = $product->photo1;
+            $productPhoto1 = public_path('img/productImage/').$currentPhoto1;
+            if(file_exists($productPhoto1)){
+                @unlink($productPhoto1);
+            }
+        }
+        // else{
+        //     $request->photo1 = $product->photo1;
+        //     $photo1 = $request->photo1;
+        // }
+
+        if(strlen($request->photo2) >= 25){
+            $photo2 = 'photo2-' . time().'.' . explode('/', explode(':', substr($request->photo2, 0, strpos($request->photo2, ';')))[1])[1];
+            \Image::make($request->photo2)->resize(1024, 768)->save(public_path('img/productImage/').$photo2);
+            $request->merge(['photo2' => $photo2]);
+
+            $currentPhoto2 = $product->photo2;
+            $productPhoto2 = public_path('img/productImage/').$currentPhoto2;
+            if(file_exists($productPhoto2)){
+                @unlink($productPhoto2);
+            }
+        }
+        // else{
+        //     $request->photo2 = 'product-placeholder.jpg';
+        //     $photo2 = $request->photo2;
+        // }
+
+        if(strlen($request->photo3) >= 25){
+            $photo3 = 'photo3-' . time().'.' . explode('/', explode(':', substr($request->photo3, 0, strpos($request->photo3, ';')))[1])[1];
+            \Image::make($request->photo3)->resize(1024, 768)->save(public_path('img/productImage/').$photo3);
+            $request->merge(['photo3' => $photo3]);
+
+            $currentPhoto3 = $product->photo3;
+            $productPhoto3 = public_path('img/productImage/').$currentPhoto3;
+            if(file_exists($productPhoto3)){
+                @unlink($productPhoto3);
+            }
+        }
+        // else{
+        //     $request->photo3 = 'product-placeholder.jpg';
+        //     $photo3 = $request->photo3;
+        // }
+
+        if(strlen($request->photo4) >= 25){
+            $photo4 = 'photo4-' . time().'.' . explode('/', explode(':', substr($request->photo4, 0, strpos($request->photo4, ';')))[1])[1];
+            \Image::make($request->photo4)->resize(1024, 768)->save(public_path('img/productImage/').$photo4);
+            $request->merge(['photo4' => $photo4]);
+
+            $currentPhoto4 = $product->photo4;
+            $productPhoto4 = public_path('img/productImage/').$currentPhoto4;
+            if(file_exists($productPhoto4)){
+                @unlink($productPhoto4);
+            }
+        }
+        // else{
+        //     $request->photo4 = 'product-placeholder.jpg';
+        //     $photo4= $request->photo4;
+        // }
+
+
+
         $product->update($request->all());
 
         return ['message' => 'Updated the product info'];
@@ -185,9 +252,32 @@ class ProductController extends Controller
 
             $product = Product::findOrFail($id);
 
-            // delete the user
+            // delete the product
+            $currentPhoto1 = $product->photo1;
+            $productPhoto1 = public_path('img/productImage/').$currentPhoto1;
+            if(file_exists($productPhoto1)){
+                @unlink($productPhoto1);
+            }
 
+            $currentPhoto2 = $product->photo2;
+            $productPhoto2 = public_path('img/productImage/').$currentPhoto2;
+            if(file_exists($productPhoto2)){
+                @unlink($productPhoto2);
+            }
+
+            $currentPhoto3 = $product->photo3;
+            $productPhoto3 = public_path('img/productImage/').$currentPhoto3;
+            if(file_exists($productPhoto3)){
+                @unlink($productPhoto3);
+            }
+
+            $currentPhoto4 = $product->photo4;
+            $productPhoto4 = public_path('img/productImage/').$currentPhoto4;
+            if(file_exists($productPhoto4)){
+                @unlink($productPhoto4);
+            }
             $product->delete();
+
         }
         // Product::get()
 

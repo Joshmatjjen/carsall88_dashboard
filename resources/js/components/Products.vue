@@ -440,8 +440,6 @@ let cTValues;
                     fuel_type: '',
                     year: '',
                     size: '',
-                    email: '',
-                    address: '',
                     condition: '',
                     description: '',
                     photo1: '',
@@ -680,8 +678,6 @@ let cTValues;
             newModal(){
                 this.editmode = false;
                 this.form.reset();
-                this.form.email = this.user.email
-                this.form.address = this.user.address
                 $('#addNew').modal('show');
             },
             deleteProduct(id){
