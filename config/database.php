@@ -51,6 +51,8 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+        // CLEARDB HEROKU
+
         // 'mysql' => array(
         //     'driver'    => 'mysql',
         //     'host'      => $host,
