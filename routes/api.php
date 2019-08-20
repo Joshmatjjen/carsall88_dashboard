@@ -29,6 +29,8 @@ Route::group(['middleware' => 'cors'], function () {
     Route::get('profilePhoto/{name}','API\PhotoController@profilePhoto');
     Route::get('productPhoto/{name}','API\PhotoController@productPhoto');
 
+    Route::apiResources(['photo'=>'API\PhotoController']);
+
     Route::apiResources(['user'=>'API\UserController']);
     Route::get('mechanic', 'API\UserController@mechanic');
     Route::post('rateMechanic/{id}', 'API\UserController@rateMechanic');

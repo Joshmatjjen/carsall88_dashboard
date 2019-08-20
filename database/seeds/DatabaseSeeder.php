@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CategoriesTableSeeder::class);
         $this->call(SubCategoriesTableSeeder::class);
         $this->call(ServicesTableSeeder::class);
+        $this->call(PhotoTableSeeder::class);
 
         // Schema::enableForeignKeyConstraints();
     }
