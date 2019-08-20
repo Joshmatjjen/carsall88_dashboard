@@ -8,8 +8,8 @@ use App\Http\Controllers\Controller;
 class ImageController extends Controller
 {
 
-    public function slidePhoto($name) {
-        $path = public_path('img/slidePhoto/').$name;
+    public function sliderPhoto($name) {
+        $path = public_path('img/sliderPhoto/').$name;
         return Response::download($path);
     }
     public function profilePhoto($name){
