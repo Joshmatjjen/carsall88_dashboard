@@ -11,8 +11,7 @@ class CreatePhotoTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('photo', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 50);
