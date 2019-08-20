@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Response;
 
 class PhotoController extends Controller
 {
+    public function slidePhoto($name) {
+        $path = public_path('img/slidePhoto/').$name;
+        return Response::download($path);
+    }
     public function profilePhoto($name){
         $path = public_path('img/profile/').$name;
         return Response::download($path);

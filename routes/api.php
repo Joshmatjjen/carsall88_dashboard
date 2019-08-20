@@ -25,6 +25,7 @@ Route::group(['middleware' => 'cors'], function () {
     Route::post('register', 'API\AuthController@register');
     Route::get('logout', 'API\AuthController@logout');
 
+    Route::get('slidePhoto/{name}','API\PhotoController@slidePhoto');
     Route::get('profilePhoto/{name}','API\PhotoController@profilePhoto');
     Route::get('productPhoto/{name}','API\PhotoController@productPhoto');
 
@@ -59,6 +60,8 @@ Route::group(['middleware' => 'cors'], function () {
     Route::middleware('auth:api')->group(function () {
         Route::get('/logout', 'Api\AuthController@logout')->name('logout');
     });
+
+    // SLide image
 
 });
 
