@@ -19,7 +19,7 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        Photo::latest()->get();
+        return Photo::latest()->get();
     }
 
     /**
