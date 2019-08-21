@@ -25,12 +25,12 @@ class SubCategoryController extends Controller
     public function index()
     {
         if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper')){
-            return SubCategory::latest()->paginate(20);
+            return SubCategory::with('category')->latest()->paginate(20);
         }
     }
 
     public function allSubCategories(){
-        return SubCategory::all();
+        return SubCategory::with('category')->get();
     }
     /**
      * Store a newly created resource in storage.

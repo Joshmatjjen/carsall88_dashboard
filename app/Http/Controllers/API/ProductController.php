@@ -28,7 +28,7 @@ class ProductController extends Controller
     public function index()
     {
         if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper') || \Gate::allows('isMechanic') || \Gate::allows('isUser')){
-            return Product::with('user', 'category', 'subcategory', 'brand')->latest()->paginate(20);
+            return Product::with('user', 'category', 'subCategory', 'brand')->latest()->paginate(20);
         }
 
     }
@@ -128,7 +128,7 @@ class ProductController extends Controller
 
     public function allProducts() {
         if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper') || \Gate::allows('isMechanic') || \Gate::allows('isUser')){
-            return Product::with('user', 'category', 'subcategory', 'brand')->latest()->get();
+            return Product::with('user', 'category', 'subCategory', 'brand')->latest()->get();
         }
     }
 

@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => 'cors'], function () {
+// Route::group(['middleware' => 'cors'], function () {
 
     Route::middleware('auth:api')->get('/user', function (Request $request) {
         return $request->user();
@@ -51,7 +51,7 @@ Route::group(['middleware' => 'cors'], function () {
     Route::apiResources(['category'=>'API\CategoryController']);
     Route::get('allCategories', 'API\CategoryController@allCategories');
 
-    Route::apiResources(['subcategory'=>'API\SubCategoryController']);
+    Route::apiResources(['sub_category'=>'API\SubCategoryController']);
     Route::get('allSubCategories', 'API\SubCategoryController@allSubCategories');
 
     Route::apiResources(['brand'=>'API\BrandController']);
@@ -65,7 +65,7 @@ Route::group(['middleware' => 'cors'], function () {
 
     // SLide image
 
-});
+// });
 
 // Route::group([
 //     'prefix' => 'auth'

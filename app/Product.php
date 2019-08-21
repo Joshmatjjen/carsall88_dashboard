@@ -21,7 +21,7 @@ class Product extends Model
             return $this->belongsTo('App\Category');
         }
 
-        public function subcategory(){
+        public function subCategory(){
             return $this->belongsTo('App\SubCategory');
         }
 
