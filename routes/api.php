@@ -43,10 +43,11 @@ use Illuminate\Http\Request;
     Route::apiResources(['service'=>'API\ServiceController']);
 
     Route::apiResources(['product'=>'API\ProductController']);
+    Route::get('allProducts', 'API\ProductController@allProducts');
     Route::get('findProduct', 'API\ProductController@search');
     Route::get('myProducts', 'API\ProductController@myProducts');
+    Route::get('allMyProducts', 'API\ProductController@allMyProducts');
     Route::get('brandsItem', 'API\ProductController@brandsItem');
-    Route::get('allProducts', 'API\ProductController@allProducts');
 
     Route::apiResources(['category'=>'API\CategoryController']);
     Route::get('allCategories', 'API\CategoryController@allCategories');

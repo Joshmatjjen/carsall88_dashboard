@@ -141,6 +141,14 @@ class ProductController extends Controller
         // return auth('api')->user();
     }
 
+    public function allMyProducts(){
+        $user = auth('api')->user()->id;
+        if(auth('api')->user()){
+            return Product::where('user_id', $user)->with('user', 'category', 'subCategory', 'brand')->latest()->get();
+        }
+        // return auth('api')->user();
+    }
+
     /**
      * Display the specified resource.
      *
