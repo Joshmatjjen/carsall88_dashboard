@@ -46,11 +46,11 @@ class ProductController extends Controller
             'price' => 'required'
         ]);
 
-
+        // (2100, 900)
 
         if($request->photo1 != ''){
             $photo1 = 'photo1-' . time().'.' . explode('/', explode(':', substr($request->photo1, 0, strpos($request->photo1, ';')))[1])[1];
-            \Image::make($request->photo1)->resize(1024, 768)->save(public_path('img/productImage/').$photo1);
+            \Image::make($request->photo1)->resize(960, 540)->save(public_path('img/productImage/').$photo1);
         }else{
             $request->photo1 = 'product-placeholder.jpg';
             $photo1 = $request->photo1;
@@ -58,7 +58,7 @@ class ProductController extends Controller
 
         if($request->photo2 != ''){
             $photo2 = 'photo2-' . time().'.' . explode('/', explode(':', substr($request->photo2, 0, strpos($request->photo2, ';')))[1])[1];
-            \Image::make($request->photo2)->resize(1024, 768)->save(public_path('img/productImage/').$photo2);
+            \Image::make($request->photo2)->resize(960, 540)->save(public_path('img/productImage/').$photo2);
 
         }else{
             $request->photo2 = 'product-placeholder.jpg';
@@ -67,7 +67,7 @@ class ProductController extends Controller
 
         if($request->photo3 != ''){
             $photo3 = 'photo3-' . time().'.' . explode('/', explode(':', substr($request->photo3, 0, strpos($request->photo3, ';')))[1])[1];
-            \Image::make($request->photo3)->resize(1024, 768)->save(public_path('img/productImage/').$photo3);
+            \Image::make($request->photo3)->resize(960, 540)->save(public_path('img/productImage/').$photo3);
 
         }else{
             $request->photo3 = 'product-placeholder.jpg';
@@ -76,7 +76,7 @@ class ProductController extends Controller
 
         if($request->photo4 != ''){
         $photo4 = 'photo4-' . time().'.' . explode('/', explode(':', substr($request->photo4, 0, strpos($request->photo4, ';')))[1])[1];
-        \Image::make($request->photo4)->resize(1024, 768)->save(public_path('img/productImage/').$photo4);
+        \Image::make($request->photo4)->resize(960, 540)->save(public_path('img/productImage/').$photo4);
 
         }else{
             $request->photo4 = 'product-placeholder.jpg';
@@ -168,7 +168,7 @@ class ProductController extends Controller
 
         if(strlen($request->photo1) >= 25 ){
             $photo1 = 'photo1-' . time().'.' . explode('/', explode(':', substr($request->photo1, 0, strpos($request->photo1, ';')))[1])[1];
-            \Image::make($request->photo1)->resize(1024, 768)->save(public_path('img/productImage/').$photo1);
+            \Image::make($request->photo1)->resize(960, 540)->save(public_path('img/productImage/').$photo1);
             $request->merge(['photo1' => $photo1]);
 
             $currentPhoto1 = $product->photo1;
@@ -184,7 +184,7 @@ class ProductController extends Controller
 
         if(strlen($request->photo2) >= 25){
             $photo2 = 'photo2-' . time().'.' . explode('/', explode(':', substr($request->photo2, 0, strpos($request->photo2, ';')))[1])[1];
-            \Image::make($request->photo2)->resize(1024, 768)->save(public_path('img/productImage/').$photo2);
+            \Image::make($request->photo2)->resize(960, 540)->save(public_path('img/productImage/').$photo2);
             $request->merge(['photo2' => $photo2]);
 
             $currentPhoto2 = $product->photo2;
@@ -200,7 +200,7 @@ class ProductController extends Controller
 
         if(strlen($request->photo3) >= 25){
             $photo3 = 'photo3-' . time().'.' . explode('/', explode(':', substr($request->photo3, 0, strpos($request->photo3, ';')))[1])[1];
-            \Image::make($request->photo3)->resize(1024, 768)->save(public_path('img/productImage/').$photo3);
+            \Image::make($request->photo3)->resize(960, 540)->save(public_path('img/productImage/').$photo3);
             $request->merge(['photo3' => $photo3]);
 
             $currentPhoto3 = $product->photo3;
@@ -216,7 +216,7 @@ class ProductController extends Controller
 
         if(strlen($request->photo4) >= 25){
             $photo4 = 'photo4-' . time().'.' . explode('/', explode(':', substr($request->photo4, 0, strpos($request->photo4, ';')))[1])[1];
-            \Image::make($request->photo4)->resize(1024, 768)->save(public_path('img/productImage/').$photo4);
+            \Image::make($request->photo4)->resize(960, 540)->save(public_path('img/productImage/').$photo4);
             $request->merge(['photo4' => $photo4]);
 
             $currentPhoto4 = $product->photo4;
