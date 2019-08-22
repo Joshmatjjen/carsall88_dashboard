@@ -23,8 +23,18 @@ class ImageController extends Controller
         return Response::download($path);
     }
 
+    public function categoryLogo($name){
+        $path = public_path('img/categoryLogo/').$name;
+        return Response::download($path);
+    }
+
+    public function brandLogo($name){
+        $path = public_path('img/BrandLogo/').$name;
+        return Response::download($path);
+    }
+
     public function servicePhoto($name){
         $path = public_path('img/Services/').$name;
-        // return Response::download($path);
+        return Response::download($path);
     }
 }

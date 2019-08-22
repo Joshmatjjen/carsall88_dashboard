@@ -28,6 +28,9 @@ use Illuminate\Http\Request;
     Route::get('sliderPhoto/{name}','API\ImageController@sliderPhoto');
     Route::get('profilePhoto/{name}','API\ImageController@profilePhoto');
     Route::get('productPhoto/{name}','API\ImageController@productPhoto');
+    Route::get('categoryLogo/{name}','API\ImageController@categoryLogo');
+    Route::get('brandLogo/{name}','API\ImageController@brandLogo');
+    Route::get('servicePhoto/{name}','API\ImageController@servicePhoto');
 
     Route::apiResources(['photo'=>'API\PhotoController']);
 
