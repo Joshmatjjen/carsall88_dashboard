@@ -16,7 +16,7 @@ class PhotoTableSeeder extends Seeder
         $photos = ['slider1', 'slider2', 'slider3', 'slider4'];
         foreach ( $photos as $photo ) {
             DB::table( 'photo' )->insert( [
-                'name' => $photo.'.jpg',
+                'name' => $photo.'.jpeg',
                 'created_at' => Carbon::now(),
             ] );
         }
