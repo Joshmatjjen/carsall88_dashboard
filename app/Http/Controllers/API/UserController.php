@@ -63,6 +63,9 @@ class UserController extends Controller
     public function mechanic(){
         return User::where('type', 'Mechanic')->latest()->paginate(20);
     }
+    public function allMechanics(){
+        return User::where('type', 'Mechanic')->latest()->get();
+    }
     public function rateMechanic($id,Request $request){
         $user = auth('api')->user();
         $mechanic = User::find($id);

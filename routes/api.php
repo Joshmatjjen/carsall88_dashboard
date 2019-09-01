@@ -36,6 +36,7 @@ use Illuminate\Http\Request;
 
     Route::apiResources(['user'=>'API\UserController']);
     Route::get('mechanic', 'API\UserController@mechanic');
+    Route::get('allMechanics', 'API\UserController@allMechanics');
     Route::post('rateMechanic/{id}', 'API\UserController@rateMechanic');
     Route::get('mechanicRatings', 'API\UserController@mechanicRatings');
     Route::post('updateRateMechanic/{id}', 'API\UserController@updateRateMechanic');
