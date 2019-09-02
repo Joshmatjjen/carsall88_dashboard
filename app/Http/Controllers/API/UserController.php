@@ -127,12 +127,16 @@ class UserController extends Controller
             }
         }
 
-        if(empty($request->password)){
-            $request->password = $user->password;
-        }
-        else if(!empty($request->password)){
-            $request->merge(['password' => Hash::make($request['password'])]);
-        }
+        if (trim(Input::get('password')) != '') {
+            $user->password = Hash::make(trim(Input::get('password')));
+         }
+
+        // if(empty($request->password)){
+        //     $request->password = $user->password;
+        // }
+        // else if(!empty($request->password)){
+        //     $request->merge(['password' => Hash::make($request['password'])]);
+        // }
 
         $user->update($request->all());
         return ['message' => "Proile Updated Successully"];
