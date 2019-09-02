@@ -10,6 +10,7 @@ use Illuminate\Auth\Access\Gate;
 use Trexology\ReviewRateable\Models\Rating;
 use PhpParser\Error;
 use Error as GlobalError;
+use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
 {
