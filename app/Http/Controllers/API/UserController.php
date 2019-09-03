@@ -129,10 +129,14 @@ class UserController extends Controller
             }
         }
 
-        if (trim(Input::get('password')) != '' || trim(Input::get('password')) != null) {
-            $user->password = Hash::make(trim(Input::get('password')));
-         }
+        $newPassword = $request->get('password');
 
+        if(empty($newPassword)){
+            $user->update($request->except('password'));
+        }else{
+            $request->merge(['password' => Hash::make($request['password'])]);
+            $user->update($request->all());
+        }
         // if(empty($request->password)){
         //     $request->password = $user->password;
         // }
@@ -140,7 +144,7 @@ class UserController extends Controller
         //     $request->merge(['password' => Hash::make($request['password'])]);
         // }
 
-        $user->update($request->all());
+        // $user->update($request->all());
         return ['message' => "Proile Updated Successully"];
     }
 
