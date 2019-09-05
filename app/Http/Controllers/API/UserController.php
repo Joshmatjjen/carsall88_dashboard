@@ -119,7 +119,7 @@ class UserController extends Controller
             // Code to take only the extension of the files
             $name = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
 
-            \Image::make(base64_decode($request->photo))->save(public_path('img/profile/').$name);
+            \Image::make($request->photo)->encode('data-url')->save(public_path('img/profile/').$name);
 
             $request->merge(['photo' => $name]);
 
