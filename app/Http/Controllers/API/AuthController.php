@@ -17,14 +17,14 @@ class AuthController extends Controller
     public function register (Request $request) {
 
         $validator = Validator::make($request->all(), [
-            'name' => '|string|max:255',
-            'email' => '|string|email|max:255|unique:users',
-            'password' => '|string|min:6',
+            'name' => 'string|max:255',
+            'email' => 'string|email|max:255|unique:users',
+            'password' => 'string|min:6',
             // 'type' => '|string',
             // 'address' => '|string',
             // 'mobileNumber' => '',
             // 'bio' => '|string',
-            // 'photo' => '|string',
+            'photo' => 'string',
             // 'state' => '|string',
             // 'city' => '|string',
             // // 'lat' => '|decimal',
