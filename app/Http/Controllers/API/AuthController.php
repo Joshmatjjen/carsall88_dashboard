@@ -44,7 +44,7 @@ class AuthController extends Controller
         // $name = time().'.' . explode('/', explode(':', substr($request->photo, 0, strpos($request->photo, ';')))[1])[1];
 
         // \Image::make($request->photo)->save(public_path('img/profile/').$name);
-        $name = "profile-".time().".png";
+        $name = "profile-".str_random(10).'-'.time().".png";
 
         \Image::make($request->photo)->encode('data-url')->save(public_path('img/profile/').$name);
 
