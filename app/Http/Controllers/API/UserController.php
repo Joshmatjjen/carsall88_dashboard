@@ -121,22 +121,22 @@ class UserController extends Controller
 
             // \Image::make($request->photo)->save(public_path('img/profile/').$name);
 
-            $photo = $request->photo;  // your base64 encoded
-            $photo = str_replace('data:image/png;base64,', '', $photo);
-            $photo = str_replace(' ', '+', $photo);
-            $photoName = str_random(10).'.'.'png';
-            \Image::put(public_path(). '/' . $photoName, base64_decode($photo));
+            // $photo = $request->photo;  // your base64 encoded
+            // $photo = str_replace('data:image/png;base64,', '', $photo);
+            // $photo = str_replace(' ', '+', $photo);
+            // $photoName = str_random(10).'.'.'png';
+            // \File::put(storage_path(). '/' . $photoName, base64_decode($photo));
 
-            $request->merge(['photo' => $photoName]);
+            // $request->merge(['photo' => $photoName]);
 
             /***Old COde */
 
-            // $name = "profile-".time().".png";
+            $name = "profile-".str_random(10).time().".png";
 
-            // \Image::make($request->photo)->encode('data-url')->save(public_path('img/profile/').$name);
+            \Image::make($request->photo)->encode('data-url')->save(public_path('img/profile/').$name);
 
 
-            // $request->merge(['photo' => $name]);
+            $request->merge(['photo' => $name]);
 
             $userPhoto = public_path('img/profile/').$currentPhoto;
             if(file_exists($userPhoto)){
