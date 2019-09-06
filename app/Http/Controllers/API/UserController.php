@@ -131,7 +131,7 @@ class UserController extends Controller
 
             /***Old COde */
 
-            $name = "profile-".str_random(10).time().".png";
+            $name = "profile-".str_random(10).'-'.time().".png";
 
             \Image::make($request->photo)->encode('data-url')->save(public_path('img/profile/').$name);
 
