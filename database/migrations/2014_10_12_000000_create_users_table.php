@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('mobileNumber')->unique()->nullable();
             $table->mediumText('bio')->nullable();
             $table->string('photo')->nullable();
+            $table->string('gender')->nullable();
             $table->string('state')->nullable();
             $table->string('city')->nullable();
             $table->decimal('lat', 10, 8)->nullable();
