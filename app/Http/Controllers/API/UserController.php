@@ -125,7 +125,7 @@ class UserController extends Controller
             $photo = str_replace('data:image/png;base64,', '', $photo);
             $photo = str_replace(' ', '+', $photo);
             $photoName = str_random(10).'.'.'png';
-            \File::put(public_path(). '/' . $photoName, base64_decode($photo));
+            \Image::put(public_path(). '/' . $photoName, base64_decode($photo));
 
             $request->merge(['photo' => $photoName]);
 
