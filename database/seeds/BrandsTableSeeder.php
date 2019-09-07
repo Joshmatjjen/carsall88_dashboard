@@ -16,7 +16,7 @@ class BrandsTableSeeder extends Seeder
         for ($i = 0; $i < count($brands); $i++)  {
             DB::table( 'brands' )->insert( [
                 'name' =>  $brands[$i],
-                'photo' => $brands[$i].'.png',
+                'logo' => $brands[$i].'.png',
                 'created_at' => Carbon::now(),
             ] );
         }
