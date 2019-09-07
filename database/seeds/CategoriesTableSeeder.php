@@ -13,10 +13,11 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $categories = [ 'Cars', 'Car Parts', 'Car Accessories'];
-        foreach ( $categories as $category ) {
-            DB::table( 'categories' )->insert( [
-                'name'       =>  $category,
-                'photo' => $category.'.png',
+
+        for ($i = 0; $i < count($categories); $i++)  {
+            DB::table( 'photo' )->insert( [
+                'name' =>  $categories[$i],
+                'photo' => $categories[$i].'.png',
                 'created_at' => Carbon::now(),
             ] );
         }
