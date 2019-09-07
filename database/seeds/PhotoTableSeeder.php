@@ -18,7 +18,6 @@ class PhotoTableSeeder extends Seeder
         for ($i = 0; $i < count($photos); $i++)  {
             DB::table( 'photos' )->insert( [
                 'name' =>  $photos[$i],
-                'photo' => $photos[$i].'.png',
                 'created_at' => Carbon::now(),
             ] );
         }
