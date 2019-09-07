@@ -18,7 +18,9 @@ class SkillController extends Controller
      */
     public function index()
     {
-        //
+        if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper') || \Gate::allows('isMechanic')){
+            return Skill::latest()->get();
+        }
     }
 
     /**
@@ -29,7 +31,11 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        return Skill::create([
+            'user_id' => $request['user_id'],
+            'service_id' => $request['service_id'],
+        ]);
     }
 
     /**
@@ -63,6 +69,13 @@ class SkillController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $skill = Skill::findOrFail($id);
+
+        // delete the skill
+
+        $skill->delete();
+
+
+        return ['message' => 'Skill Deleted'];
     }
 }

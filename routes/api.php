@@ -45,6 +45,9 @@ use Illuminate\Http\Request;
     Route::put('profile', 'API\UserController@updateProfile');
 
     Route::apiResources(['service'=>'API\ServiceController']);
+    Route::get('allServices', 'API\ServiceController@allServices');
+
+    Route::apiResources(['skill'=>'API\SkillController']);
 
     Route::apiResources(['product'=>'API\ProductController']);
     Route::get('allProducts', 'API\ProductController@allProducts');

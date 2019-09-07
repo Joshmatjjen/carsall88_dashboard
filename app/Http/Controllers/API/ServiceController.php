@@ -29,6 +29,10 @@ class ServiceController extends Controller
         }
     }
 
+    public function allServices() {
+        return Service::orderBy('id')->get();
+    }
+
     /**
      * Store a newly created resource in storage.
      *
