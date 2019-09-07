@@ -15,7 +15,7 @@ class CategoriesTableSeeder extends Seeder
         $categories = [ 'Cars', 'Car Parts', 'Car Accessories'];
 
         for ($i = 0; $i < count($categories); $i++)  {
-            DB::table( 'photo' )->insert( [
+            DB::table( 'categories' )->insert( [
                 'name' =>  $categories[$i],
                 'photo' => $categories[$i].'.png',
                 'created_at' => Carbon::now(),
