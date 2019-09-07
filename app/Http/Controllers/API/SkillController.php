@@ -23,6 +23,13 @@ class SkillController extends Controller
         }
     }
 
+    public function mySkills() {
+        $user = auth('api')->user()->id;
+        if(auth('api')->user()){
+            return Skill::where('user_id', $user)->with('user', 'service')->latest()->get();
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *
