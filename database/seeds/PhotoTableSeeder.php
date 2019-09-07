@@ -13,7 +13,7 @@ class PhotoTableSeeder extends Seeder
      */
     public function run()
     {
-        $photos = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
+        $photos = ['slider1.jpeg', 'slider2.jpeg', 'slider3.jpeg', 'slider4.jpeg', 'slider5.jpeg'];
 
         for ($i = 0; $i < count($photos); $i++)  {
             DB::table( 'photos' )->insert( [
