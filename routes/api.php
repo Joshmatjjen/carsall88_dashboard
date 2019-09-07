@@ -48,6 +48,7 @@ use Illuminate\Http\Request;
     Route::get('allServices', 'API\ServiceController@allServices');
 
     Route::apiResources(['skill'=>'API\SkillController']);
+    Route::get('mySkills', 'API\SkillController@mySkills');
 
     Route::apiResources(['product'=>'API\ProductController']);
     Route::get('allProducts', 'API\ProductController@allProducts');
