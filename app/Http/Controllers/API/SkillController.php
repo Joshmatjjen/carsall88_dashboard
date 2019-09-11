@@ -40,7 +40,7 @@ class SkillController extends Controller
     public function store(Request $request)
     {
 
-        return Skill::create([
+        return Skill::firstOrCreate([
             'user_id' => $request['user_id'],
             'service_id' => $request['service_id'],
         ]);
