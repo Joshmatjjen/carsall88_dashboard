@@ -20,7 +20,7 @@ class SkillController extends Controller
     public function index()
     {
         if(\Gate::allows('isAdmin') || \Gate::allows('isDeveloper') || \Gate::allows('isMechanic')){
-            return Skill::latest()->get();
+            return Skill::where('user_id', $user)->with('user', 'service')->latest()->get();
         }
     }
 
